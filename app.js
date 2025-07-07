@@ -66,15 +66,37 @@ function updateTenseCounts() {
     tenseOptions.forEach((option, index) => {
         const label = option.querySelector('.tense-label');
         const currentText = tenseNames[index];
-        label.innerHTML = `${currentText}<span style="float: right">(${counts[index]})</span>`;
+        label.innerHTML = `${currentText}`;
+        
+        // Add count as separate element
+        let countEl = option.querySelector('.tense-count');
+        if (!countEl) {
+            countEl = document.createElement('span');
+            countEl.className = 'tense-count';
+            option.appendChild(countEl);
+        }
+        countEl.textContent = `(${counts[index]})`;
     });
 }
 
 // Initialize tense selector
 function initTenseSelector() {
+    // Load saved tense selection from localStorage
+    const saved = localStorage.getItem('langlearn_selected_tenses');
+    if (saved) {
+        selectedTenses = JSON.parse(saved);
+    }
+    
     const tenseOptions = document.querySelectorAll('.tense-option');
     tenseOptions.forEach((option, index) => {
         option.addEventListener('click', () => toggleTense(index));
+        
+        // Set visual state based on loaded selection
+        if (selectedTenses.includes(index)) {
+            option.classList.add('selected');
+        } else {
+            option.classList.remove('selected');
+        }
     });
 }
 
@@ -94,6 +116,9 @@ function toggleTense(tenseIndex) {
         selectedTenses.sort(); // Keep sorted for consistency
         option.classList.add('selected');
     }
+    
+    // Save tense selection to localStorage
+    localStorage.setItem('langlearn_selected_tenses', JSON.stringify(selectedTenses));
     
     // Reshuffle and reload exercise with new tense selection
     shuffleExercises();
