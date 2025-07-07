@@ -209,6 +209,115 @@ const explanations = {
             3: "Expresa certeza futura",
             4: "Expresa hipótesis general",
             5: "Expresa posibilidad o duda"
+        },
+        
+        // Conditional patterns
+        "si_tuviera_conditional": {
+            0: "Expresa certeza presente",
+            1: "Expresa hecho pasado específico",
+            2: "Expresa hecho habitual pasado",
+            3: "Expresa certeza futura",
+            4: "Condición hipotética requiere condicional",
+            5: "No hay duda ni emoción"
+        },
+        
+        "polite_request": {
+            0: "Forma directa, no cortés",
+            1: "Se refiere al pasado, no presente",
+            2: "Se refiere al pasado habitual",
+            3: "Forma directa futura",
+            4: "Forma cortés y respetuosa",
+            5: "No hay duda ni emoción"
+        },
+        
+        "advice_conditional": {
+            0: "Expresa certeza presente",
+            1: "Expresa hecho pasado específico",
+            2: "Expresa hecho habitual pasado",
+            3: "Expresa certeza futura",
+            4: "Expresa consejo o recomendación",
+            5: "No hay duda ni emoción"
+        },
+        
+        "reported_speech": {
+            0: "Expresa certeza presente",
+            1: "Expresa hecho pasado directo",
+            2: "Expresa hecho habitual pasado",
+            3: "Expresa certeza futura",
+            4: "Estilo indirecto en pasado",
+            5: "No hay duda ni emoción"
+        },
+        
+        "si_pudiera_conditional": {
+            0: "Expresa certeza presente",
+            1: "Expresa hecho pasado específico",
+            2: "Expresa hecho habitual pasado",
+            3: "Expresa certeza futura",
+            4: "Condición hipotética con 'pudiera'",
+            5: "No hay duda ni emoción"
+        },
+        
+        "hypothetical_condition": {
+            0: "Expresa certeza presente",
+            1: "Expresa hecho pasado específico",
+            2: "Expresa hecho habitual pasado",
+            3: "Expresa certeza futura",
+            4: "Situación hipotética o irreal",
+            5: "No hay duda ni emoción"
+        },
+        
+        "si_fuera_conditional": {
+            0: "Expresa certeza presente",
+            1: "Expresa hecho pasado específico",
+            2: "Expresa hecho habitual pasado",
+            3: "Expresa certeza futura",
+            4: "Condición hipotética con 'fuera'",
+            5: "No hay duda ni emoción"
+        },
+        
+        "hypothetical_reaction": {
+            0: "Expresa certeza presente",
+            1: "Expresa hecho pasado específico",
+            2: "Expresa hecho habitual pasado",
+            3: "Expresa certeza futura",
+            4: "Reacción hipotética en esa situación",
+            5: "No hay duda ni emoción"
+        },
+        
+        "polite_invitation": {
+            0: "Forma directa, no cortés",
+            1: "Se refiere al pasado, no presente",
+            2: "Se refiere al pasado habitual",
+            3: "Forma directa futura",
+            4: "Invitación cortés y respetuosa",
+            5: "No hay duda ni emoción"
+        },
+        
+        "si_estudiara_conditional": {
+            0: "Expresa certeza presente",
+            1: "Expresa hecho pasado específico",
+            2: "Expresa hecho habitual pasado",
+            3: "Expresa certeza futura",
+            4: "Condición hipotética con 'estudiara'",
+            5: "No hay duda ni emoción"
+        },
+        
+        "si_no_lloviera_conditional": {
+            0: "Expresa certeza presente",
+            1: "Expresa hecho pasado específico",
+            2: "Expresa hecho habitual pasado",
+            3: "Expresa certeza futura",
+            4: "Condición hipotética negativa",
+            5: "No hay duda ni emoción"
+        },
+        
+        "si_supiera_conditional": {
+            0: "Expresa certeza presente",
+            1: "Expresa hecho pasado específico",
+            2: "Expresa hecho habitual pasado",
+            3: "Expresa certeza futura",
+            4: "Condición hipotética con 'supiera'",
+            5: "No hay duda ni emoción"
         }
     }
 };

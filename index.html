@@ -97,7 +97,23 @@
     </div>
 
     <script src="explanations.js"></script>
-    <script src="exercises.js"></script>
+    <script src="exercises/presente.js"></script>
+    <script src="exercises/preterito.js"></script>
+    <script src="exercises/imperfecto.js"></script>
+    <script src="exercises/futuro.js"></script>
+    <script src="exercises/condicional.js"></script>
+    <script src="exercises/subjuntivo.js"></script>
+    <script>
+        // Combine all exercises from separate files
+        const exercises = [
+            ...presenteExercises,
+            ...preteritoExercises,
+            ...imperfectoExercises,
+            ...futuroExercises,
+            ...condicionalExercises,
+            ...subjuntivoExercises
+        ];
+    </script>
     <script src="app.js"></script>
 </body>
 </html>

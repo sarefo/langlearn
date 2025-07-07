@@ -29,11 +29,27 @@ The app implements a sophisticated dual-algorithm approach:
 ### Application Structure
 - **index.html** - Main application file
 - **app.js** - Core application logic and exercise handling
-- **exercises.js** - Exercise data with clean, non-redundant structure
+- **exercises/** - Exercise data organized by tense (see ID System below)
 - **explanations.js** - Reusable explanation patterns for contextual feedback
 
+### Exercise ID System
+Exercises are organized by tense with unique ID prefixes to prevent conflicts:
+
+- **presente.js** - IDs: 100-199 (Next ID: 101)
+- **preterito.js** - IDs: 200-299 (33 exercises: 201-233)
+- **imperfecto.js** - IDs: 300-399 (32 exercises: 301-332)
+- **futuro.js** - IDs: 400-499 (Next ID: 401)
+- **condicional.js** - IDs: 500-599 (30 exercises: 501-530)
+- **subjuntivo.js** - IDs: 600-699 (27 exercises: 601-627)
+
+**Benefits:**
+- Zero overhead - no build tools needed
+- Visual clarity - ID tells you which tense
+- Future-proof - 100 IDs per tense
+- No conflicts - impossible to have duplicate IDs
+
 ### Data Flow
-1. Exercises loaded from embedded JavaScript array (15 exercises with metadata)
+1. Exercises loaded from separate tense files and combined (122 total exercises)
 2. `shuffleExercises()` randomizes order for variety
 3. User answers trigger statistics and streak updates
 4. Progress persists to localStorage for session continuity
