@@ -26,6 +26,16 @@ const accuracyEl = document.getElementById('accuracy');
 const streakEl = document.getElementById('streak');
 const exerciseContainer = document.getElementById('exercise-container');
 
+// Convert difficulty number to text
+function getDifficultyText(difficulty) {
+    const difficultyMap = {
+        1: 'Fácil',
+        2: 'Medio', 
+        3: 'Difícil'
+    };
+    return difficultyMap[difficulty] || 'Medio';
+}
+
 // Count exercises per tense
 function countExercisesPerTense() {
     const counts = [0, 0, 0, 0, 0, 0]; // A, B, C, D, E, F
@@ -178,11 +188,11 @@ function renderExercise() {
     exerciseContainer.innerHTML = `
         <div class="exercise-header">
             <span class="type-badge">${exercise.type}</span>
-            <span class="difficulty">📊 ${exercise.difficulty}</span>
+            <span class="difficulty">📊 ${getDifficultyText(exercise.difficulty)}</span>
         </div>
         
         <div class="question">
-            <div class="question-title">${exercise.question}</div>
+            <div class="question-title">Completa la oración:</div>
             <div class="question-text">${exercise.text} <span class="infinitive">(${exercise.infinitive})</span></div>
         </div>
         
@@ -271,17 +281,23 @@ function selectOption(selectedIndex) {
                 resultEl.className = `result ${isCorrect ? 'correct' : 'incorrect'}`;
                 
                 let explanationText = '';
-                if (isCorrect) {
-                    explanationText = currentExercise.explanations[selectedIndex];
+                const pattern = currentExercise.explanation;
+                
+                if (pattern && explanations.patterns[pattern]) {
+                    if (isCorrect) {
+                        explanationText = explanations.patterns[pattern][selectedIndex];
+                    } else {
+                        explanationText = explanations.patterns[pattern][selectedIndex] + '<br><br>' +
+                                        'Respuesta correcta: ' + explanations.patterns[pattern][bestCorrectAnswer];
+                    }
                 } else {
-                    explanationText = currentExercise.explanations[selectedIndex] + '<br><br>' +
-                                    '✓ Respuesta correcta: ' + currentExercise.explanations[bestCorrectAnswer];
+                    // Fallback for exercises without explanation patterns
+                    explanationText = isCorrect ? 'Selección correcta' : 'Selección incorrecta';
                 }
                 
                 resultEl.innerHTML = `
                     <div>${isCorrect ? '✅ ¡Correcto!' : '❌ Incorrecto'}</div>
                     <div style="margin-top: 4px; font-size: 13px; color: var(--text-light);">${explanationText}</div>
-                    <div style="margin-top: 6px; font-size: 12px; font-style: italic; color: var(--text-light);">${currentExercise.primaryExplanation}</div>
                     <button class="next-btn" onclick="nextExercise()">
                         Siguiente ejercicio (Enter)
                     </button>

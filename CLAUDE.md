@@ -32,9 +32,11 @@ The app implements a sophisticated dual-algorithm approach:
    - Uses localStorage keys: `langlearn_streak`, `langlearn_last_streak_date`
 
 ### Application Structure
-- **index.html** - Single-file application with embedded CSS and JavaScript
+- **index.html** - Main application file with embedded CSS
+- **app.js** - Core application logic and exercise handling
+- **exercises.js** - Exercise data with clean, non-redundant structure
+- **explanations.js** - Reusable explanation patterns for contextual feedback
 - **favicon.svg** - SVG favicon with clock icon representing past tenses
-- **Exercises array** - 15 comprehensive exercises covering all Spanish subjects and tenses
 
 ### Data Flow
 1. Exercises loaded from embedded JavaScript array (15 exercises with metadata)
@@ -91,8 +93,89 @@ The app implements a sophisticated dual-algorithm approach:
 - **Test keyboard shortcuts** - Verify A-D, 1-4, Enter, and Space keys work correctly
 
 ### Adding New Exercises
-1. Add new exercise objects to the `exercises` array in the JavaScript section
-2. Follow the existing structure: `{id, type, difficulty, question, text, options, correct, explanation}`
-3. Use `processInfinitives()` for verbs in parentheses - they'll automatically be styled gray/italic
-4. Ensure explanations are educational and concise
-5. Test with different screen sizes to ensure layout remains optimal
+
+**IMPORTANT: Follow this structure to maintain low redundancy and high-quality explanations.**
+
+#### Exercise Structure
+Add new exercises to `exercises.js` following this exact structure:
+```javascript
+{
+    id: 66,                          // Unique incremental ID
+    type: "Pretérito vs Imperfecto", // Category (see existing types)
+    difficulty: 2,                   // 1=Fácil, 2=Medio, 3=Difícil
+    text: "Ayer _____ al médico.",   // Sentence with blank (use _____)
+    infinitive: "ir",                // Verb in infinitive form
+    options: [                       // Always 6 options in this order:
+        "voy",                       // A = Presente
+        "fui",                       // B = Pretérito  
+        "iba",                       // C = Imperfecto
+        "iré",                       // D = Futuro
+        "iría",                      // E = Condicional
+        "vaya"                       // F = Subjuntivo
+    ],
+    correctAnswers: [1],             // Array of correct option indices (0-5)
+    explanation: "ayer_past"         // Reference to explanations.js pattern
+}
+```
+
+#### Explanation System
+**DO NOT create unique explanations for each exercise.** Instead:
+
+1. **Check existing patterns** in `explanations.js` first
+2. **Reuse patterns** when the grammatical context is similar
+3. **Add new patterns** only when existing ones don't fit
+
+#### Available Explanation Patterns
+Current patterns in `explanations.js`:
+- **`ayer_past`** - For "ayer" and other specific past time indicators
+- **`siempre_habitual`** - For "siempre" and habitual actions
+- **`cada_habitual`** - For "cada X" (cada día, cada verano, etc.)
+- **`poder_specific`** - For "poder" in specific situations
+- **`saber_continuous`** - For "saber" as continuous knowledge
+- **`saber_moment`** - For "saber" as moment of learning
+- **`mientras_interrupted`** - For "mientras" with interrupted actions
+- **`repente_sudden`** - For "de repente" and sudden actions
+- **`question_specific`** - For questions about specific past events
+- **`description_past`** - For descriptions and states in past
+- **`sequence_completed`** - For "primero", "luego" sequences
+- **`context_main`** - For context-setting vs main actions
+
+#### When to Add New Patterns
+Add a new pattern to `explanations.js` only when:
+1. **No existing pattern fits** the grammatical context
+2. **Multiple exercises** would benefit from the same pattern
+3. **The pattern is grammatically distinct** from existing ones
+
+#### Pattern Structure
+When adding new patterns, follow this structure:
+```javascript
+"pattern_name": {
+    0: "Why Presente doesn't work",
+    1: "Why Pretérito works/doesn't work", 
+    2: "Why Imperfecto works/doesn't work",
+    3: "Why Futuro doesn't work",
+    4: "Why Condicional doesn't work", 
+    5: "Why Subjuntivo doesn't work"
+}
+```
+
+#### Best Practices
+- **Be specific** - "Ayer indica acción específica" not "El contexto es pasado"
+- **Be concise** - One clear reason per option
+- **Be educational** - Explain the grammatical rule, not just right/wrong
+- **Avoid redundancy** - Don't repeat tense names or "correcto/incorrecto"
+- **Test thoroughly** - Verify explanations make sense for wrong answers too
+
+#### Example Process
+1. **New exercise**: "Todos los sábados _____ fútbol" 
+2. **Check existing**: Does `cada_habitual` pattern fit? YES
+3. **Use existing**: `explanation: "cada_habitual"`
+4. **Result**: Reuses explanations, maintains consistency
+
+#### Quality Checklist
+- ✅ Uses existing explanation pattern when appropriate
+- ✅ Difficulty matches grammatical complexity (1=simple rules, 3=nuanced)
+- ✅ All 6 options follow A-F tense order
+- ✅ Infinitive matches the conjugated options
+- ✅ Text is clear and natural Spanish
+- ✅ Exercise tests a specific grammatical concept
