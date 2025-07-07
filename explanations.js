@@ -118,6 +118,97 @@ const explanations = {
             3: "El contexto es pasado",
             4: "Es un hecho, no hipotético",
             5: "No hay duda ni emoción"
+        },
+        
+        // Subjunctive patterns
+        "esperar_emotion": {
+            0: "Expresa certeza, no deseo",
+            1: "Expresa hecho específico, no deseo",
+            2: "Expresa hecho habitual, no deseo",
+            3: "Expresa certeza futura, no deseo",
+            4: "Expresa posibilidad, no deseo",
+            5: "Expresa deseo/esperanza sobre otra persona"
+        },
+        
+        "querer_desire": {
+            0: "Expresa certeza, no deseo",
+            1: "Expresa hecho pasado, no deseo",
+            2: "Expresa hecho habitual, no deseo",
+            3: "Expresa certeza futura, no deseo",
+            4: "Expresa hipótesis, no deseo",
+            5: "Expresa deseo hacia otra persona"
+        },
+        
+        "dudar_doubt": {
+            0: "Expresa certeza presente",
+            1: "Expresa hecho pasado confirmado",
+            2: "Expresa hecho habitual confirmado",
+            3: "Expresa certeza futura",
+            4: "Expresa hipótesis, no duda",
+            5: "Expresa duda o incertidumbre"
+        },
+        
+        "necesitar_need": {
+            0: "Expresa certeza, no necesidad",
+            1: "Expresa hecho pasado, no necesidad",
+            2: "Expresa hecho habitual, no necesidad",
+            3: "Expresa certeza futura",
+            4: "Expresa hipótesis, no necesidad",
+            5: "Expresa necesidad hacia otra persona"
+        },
+        
+        "cuando_future": {
+            0: "Se refiere al presente habitual",
+            1: "Se refiere al pasado específico",
+            2: "Se refiere al pasado habitual",
+            3: "Se refiere al futuro específico",
+            4: "Expresa hipótesis, no tiempo futuro",
+            5: "Tiempo futuro incierto requiere subjuntivo"
+        },
+        
+        "aunque_concession": {
+            0: "Expresa certeza presente",
+            1: "Expresa hecho pasado confirmado",
+            2: "Expresa hecho habitual confirmado",
+            3: "Expresa certeza futura",
+            4: "Expresa hipótesis, no concesión",
+            5: "Expresa concesión o contraste"
+        },
+        
+        "para_que_purpose": {
+            0: "Expresa certeza, no propósito",
+            1: "Expresa hecho pasado, no propósito",
+            2: "Expresa hecho habitual, no propósito",
+            3: "Expresa certeza futura",
+            4: "Expresa hipótesis general",
+            5: "Expresa propósito o finalidad"
+        },
+        
+        "sin_que_negative": {
+            0: "Expresa certeza presente",
+            1: "Expresa hecho pasado confirmado",
+            2: "Expresa hecho habitual confirmado",
+            3: "Expresa certeza futura",
+            4: "Expresa hipótesis general",
+            5: "Expresa acción sin que ocurra otra"
+        },
+        
+        "es_bueno_opinion": {
+            0: "Expresa certeza, no opinión",
+            1: "Expresa hecho pasado, no opinión",
+            2: "Expresa hecho habitual, no opinión",
+            3: "Expresa certeza futura",
+            4: "Expresa hipótesis general",
+            5: "Expresa valoración u opinión"
+        },
+        
+        "tal_vez_maybe": {
+            0: "Expresa certeza presente",
+            1: "Expresa hecho pasado confirmado",
+            2: "Expresa hecho habitual confirmado",
+            3: "Expresa certeza futura",
+            4: "Expresa hipótesis general",
+            5: "Expresa posibilidad o duda"
         }
     }
 };

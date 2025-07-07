@@ -208,7 +208,6 @@ function renderExercise() {
     
     exerciseContainer.innerHTML = `
         <div class="exercise-header">
-            <span class="type-badge">${exercise.type}</span>
             <span class="difficulty">${getDifficultyDots(exercise.difficulty)}</span>
         </div>
         
