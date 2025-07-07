@@ -169,7 +169,8 @@ const exercises = [
         text: "Anoche _____ una película muy interesante.",
         infinitive: "ver",
         options: ["veo", "viste", "veías", "verás", "verías", "veas"],
-        correctAnswers: [1]
+        correctAnswers: [1],
+        explanation: "ayer_past"
     },
     {
         id: 18,
@@ -178,7 +179,8 @@ const exercises = [
         text: "No sabía que _____ francés tan bien.",
         infinitive: "hablar",
         options: ["hablas", "hablaste", "hablabas", "hablarás", "hablarías", "hables"],
-        correctAnswers: [2]
+        correctAnswers: [2],
+        explanation: "saber_continuous"
     },
     {
         id: 19,
@@ -187,7 +189,8 @@ const exercises = [
         text: "María _____ en esa empresa cuando la conocí.",
         infinitive: "trabajar",
         options: ["trabaja", "trabajó", "trabajaba", "trabajará", "trabajaría", "trabaje"],
-        correctAnswers: [2]
+        correctAnswers: [2],
+        explanation: "context_main"
     },
     {
         id: 20,
@@ -196,7 +199,8 @@ const exercises = [
         text: "Él _____ a la fiesta muy tarde anoche.",
         infinitive: "venir",
         options: ["viene", "vino", "venía", "vendrá", "vendría", "venga"],
-        correctAnswers: [1]
+        correctAnswers: [1],
+        explanation: "ayer_past"
     },
     {
         id: 21,
@@ -205,7 +209,8 @@ const exercises = [
         text: "Mi hermana _____ doctora cuando la conociste.",
         infinitive: "ser",
         options: ["es", "fue", "era", "será", "sería", "sea"],
-        correctAnswers: [2]
+        correctAnswers: [2],
+        explanation: "description_past"
     },
     {
         id: 22,
@@ -214,7 +219,8 @@ const exercises = [
         text: "Ella _____ mucha prisa ayer por la mañana.",
         infinitive: "tener",
         options: ["tiene", "tuvo", "tenía", "tendrá", "tendría", "tenga"],
-        correctAnswers: [1]
+        correctAnswers: [1],
+        explanation: "ayer_past"
     },
     {
         id: 23,
@@ -223,7 +229,8 @@ const exercises = [
         text: "El ladrón _____ por la ventana mientras la familia dormía.",
         infinitive: "entrar",
         options: ["entra", "entró", "entraba", "entrará", "entraría", "entre"],
-        correctAnswers: [1]
+        correctAnswers: [1],
+        explanation: "mientras_interrupted"
     },
     {
         id: 24,
@@ -302,7 +309,8 @@ const exercises = [
         text: "Nosotros _____ temprano pero el evento ya había empezado.",
         infinitive: "venir",
         options: ["venimos", "vinimos", "veníamos", "vendremos", "vendríamos", "vengamos"],
-        correctAnswers: [1]
+        correctAnswers: [1],
+        explanation: "sequence_completed"
     },
     {
         id: 32,
@@ -311,7 +319,8 @@ const exercises = [
         text: "Durante mi infancia, _____ muchos cuentos antes de dormir.",
         infinitive: "leer",
         options: ["leemos", "leímos", "leíamos", "leeremos", "leeríamos", "leamos"],
-        correctAnswers: [2]
+        correctAnswers: [2],
+        explanation: "siempre_habitual"
     },
     {
         id: 33,
@@ -320,7 +329,8 @@ const exercises = [
         text: "Nosotros _____ mucha suerte en ese viaje.",
         infinitive: "tener",
         options: ["tenemos", "tuvimos", "teníamos", "tendremos", "tendríamos", "tengamos"],
-        correctAnswers: [1]
+        correctAnswers: [1],
+        explanation: "poder_specific"
     },
     {
         id: 34,
@@ -329,7 +339,8 @@ const exercises = [
         text: "Antes _____ caminar al trabajo, pero ahora manejamos.",
         infinitive: "poder",
         options: ["podemos", "pudimos", "podíamos", "podremos", "podríamos", "podamos"],
-        correctAnswers: [2]
+        correctAnswers: [2],
+        explanation: "siempre_habitual"
     },
     {
         id: 35,
@@ -338,7 +349,8 @@ const exercises = [
         text: "Primero _____ la tarea, luego salimos a jugar.",
         infinitive: "terminar",
         options: ["terminamos", "terminamos", "terminábamos", "terminaremos", "terminaríamos", "terminemos"],
-        correctAnswers: [1]
+        correctAnswers: [1],
+        explanation: "sequence_completed"
     },
     {
         id: 36,
@@ -347,7 +359,8 @@ const exercises = [
         text: "Mis padres _____ cuando llegué a casa.",
         infinitive: "cenar",
         options: ["cenan", "cenaron", "cenaban", "cenarán", "cenarían", "cenen"],
-        correctAnswers: [2]
+        correctAnswers: [2],
+        explanation: "mientras_interrupted"
     },
     {
         id: 37,
@@ -356,7 +369,8 @@ const exercises = [
         text: "Ellos _____ la respuesta desde el principio.",
         infinitive: "saber",
         options: ["saben", "supieron", "sabían", "sabrán", "sabrían", "sepan"],
-        correctAnswers: [1]
+        correctAnswers: [1],
+        explanation: "saber_moment"
     },
     {
         id: 38,
@@ -365,7 +379,8 @@ const exercises = [
         text: "Los invitados _____ a las ocho en punto.",
         infinitive: "venir",
         options: ["vienen", "vinieron", "venían", "vendrán", "vendrían", "vengan"],
-        correctAnswers: [1]
+        correctAnswers: [1],
+        explanation: "poder_specific"
     },
     {
         id: 39,
@@ -374,7 +389,8 @@ const exercises = [
         text: "Los niños _____ en el jardín cuando empezó a llover.",
         infinitive: "jugar",
         options: ["juegan", "jugaron", "jugaban", "jugarán", "jugarían", "jueguen"],
-        correctAnswers: [2]
+        correctAnswers: [2],
+        explanation: "mientras_interrupted"
     },
     {
         id: 40,
@@ -383,7 +399,8 @@ const exercises = [
         text: "Ellas _____ resolver todos los ejercicios.",
         infinitive: "poder",
         options: ["pueden", "pudieron", "podían", "podrán", "podrían", "puedan"],
-        correctAnswers: [1]
+        correctAnswers: [1],
+        explanation: "poder_specific"
     },
     {
         id: 41,
@@ -392,7 +409,8 @@ const exercises = [
         text: "Durante la reunión, todos _____ en silencio hasta que habló el director.",
         infinitive: "estar",
         options: ["están", "estuvieron", "estaban", "estarán", "estarían", "estén"],
-        correctAnswers: [2]
+        correctAnswers: [2],
+        explanation: "mientras_interrupted"
     },
     {
         id: 42,
@@ -401,7 +419,8 @@ const exercises = [
         text: "Mis hermanos _____ que estudiar todo el fin de semana.",
         infinitive: "tener",
         options: ["tienen", "tuvieron", "tenían", "tendrán", "tendrían", "tengan"],
-        correctAnswers: [1]
+        correctAnswers: [1],
+        explanation: "poder_specific"
     },
     {
         id: 43,
@@ -410,7 +429,8 @@ const exercises = [
         text: "El cielo _____ muy nublado ayer por la mañana.",
         infinitive: "estar",
         options: ["está", "estuvo", "estaba", "estará", "estaría", "esté"],
-        correctAnswers: [2]
+        correctAnswers: [2],
+        explanation: "description_past"
     },
     {
         id: 44,
@@ -419,7 +439,8 @@ const exercises = [
         text: "Todos los domingos _____ a casa de mis abuelos.",
         infinitive: "ir",
         options: ["voy", "fui", "iba", "iré", "iría", "vaya"],
-        correctAnswers: [2]
+        correctAnswers: [2],
+        explanation: "cada_habitual"
     },
     {
         id: 45,
@@ -428,7 +449,8 @@ const exercises = [
         text: "Primero _____, luego salí de casa.",
         infinitive: "desayunar",
         options: ["desayuno", "desayuné", "desayunaba", "desayunaré", "desayunaría", "desayune"],
-        correctAnswers: [1]
+        correctAnswers: [1],
+        explanation: "sequence_completed"
     },
     {
         id: 46,
@@ -437,7 +459,8 @@ const exercises = [
         text: "Usted _____ las llaves en la mesa anoche.",
         infinitive: "poner",
         options: ["pone", "puso", "ponía", "pondrá", "pondría", "ponga"],
-        correctAnswers: [1]
+        correctAnswers: [1],
+        explanation: "ayer_past"
     },
     {
         id: 47,
@@ -446,7 +469,8 @@ const exercises = [
         text: "A menudo _____ en ese café cuando vivía cerca.",
         infinitive: "desayunar",
         options: ["desayuno", "desayuné", "desayunaba", "desayunaré", "desayunaría", "desayune"],
-        correctAnswers: [2]
+        correctAnswers: [2],
+        explanation: "siempre_habitual"
     },
     {
         id: 48,
@@ -455,7 +479,8 @@ const exercises = [
         text: "Una vez _____ un accidente muy grave en esa esquina.",
         infinitive: "ver",
         options: ["veo", "vi", "veía", "veré", "vería", "vea"],
-        correctAnswers: [1]
+        correctAnswers: [1],
+        explanation: "poder_specific"
     },
     {
         id: 49,
@@ -464,7 +489,8 @@ const exercises = [
         text: "Hacía mucho calor cuando _____ de la oficina.",
         infinitive: "salir",
         options: ["salgo", "salí", "salía", "saldré", "saldría", "salga"],
-        correctAnswers: [1]
+        correctAnswers: [1],
+        explanation: "mientras_interrupted"
     },
     {
         id: 50,
@@ -473,7 +499,8 @@ const exercises = [
         text: "El teléfono _____ cuando estaba en la ducha.",
         infinitive: "sonar",
         options: ["suena", "sonó", "sonaba", "sonará", "sonaría", "suene"],
-        correctAnswers: [1]
+        correctAnswers: [1],
+        explanation: "mientras_interrupted"
     },
     {
         id: 51,
@@ -482,7 +509,8 @@ const exercises = [
         text: "_____ las tres de la mañana cuando llegaste.",
         infinitive: "ser",
         options: ["son", "fueron", "eran", "serán", "serían", "sean"],
-        correctAnswers: [2]
+        correctAnswers: [2],
+        explanation: "context_main"
     },
     {
         id: 52,
@@ -491,7 +519,8 @@ const exercises = [
         text: "No _____ dormir anoche por el ruido.",
         infinitive: "poder",
         options: ["puedo", "pude", "podía", "podré", "podría", "pueda"],
-        correctAnswers: [1]
+        correctAnswers: [1],
+        explanation: "ayer_past"
     },
     {
         id: 53,
@@ -500,7 +529,8 @@ const exercises = [
         text: "De niño, _____ muy tímido, pero un día decidí cambiar.",
         infinitive: "ser",
         options: ["soy", "fui", "era", "seré", "sería", "sea"],
-        correctAnswers: [2]
+        correctAnswers: [2],
+        explanation: "description_past"
     },
     {
         id: 54,
@@ -509,7 +539,8 @@ const exercises = [
         text: "El restaurante _____ lleno cuando llegamos.",
         infinitive: "estar",
         options: ["está", "estuvo", "estaba", "estará", "estaría", "esté"],
-        correctAnswers: [2]
+        correctAnswers: [2],
+        explanation: "context_main"
     },
     {
         id: 55,
@@ -518,7 +549,8 @@ const exercises = [
         text: "Como _____ lluvia, decidimos quedarnos en casa.",
         infinitive: "haber",
         options: ["hay", "hubo", "había", "habrá", "habría", "haya"],
-        correctAnswers: [2]
+        correctAnswers: [2],
+        explanation: "context_main"
     },
     {
         id: 56,
@@ -527,7 +559,8 @@ const exercises = [
         text: "No pude salir porque _____ enfermo.",
         infinitive: "estar",
         options: ["estoy", "estuve", "estaba", "estaré", "estaría", "esté"],
-        correctAnswers: [2]
+        correctAnswers: [2],
+        explanation: "description_past"
     },
     {
         id: 57,
@@ -536,7 +569,8 @@ const exercises = [
         text: "En aquella época, no _____ usar computadoras.",
         infinitive: "saber",
         options: ["sé", "supe", "sabía", "sabré", "sabría", "sepa"],
-        correctAnswers: [2]
+        correctAnswers: [2],
+        explanation: "saber_continuous"
     },
     {
         id: 58,
@@ -545,7 +579,8 @@ const exercises = [
         text: "El año pasado _____ español en la universidad.",
         infinitive: "estudiar",
         options: ["estudio", "estudié", "estudiaba", "estudiaré", "estudiaría", "estudie"],
-        correctAnswers: [2]
+        correctAnswers: [2],
+        explanation: "context_main"
     },
     {
         id: 59,
@@ -554,7 +589,8 @@ const exercises = [
         text: "Después de que _____ el examen, me sentí muy aliviado.",
         infinitive: "terminar",
         options: ["termino", "terminé", "terminaba", "terminaré", "terminaría", "termine"],
-        correctAnswers: [1]
+        correctAnswers: [1],
+        explanation: "sequence_completed"
     },
     {
         id: 60,
@@ -563,7 +599,8 @@ const exercises = [
         text: "Mis abuelos _____ de visita cada Navidad.",
         infinitive: "venir",
         options: ["vienen", "vinieron", "venían", "vendrán", "vendrían", "vengan"],
-        correctAnswers: [2]
+        correctAnswers: [2],
+        explanation: "cada_habitual"
     },
     {
         id: 61,
