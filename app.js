@@ -207,13 +207,13 @@ function renderExercise() {
     const exercise = currentExercise;
     
     exerciseContainer.innerHTML = `
-        <div class="exercise-header">
-            <span class="difficulty">${getDifficultyDots(exercise.difficulty)}</span>
-        </div>
-        
         <div class="question">
-            <div class="question-title">Completa la oración:</div>
+            <div class="question-title">
+                <span>Completa la oración:</span>
+                <span class="difficulty">${getDifficultyDots(exercise.difficulty)}</span>
+            </div>
             <div class="question-text">${exercise.text} <span class="infinitive">(${exercise.infinitive})</span></div>
+            <div class="keyboard-hint">💡 Usa las teclas A-F o 1-6 para responder, Enter/Espacio para continuar</div>
         </div>
         
         <div class="options">
