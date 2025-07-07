@@ -1,14 +1,13 @@
-// Spanish comprehensive tense exercises - 6 major tenses
+// Spanish comprehensive tense exercises - Clean format with 6 tenses
 // A = Presente, B = Pretérito, C = Imperfecto, D = Futuro, E = Condicional, F = Subjuntivo presente
 const exercises = [
-    // ========== LEVEL 1: Clear single-tense contexts ==========
     {
         id: 1,
         type: "Temporal Específico",
         difficulty: "Fácil",
         question: "Completa la oración:",
-        text: "Ayer _____ (llamar) a mi abuela por teléfono.",
-        hint: "(llamar)",
+        text: "Ayer _____ a mi abuela por teléfono.",
+        infinitive: "llamar",
         options: [
             "llamo",      // A: Presente
             "llamé",      // B: Pretérito  
@@ -33,8 +32,8 @@ const exercises = [
         type: "Temporal Específico",
         difficulty: "Fácil",
         question: "Completa la oración:",
-        text: "Mañana _____ (estudiar) para el examen.",
-        hint: "(estudiar)",
+        text: "Mañana _____ para el examen.",
+        infinitive: "estudiar",
         options: [
             "estudio",      // A: Presente
             "estudié",      // B: Pretérito  
@@ -59,8 +58,8 @@ const exercises = [
         type: "Hábitos Pasados",
         difficulty: "Fácil",
         question: "Completa la oración:",
-        text: "Cuando era niño, siempre _____ (jugar) en el parque.",
-        hint: "(jugar)",
+        text: "Cuando era niño, siempre _____ en el parque.",
+        infinitive: "jugar",
         options: [
             "juego",      // A: Presente
             "jugué",      // B: Pretérito  
@@ -85,8 +84,8 @@ const exercises = [
         type: "Presente Habitual",
         difficulty: "Fácil",
         question: "Completa la oración:",
-        text: "Todos los días _____ (trabajar) desde las 9 hasta las 5.",
-        hint: "(trabajar)",
+        text: "Todos los días _____ desde las 9 hasta las 5.",
+        infinitive: "trabajar",
         options: [
             "trabajo",     // A: Presente
             "trabajé",     // B: Pretérito  
@@ -111,8 +110,8 @@ const exercises = [
         type: "Subjuntivo",
         difficulty: "Medio",
         question: "Completa la oración:",
-        text: "Espero que _____ (venir) a mi fiesta.",
-        hint: "(venir)",
+        text: "Espero que _____ a mi fiesta.",
+        infinitive: "venir",
         options: [
             "viene",      // A: Presente
             "vino",       // B: Pretérito  
@@ -137,8 +136,8 @@ const exercises = [
         type: "Condicional",
         difficulty: "Medio",
         question: "Completa la oración:",
-        text: "Si tuviera dinero, _____ (viajar) por el mundo.",
-        hint: "(viajar)",
+        text: "Si tuviera dinero, _____ por el mundo.",
+        infinitive: "viajar",
         options: [
             "viajo",      // A: Presente
             "viajé",      // B: Pretérito  
@@ -163,8 +162,8 @@ const exercises = [
         type: "Verbos Irregulares",
         difficulty: "Medio",
         question: "Completa la oración:",
-        text: "Ayer no _____ (poder) ir al cine.",
-        hint: "(poder)",
+        text: "Ayer no _____ ir al cine.",
+        infinitive: "poder",
         options: [
             "puedo",      // A: Presente
             "pude",       // B: Pretérito  
@@ -189,8 +188,8 @@ const exercises = [
         type: "Múltiples Correctas",
         difficulty: "Difícil",
         question: "Completa la oración:",
-        text: "Cuando _____ (tener) tiempo, leo libros.",
-        hint: "(tener)",
+        text: "Cuando _____ tiempo, leo libros.",
+        infinitive: "tener",
         options: [
             "tengo",      // A: Presente
             "tuve",       // B: Pretérito  
@@ -215,8 +214,8 @@ const exercises = [
         type: "Interrupción",
         difficulty: "Medio",
         question: "Completa la oración:",
-        text: "Mientras _____ (ver) televisión, sonó el teléfono.",
-        hint: "(ver)",
+        text: "Mientras _____ televisión, sonó el teléfono.",
+        infinitive: "ver",
         options: [
             "veo",        // A: Presente
             "vi",         // B: Pretérito  
@@ -241,8 +240,8 @@ const exercises = [
         type: "Futuro Inmediato",
         difficulty: "Fácil",
         question: "Completa la oración:",
-        text: "El próximo año _____ (estudiar) en el extranjero.",
-        hint: "(estudiar)",
+        text: "El próximo año _____ en el extranjero.",
+        infinitive: "estudiar",
         options: [
             "estudio",      // A: Presente
             "estudié",      // B: Pretérito  
@@ -262,15 +261,13 @@ const exercises = [
         },
         primaryExplanation: "Se usa futuro para planes definidos con marcadores temporales específicos."
     },
-
-    // ========== LEVEL 2: More complex contexts ==========
     {
         id: 11,
         type: "Cortesía",
         difficulty: "Medio",
         question: "Completa la oración:",
-        text: "¿_____ (poder) ayudarme con esto, por favor?",
-        hint: "(poder)",
+        text: "¿_____ ayudarme con esto, por favor?",
+        infinitive: "poder",
         options: [
             "Puedes",     // A: Presente
             "Pudiste",    // B: Pretérito  
@@ -295,8 +292,8 @@ const exercises = [
         type: "Duda/Emoción",
         difficulty: "Difícil",
         question: "Completa la oración:",
-        text: "No creo que _____ (llover) mañana.",
-        hint: "(llover)",
+        text: "No creo que _____ mañana.",
+        infinitive: "llover",
         options: [
             "llueve",     // A: Presente
             "llovió",     // B: Pretérito  
@@ -321,8 +318,8 @@ const exercises = [
         type: "Descripción Pasada",
         difficulty: "Medio",
         question: "Completa la oración:",
-        text: "La casa _____ (ser) muy grande y tenía un jardín hermoso.",
-        hint: "(ser)",
+        text: "La casa _____ muy grande y tenía un jardín hermoso.",
+        infinitive: "ser",
         options: [
             "es",         // A: Presente
             "fue",        // B: Pretérito  
@@ -347,8 +344,8 @@ const exercises = [
         type: "Secuencia",
         difficulty: "Medio",
         question: "Completa la oración:",
-        text: "Primero _____ (desayunar), luego salí de casa.",
-        hint: "(desayunar)",
+        text: "Primero _____, luego salí de casa.",
+        infinitive: "desayunar",
         options: [
             "desayuno",    // A: Presente
             "desayuné",    // B: Pretérito  
@@ -373,8 +370,8 @@ const exercises = [
         type: "Hipótesis Pasada",
         difficulty: "Difícil",
         question: "Completa la oración:",
-        text: "En tu lugar, yo _____ (decir) la verdad.",
-        hint: "(decir)",
+        text: "En tu lugar, yo _____ la verdad.",
+        infinitive: "decir",
         options: [
             "digo",       // A: Presente
             "dije",       // B: Pretérito  
@@ -393,5 +390,135 @@ const exercises = [
             5: "Subjuntivo: No, es consejo hipotético, no duda/emoción"
         },
         primaryExplanation: "Se usa condicional para expresar lo que haríamos en situaciones hipotéticas."
+    },
+    {
+        id: 16,
+        type: "Hábitos Pasados",
+        difficulty: "Fácil",
+        question: "Completa la oración:",
+        text: "Cada verano _____ a la playa con mi familia.",
+        infinitive: "ir",
+        options: [
+            "voy",        // A: Presente
+            "fui",        // B: Pretérito  
+            "iba",        // C: Imperfecto
+            "iré",        // D: Futuro
+            "iría",       // E: Condicional
+            "vaya"        // F: Subjuntivo presente
+        ],
+        correctAnswers: [2], // C: Imperfecto
+        explanations: {
+            0: "Presente: No, el contexto sugiere pasado",
+            1: "Pretérito: No, 'cada verano' indica repetición, no evento único",
+            2: "Imperfecto: ✓ Correcto - 'cada verano' indica acción habitual repetida",
+            3: "Futuro: Posible para planes futuros, pero el contexto sugiere pasado",
+            4: "Condicional: No, no es hipotético",
+            5: "Subjuntivo: No, no hay duda ni emoción expresada"
+        },
+        primaryExplanation: "'Cada' + período de tiempo indica imperfecto para acciones habituales."
+    },
+    {
+        id: 17,
+        type: "Presente vs Futuro",
+        difficulty: "Medio",
+        question: "Completa la oración:",
+        text: "Siempre _____ la verdad, sin importar las consecuencias.",
+        infinitive: "decir",
+        options: [
+            "digo",       // A: Presente
+            "dije",       // B: Pretérito  
+            "decía",      // C: Imperfecto
+            "diré",       // D: Futuro
+            "diría",      // E: Condicional
+            "diga"        // F: Subjuntivo presente
+        ],
+        correctAnswers: [0, 3], // A: Presente, D: Futuro
+        explanations: {
+            0: "Presente: ✓ Correcto - principio o hábito actual",
+            1: "Pretérito: No, 'siempre' indica continuidad, no evento único",
+            2: "Imperfecto: No, sería para hábitos pasados",
+            3: "Futuro: ✓ Correcto - promesa o intención futura",
+            4: "Condicional: No, no es hipotético",
+            5: "Subjuntivo: No, no hay duda ni emoción expresada"
+        },
+        primaryExplanation: "Tanto presente (principio actual) como futuro (promesa) son correctos."
+    },
+    {
+        id: 18,
+        type: "Verbos Irregulares",
+        difficulty: "Medio",
+        question: "Completa la oración:",
+        text: "Ayer _____ que estudiar toda la noche.",
+        infinitive: "tener",
+        options: [
+            "tengo",      // A: Presente
+            "tuve",       // B: Pretérito  
+            "tenía",      // C: Imperfecto
+            "tendré",     // D: Futuro
+            "tendría",    // E: Condicional
+            "tenga"       // F: Subjuntivo presente
+        ],
+        correctAnswers: [1], // B: Pretérito
+        explanations: {
+            0: "Presente: No, 'ayer' indica pasado",
+            1: "Pretérito: ✓ Correcto - obligación específica de ayer",
+            2: "Imperfecto: No, 'ayer' sugiere evento específico, no habitual",
+            3: "Futuro: No, 'ayer' es pasado",
+            4: "Condicional: No, es hecho pasado, no hipotético",
+            5: "Subjuntivo: No, no hay duda ni emoción expresada"
+        },
+        primaryExplanation: "Pretérito para obligaciones específicas en el pasado."
+    },
+    {
+        id: 19,
+        type: "Estados vs Acciones",
+        difficulty: "Medio",
+        question: "Completa la oración:",
+        text: "Cuando llegué, él ya _____ en casa.",
+        infinitive: "estar",
+        options: [
+            "está",       // A: Presente
+            "estuvo",     // B: Pretérito  
+            "estaba",     // C: Imperfecto
+            "estará",     // D: Futuro
+            "estaría",    // E: Condicional
+            "esté"        // F: Subjuntivo presente
+        ],
+        correctAnswers: [2], // C: Imperfecto
+        explanations: {
+            0: "Presente: No, el contexto es pasado",
+            1: "Pretérito: No, describe estado continuo, no acción completada",
+            2: "Imperfecto: ✓ Correcto - estado continuo cuando otra acción ocurrió",
+            3: "Futuro: No, el contexto es pasado",
+            4: "Condicional: No, es hecho pasado, no hipotético",
+            5: "Subjuntivo: No, no hay duda ni emoción expresada"
+        },
+        primaryExplanation: "Se usa imperfecto para estados continuos en el pasado."
+    },
+    {
+        id: 20,
+        type: "Subjuntivo Deseo",
+        difficulty: "Difícil",
+        question: "Completa la oración:",
+        text: "Ojalá _____ buen tiempo este fin de semana.",
+        infinitive: "hacer",
+        options: [
+            "hace",       // A: Presente
+            "hizo",       // B: Pretérito  
+            "hacía",      // C: Imperfecto
+            "hará",       // D: Futuro
+            "haría",      // E: Condicional
+            "haga"        // F: Subjuntivo presente
+        ],
+        correctAnswers: [5], // F: Subjuntivo presente
+        explanations: {
+            0: "Presente: No, después de 'ojalá' se usa subjuntivo",
+            1: "Pretérito: No, después de 'ojalá' se usa subjuntivo",
+            2: "Imperfecto: No, después de 'ojalá' se usa subjuntivo",
+            3: "Futuro: No, después de 'ojalá' se usa subjuntivo",
+            4: "Condicional: No, después de 'ojalá' se usa subjuntivo",
+            5: "Subjuntivo: ✓ Correcto - 'ojalá' expresa deseo"
+        },
+        primaryExplanation: "'Ojalá' siempre requiere subjuntivo para expresar deseos."
     }
 ];

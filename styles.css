@@ -214,12 +214,6 @@ body {
     opacity: 0.7;
 }
 
-.option.disabled-tense {
-    opacity: 0.4;
-    background: #f8f9fa;
-    pointer-events: none;
-}
-
 .tense-indicator {
     font-size: 11px;
     color: var(--text-light);

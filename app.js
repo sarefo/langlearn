@@ -1,4 +1,4 @@
-// Spanish Language Learning App - 6 Tense System
+// Spanish Language Learning App - 6 Tense System with Clean Format
 // A = Presente, B = Pretérito, C = Imperfecto, D = Futuro, E = Condicional, F = Subjuntivo presente
 
 // App state
@@ -26,12 +26,38 @@ const accuracyEl = document.getElementById('accuracy');
 const streakEl = document.getElementById('streak');
 const exerciseContainer = document.getElementById('exercise-container');
 
+// Count exercises per tense
+function countExercisesPerTense() {
+    const counts = [0, 0, 0, 0, 0, 0]; // A, B, C, D, E, F
+    
+    exercises.forEach(exercise => {
+        exercise.correctAnswers.forEach(answerIndex => {
+            counts[answerIndex]++;
+        });
+    });
+    
+    return counts;
+}
+
 // Initialize app
 function init() {
     loadStats();
     initTenseSelector();
+    updateTenseCounts();
     shuffleExercises();
     loadExercise();
+}
+
+// Update tense counts in the UI
+function updateTenseCounts() {
+    const counts = countExercisesPerTense();
+    const tenseOptions = document.querySelectorAll('.tense-option');
+    
+    tenseOptions.forEach((option, index) => {
+        const label = option.querySelector('.tense-label');
+        const currentText = tenseNames[index];
+        label.textContent = `${currentText} (${counts[index]})`;
+    });
 }
 
 // Initialize tense selector
@@ -131,11 +157,6 @@ function loadExercise() {
     renderExercise();
 }
 
-// Process text to style infinitives in brackets
-function processInfinitives(text) {
-    return text.replace(/\(([^)]+)\)/g, '<span class="infinitive">($1)</span>');
-}
-
 // Check if an answer is correct for current tense selection
 function isAnswerCorrect(selectedIndex) {
     return currentExercise.correctAnswers.includes(selectedIndex) && 
@@ -162,17 +183,15 @@ function renderExercise() {
         
         <div class="question">
             <div class="question-title">${exercise.question}</div>
-            <div class="question-text">${processInfinitives(exercise.text)}</div>
+            <div class="question-text">${exercise.text} <span class="infinitive">(${exercise.infinitive})</span></div>
         </div>
         
         <div class="options">
             ${exercise.options.map((option, index) => {
                 const letter = String.fromCharCode(65 + index); // A, B, C, D, E, F
-                const isInSelectedTenses = selectedTenses.includes(index);
-                const optionClass = isInSelectedTenses ? 'option' : 'option disabled-tense';
                 
                 return `
-                    <div class="${optionClass}" onclick="selectOption(${index})">
+                    <div class="option" onclick="selectOption(${index})">
                         <div class="option-letter">${letter}</div>
                         <span>${option}</span>
                         <span class="tense-indicator">(${tenseNames[index]})</span>
