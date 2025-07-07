@@ -56,7 +56,7 @@ function updateTenseCounts() {
     tenseOptions.forEach((option, index) => {
         const label = option.querySelector('.tense-label');
         const currentText = tenseNames[index];
-        label.textContent = `${currentText} (${counts[index]})`;
+        label.innerHTML = `${currentText}<span style="float: right">(${counts[index]})</span>`;
     });
 }
 
