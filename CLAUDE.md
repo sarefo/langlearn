@@ -4,64 +4,95 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Development Commands
 
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm run preview` - Preview production build
-- `npm run lint` - Run ESLint to check for code issues
+**Note: This app now uses vanilla JavaScript instead of React for simplicity and performance.**
+
+- a server is already running at localhost:8000
+- No build step required - edit `index.html` directly
+- Deploy directly to GitHub Pages - just push `index.html`
 
 ## Architecture Overview
+
+### Technology Stack
+The app is built with **vanilla HTML/CSS/JavaScript** for:
+- **Zero build complexity** - No Node.js, Vite, or React dependencies
+- **Lightning fast** - Minimal file size (~8KB vs 200KB+ React bundle)
+- **GitHub Pages ready** - Deploy instantly without build steps
+- **Maximum compatibility** - Works on all devices and browsers
 
 ### Core Learning System
 The app implements a sophisticated dual-algorithm approach:
 
-1. **Spaced Repetition System** (`src/utils/spacedRepetition.js`):
-   - Manages exercise intervals: 1 day → 3 days → 1 week → 2 weeks → 1 month
-   - Tracks per-exercise accuracy, difficulty, and scheduling
-   - Uses localStorage keys: `langlearn_exercise_data`, `langlearn_last_review`
+1. **Statistics Tracking** (localStorage):
+   - Tracks correct/total answers and accuracy percentage
+   - Uses localStorage key: `langlearn_stats`
 
-2. **Habit Tracking System** (`src/utils/habitTracker.js`):
-   - Manages daily streaks and consistency metrics
-   - Provides motivational messaging and milestone rewards
-   - Uses localStorage keys: `langlearn_streak_data`, `langlearn_daily_goals`
+2. **Daily Streak System** (localStorage):
+   - Manages daily streaks for habit formation
+   - Updates only on first correct answer each day
+   - Uses localStorage keys: `langlearn_streak`, `langlearn_last_streak_date`
 
-### Component Architecture
-- **App.jsx** - Main orchestrator, manages state and data flow between learning systems
-- **Exercise.jsx** - Core exercise component with answer feedback and statistics
-- **Progress.jsx** - Displays accuracy and overall progress metrics
-- **HabitTracker.jsx** - Shows streak counter and daily goals
+### Application Structure
+- **index.html** - Single-file application with embedded CSS and JavaScript
+- **favicon.svg** - SVG favicon with clock icon representing past tenses
+- **Exercises array** - 15 comprehensive exercises covering all Spanish subjects and tenses
 
 ### Data Flow
-1. Exercises loaded from `src/data/exercises.js` (47 exercises with metadata)
-2. `getNextExercise()` uses spaced repetition algorithm to prioritize exercises
-3. User answers trigger `updateProgress()` which adjusts intervals and difficulty
-4. Correct answers update streaks via `updateStreak()`
-5. All progress persists to localStorage for session continuity
+1. Exercises loaded from embedded JavaScript array (15 exercises with metadata)
+2. `shuffleExercises()` randomizes order for variety
+3. User answers trigger statistics and streak updates
+4. Progress persists to localStorage for session continuity
+5. Results appear directly below correct option for immediate feedback
 
 ### Key Features
 - **Spanish-only interface** for immersion learning
-- **Keyboard navigation** (A-D keys for answers, Enter/Space to continue)
-- **React-only deployment** - Built for production via Vite
-- **Answer shuffling** to prevent pattern memorization
-- **Contextual explanations** with learning tips for each exercise
-- **HTML rendering** for infinitive verb hints in gray
+- **Dual keyboard navigation** (A-D keys AND 1-4 number keys for answers, Enter/Space to continue)
+- **Vanilla JS deployment** - Single HTML file, no build process
+- **Exercise shuffling** with auto-reshuffle when all exercises completed
+- **Contextual explanations** with grammatical reasoning for each exercise
+- **Infinitive styling** - Verbs in parentheses displayed in gray italic
 - **Inline result display** - Results appear directly below correct answer
+- **Mobile-first responsive design** - Fits perfectly on Pixel 7a and larger screens
 
-### MCP Context7 Integration
-- Always use Context7 MCP to get the latest versions and best practices for all libraries and frameworks
-- Before implementing any new dependency, check Context7 for the most up-to-date documentation
-- Use Context7 to verify React, Vite, and other tooling best practices
+### Layout Design
+- **Exercise-focused layout** - Main exercise takes ~80% of screen space
+- **Progress cards at bottom** - Compact, unobtrusive progress tracking
+- **Optimal font sizes** - 16px base, 18px titles, 16px options for excellent readability
+- **Screen-filling design** - Uses 100% of available height on all devices
+- **Top-aligned content** - Natural reading flow from header to exercise to stats
 
-### Content Focus
-- Spanish past tenses: Preterite vs Imperfect distinction
-- Common irregular verbs (tener, saber, poder, venir)
-- Context-based sentence completion exercises
-- Progressive difficulty from basic to advanced scenarios
-- 47 exercises across 6 categories: Pretérito vs Imperfecto, Verbos Irregulares, Descripciones, Tiempo y Frecuencia, Secuencias
+### Exercise Content
+- **Spanish past tenses**: Preterite vs Imperfect distinction
+- **All subjects covered**: Yo, Tú, Él/Ella, Nosotros, Ellos/Ellas, Usted
+- **Irregular verbs**: poder, tener, venir, hacer, saber, poner
+- **Context-based scenarios**: Specific actions vs habitual actions vs descriptions
+- **Progressive difficulty**: Fácil → Medio → Difícil
+- **15 exercises across 6 categories**: Pretérito vs Imperfecto, Verbos Irregulares, Descripciones, Tiempo y Frecuencia, Secuencias
+
+### Browser Compatibility
+- **Modern SVG favicon** - Works in all current browsers
+- **Keyboard event handling** - Ignores modifier keys (Ctrl, Alt, etc.) to prevent conflicts
+- **Touch-friendly** - Large tap targets (24px option letters, generous padding)
+- **Responsive breakpoints** - Optimized for mobile (≤480px) and tablet (≤768px)
 
 ### Deployment Workflow
-- **Development**: `npm run dev` for local development with hot reload
-- **Current Build**: Single HTML file in `dist/index.html` with all assets inlined
-- **Deploy**: Upload `dist/index.html` to GitHub Pages or any static host
-- **Test Local**: `python -m http.server 8000` then visit `/langlearn/dist/index.html`
-- **GitHub Pages**: Accessible via parent index.html link or direct URL
-- **Note**: Future React builds can be created with `npm run build` when Node.js/Vite setup is working
+- **Development**: Edit `index.html` directly
+- **Current State**: Single `index.html` file with all functionality embedded
+- **Deploy**: Simply push `index.html` to GitHub Pages - works immediately
+- **Test Local**: Visit `http://localhost:8000/langlearn/` 
+- **GitHub Pages**: Accessible instantly at your GitHub Pages URL
+- **Performance**: Fast loading (~8KB), excellent mobile performance
+
+### Best Practices for Updates
+- **Edit index.html directly** - All code is in one maintainable file
+- **Test on multiple screen sizes** - Ensure mobile and desktop compatibility
+- **Keep functions small** - JavaScript is organized in clear, focused functions
+- **Maintain accessibility** - Keyboard navigation and clear visual feedback
+- **Preserve localStorage keys** - Don't break existing user progress
+- **Test keyboard shortcuts** - Verify A-D, 1-4, Enter, and Space keys work correctly
+
+### Adding New Exercises
+1. Add new exercise objects to the `exercises` array in the JavaScript section
+2. Follow the existing structure: `{id, type, difficulty, question, text, options, correct, explanation}`
+3. Use `processInfinitives()` for verbs in parentheses - they'll automatically be styled gray/italic
+4. Ensure explanations are educational and concise
+5. Test with different screen sizes to ensure layout remains optimal
