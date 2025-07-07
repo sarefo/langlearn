@@ -1,5 +1,5 @@
-// Spanish comprehensive tense exercises - Converted from backup with 65 exercises
-// A = Presente, B = Pretérito, C = Imperfecto, D = Futuro, E = Condicional, F = Subjuntivo presente
+// Spanish comprehensive tense exercises
+// Always give options in this order: A = Presente, B = Pretérito, C = Imperfecto, D = Futuro, E = Condicional, F = Subjuntivo presente
 const exercises = [
     {
         id: 1,
@@ -92,7 +92,7 @@ const exercises = [
             "sabía",
             "sabré",
             "sabría",
-            "sepa" 
+            "sepa"
         ],
         correctAnswers: [2],
         explanations: {
@@ -118,7 +118,7 @@ const exercises = [
             "iba",
             "iré",
             "iría",
-            "vaya" 
+            "vaya"
         ],
         correctAnswers: [2],
         explanations: {
@@ -144,7 +144,7 @@ const exercises = [
             "sabía",
             "sabré",
             "sabría",
-            "sepa" 
+            "sepa"
         ],
         correctAnswers: [1],
         explanations: {
@@ -196,7 +196,7 @@ const exercises = [
             "veía",
             "veré",
             "vería",
-            "vea"  
+            "vea"
         ],
         correctAnswers: [2],
         explanations: {
@@ -430,7 +430,7 @@ const exercises = [
             "veías",
             "verás",
             "verías",
-            "veas" 
+            "veas"
         ],
         correctAnswers: [1],
         explanations: {
@@ -534,7 +534,7 @@ const exercises = [
             "era",
             "será",
             "sería",
-            "sea"  
+            "sea"
         ],
         correctAnswers: [2],
         explanations: {
@@ -612,7 +612,7 @@ const exercises = [
             "sabía",
             "sabrá",
             "sabría",
-            "sepa" 
+            "sepa"
         ],
         correctAnswers: [1],
         explanations: {
@@ -638,7 +638,7 @@ const exercises = [
             "estaba",
             "estaré",
             "estaría",
-            "esté" 
+            "esté"
         ],
         correctAnswers: [2],
         explanations: {
@@ -690,7 +690,7 @@ const exercises = [
             "era",
             "será",
             "sería",
-            "sea"  
+            "sea"
         ],
         correctAnswers: [2],
         explanations: {
@@ -1106,7 +1106,7 @@ const exercises = [
             "estaba",
             "estará",
             "estaría",
-            "esté" 
+            "esté"
         ],
         correctAnswers: [2],
         explanations: {
@@ -1132,7 +1132,7 @@ const exercises = [
             "iba",
             "iré",
             "iría",
-            "vaya" 
+            "vaya"
         ],
         correctAnswers: [2],
         explanations: {
@@ -1236,7 +1236,7 @@ const exercises = [
             "veía",
             "veré",
             "vería",
-            "vea"  
+            "vea"
         ],
         correctAnswers: [1],
         explanations: {
@@ -1314,7 +1314,7 @@ const exercises = [
             "eran",
             "serán",
             "serían",
-            "sean" 
+            "sean"
         ],
         correctAnswers: [2],
         explanations: {
@@ -1366,7 +1366,7 @@ const exercises = [
             "era",
             "seré",
             "sería",
-            "sea"  
+            "sea"
         ],
         correctAnswers: [2],
         explanations: {
@@ -1392,7 +1392,7 @@ const exercises = [
             "estaba",
             "estará",
             "estaría",
-            "esté" 
+            "esté"
         ],
         correctAnswers: [2],
         explanations: {
@@ -1418,7 +1418,7 @@ const exercises = [
             "había",
             "habrá",
             "habría",
-            "haya" 
+            "haya"
         ],
         correctAnswers: [2],
         explanations: {
@@ -1444,7 +1444,7 @@ const exercises = [
             "estaba",
             "estaré",
             "estaría",
-            "esté" 
+            "esté"
         ],
         correctAnswers: [2],
         explanations: {
@@ -1470,7 +1470,7 @@ const exercises = [
             "sabía",
             "sabré",
             "sabría",
-            "sepa" 
+            "sepa"
         ],
         correctAnswers: [2],
         explanations: {
@@ -1574,7 +1574,7 @@ const exercises = [
             "vivía",
             "viviré",
             "viviría",
-            "viva" 
+            "viva"
         ],
         correctAnswers: [2],
         explanations: {
@@ -1600,7 +1600,7 @@ const exercises = [
             "hacía",
             "hará",
             "haría",
-            "haga" 
+            "haga"
         ],
         correctAnswers: [1],
         explanations: {
