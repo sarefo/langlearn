@@ -318,6 +318,395 @@ const explanations = {
             3: "Expresa certeza futura",
             4: "Condición hipotética con 'supiera'",
             5: "No hay duda ni emoción"
+        },
+        
+        // Futuro patterns
+        "manana_future": {
+            0: "El contexto es futuro",
+            1: "Se refiere al pasado, no mañana",
+            2: "Se refiere al pasado habitual",
+            3: "'Mañana' indica acción futura",
+            4: "No es hipotético, es plan definido",
+            5: "No hay duda ni emoción"
+        },
+        
+        "proximo_future": {
+            0: "El contexto es futuro",
+            1: "Se refiere al pasado, no futuro",
+            2: "Se refiere al pasado habitual",
+            3: "'Próximo' indica tiempo futuro",
+            4: "No es hipotético, es plan definido",
+            5: "No hay duda ni emoción"
+        },
+        
+        "tiempo_future": {
+            0: "El contexto es futuro",
+            1: "Se refiere al pasado, no futuro",
+            2: "Se refiere al pasado habitual",
+            3: "Indica momento específico en el futuro",
+            4: "No es hipotético, es plan definido",
+            5: "No hay duda ni emoción"
+        },
+        
+        "pregunta_future": {
+            0: "El contexto es futuro",
+            1: "Se refiere al pasado, no futuro",
+            2: "Se refiere al pasado habitual",
+            3: "Pregunta sobre acción futura",
+            4: "No es hipotético, es pregunta directa",
+            5: "No hay duda ni emoción"
+        },
+        
+        "esta_noche_future": {
+            0: "El contexto es futuro",
+            1: "Se refiere al pasado, no esta noche",
+            2: "Se refiere al pasado habitual",
+            3: "'Esta noche' indica tiempo futuro",
+            4: "No es hipotético, es plan definido",
+            5: "No hay duda ni emoción"
+        },
+        
+        "despues_future": {
+            0: "El contexto es futuro",
+            1: "Se refiere al pasado, no después",
+            2: "Se refiere al pasado habitual",
+            3: "'Después' indica secuencia futura",
+            4: "No es hipotético, es plan definido",
+            5: "No hay duda ni emoción"
+        },
+        
+        "capacidad_future": {
+            0: "El contexto es futuro",
+            1: "Se refiere al pasado, no futuro",
+            2: "Se refiere al pasado habitual",
+            3: "Capacidad en situación futura",
+            4: "No es hipotético, es realidad futura",
+            5: "No hay duda ni emoción"
+        },
+        
+        "si_estudias_future": {
+            0: "El contexto es futuro",
+            1: "Se refiere al pasado, no futuro",
+            2: "Se refiere al pasado habitual",
+            3: "Resultado futuro de condición presente",
+            4: "No es hipotético, es causa-efecto",
+            5: "No hay duda ni emoción"
+        },
+        
+        "domingo_future": {
+            0: "El contexto es futuro",
+            1: "Se refiere al pasado, no domingo",
+            2: "Se refiere al pasado habitual",
+            3: "'El domingo' indica día futuro",
+            4: "No es hipotético, es plan definido",
+            5: "No hay duda ni emoción"
+        },
+        
+        "dentro_poco_future": {
+            0: "El contexto es futuro",
+            1: "Se refiere al pasado, no futuro",
+            2: "Se refiere al pasado habitual",
+            3: "'Dentro de poco' indica futuro cercano",
+            4: "No es hipotético, es certeza futura",
+            5: "No hay duda ni emoción"
+        },
+        
+        "pronto_future": {
+            0: "El contexto es futuro",
+            1: "Se refiere al pasado, no pronto",
+            2: "Se refiere al pasado habitual",
+            3: "'Pronto' indica futuro cercano",
+            4: "No es hipotético, es plan definido",
+            5: "No hay duda ni emoción"
+        },
+        
+        "algun_dia_future": {
+            0: "El contexto es futuro",
+            1: "Se refiere al pasado, no futuro",
+            2: "Se refiere al pasado habitual",
+            3: "'Algún día' indica futuro indefinido",
+            4: "No es hipotético, es posibilidad futura",
+            5: "No hay duda ni emoción"
+        },
+        
+        "cuando_seas_future": {
+            0: "El contexto es futuro",
+            1: "Se refiere al pasado, no futuro",
+            2: "Se refiere al pasado habitual",
+            3: "Acción futura dependiente de otra",
+            4: "No es hipotético, es secuencia futura",
+            5: "No hay duda ni emoción"
+        },
+        
+        "proxima_semana_future": {
+            0: "El contexto es futuro",
+            1: "Se refiere al pasado, no próxima semana",
+            2: "Se refiere al pasado habitual",
+            3: "'Próxima semana' indica tiempo futuro",
+            4: "No es hipotético, es plan definido",
+            5: "No hay duda ni emoción"
+        },
+        
+        "en_futuro_future": {
+            0: "El contexto es futuro",
+            1: "Se refiere al pasado, no futuro",
+            2: "Se refiere al pasado habitual",
+            3: "'En el futuro' indica tiempo futuro",
+            4: "No es hipotético, es predicción",
+            5: "No hay duda ni emoción"
+        },
+        
+        "si_no_llueve_future": {
+            0: "El contexto es futuro",
+            1: "Se refiere al pasado, no futuro",
+            2: "Se refiere al pasado habitual",
+            3: "Plan futuro dependiente de condición",
+            4: "No es hipotético, es plan condicional",
+            5: "No hay duda ni emoción"
+        },
+        
+        "proximo_viaje_future": {
+            0: "El contexto es futuro",
+            1: "Se refiere al pasado, no próximo viaje",
+            2: "Se refiere al pasado habitual",
+            3: "'Próximo viaje' indica evento futuro",
+            4: "No es hipotético, es plan definido",
+            5: "No hay duda ni emoción"
+        },
+        
+        "no_sabre_future": {
+            0: "El contexto es futuro",
+            1: "Se refiere al pasado, no futuro",
+            2: "Se refiere al pasado habitual",
+            3: "Incertidumbre sobre situación futura",
+            4: "No es hipotético, es realidad futura",
+            5: "No hay duda ni emoción"
+        },
+        
+        "despues_cenar_future": {
+            0: "El contexto es futuro",
+            1: "Se refiere al pasado, no después",
+            2: "Se refiere al pasado habitual",
+            3: "'Después de cenar' indica secuencia futura",
+            4: "No es hipotético, es plan definido",
+            5: "No hay duda ni emoción"
+        },
+        
+        "ano_viene_future": {
+            0: "El contexto es futuro",
+            1: "Se refiere al pasado, no año que viene",
+            2: "Se refiere al pasado habitual",
+            3: "'Año que viene' indica tiempo futuro",
+            4: "No es hipotético, es plan definido",
+            5: "No hay duda ni emoción"
+        },
+        
+        "cuando_termine_future": {
+            0: "El contexto es futuro",
+            1: "Se refiere al pasado, no futuro",
+            2: "Se refiere al pasado habitual",
+            3: "Acción futura dependiente de otra",
+            4: "No es hipotético, es secuencia futura",
+            5: "No hay duda ni emoción"
+        },
+        
+        "seguramente_future": {
+            0: "El contexto es futuro",
+            1: "Se refiere al pasado, no futuro",
+            2: "Se refiere al pasado habitual",
+            3: "'Seguramente' indica probabilidad futura",
+            4: "No es hipotético, es predicción probable",
+            5: "No hay duda ni emoción"
+        },
+        
+        "manana_temprano_future": {
+            0: "El contexto es futuro",
+            1: "Se refiere al pasado, no mañana",
+            2: "Se refiere al pasado habitual",
+            3: "'Mañana' indica acción futura",
+            4: "No es hipotético, es plan definido",
+            5: "No hay duda ni emoción"
+        },
+        
+        // Presente patterns
+        "siempre_presente": {
+            0: "'Siempre' indica hábito actual",
+            1: "Se refiere al pasado, no presente",
+            2: "Se refiere al pasado habitual",
+            3: "Se refiere al futuro, no presente",
+            4: "No es hipotético, es hecho actual",
+            5: "No hay duda ni emoción"
+        },
+        
+        "habilidad_presente": {
+            0: "Habilidad que se posee actualmente",
+            1: "Se refiere al pasado, no presente",
+            2: "Se refiere al pasado habitual",
+            3: "Se refiere al futuro, no presente",
+            4: "No es hipotético, es hecho actual",
+            5: "No hay duda ni emoción"
+        },
+        
+        "estado_presente": {
+            0: "Estado actual y permanente",
+            1: "Se refiere al pasado, no presente",
+            2: "Se refiere al pasado habitual",
+            3: "Se refiere al futuro, no presente",
+            4: "No es hipotético, es realidad actual",
+            5: "No hay duda ni emoción"
+        },
+        
+        "hoy_presente": {
+            0: "'Hoy' indica presente actual",
+            1: "Se refiere al pasado, no hoy",
+            2: "Se refiere al pasado habitual",
+            3: "Se refiere al futuro, no hoy",
+            4: "No es hipotético, es situación actual",
+            5: "No hay duda ni emoción"
+        },
+        
+        "origen_presente": {
+            0: "Origen actual y permanente",
+            1: "Se refiere al pasado, no presente",
+            2: "Se refiere al pasado habitual",
+            3: "Se refiere al futuro, no presente",
+            4: "No es hipotético, es realidad actual",
+            5: "No hay duda ni emoción"
+        },
+        
+        "rutina_presente": {
+            0: "Rutina habitual actual",
+            1: "Se refiere al pasado, no presente",
+            2: "Se refiere al pasado habitual",
+            3: "Se refiere al futuro, no presente",
+            4: "No es hipotético, es hábito actual",
+            5: "No hay duda ni emoción"
+        },
+        
+        "pregunta_presente": {
+            0: "Pregunta sobre situación actual",
+            1: "Se refiere al pasado, no presente",
+            2: "Se refiere al pasado habitual",
+            3: "Se refiere al futuro, no presente",
+            4: "No es hipotético, es pregunta directa",
+            5: "No hay duda ni emoción"
+        },
+        
+        "estado_actual": {
+            0: "Estado presente y temporal",
+            1: "Se refiere al pasado, no presente",
+            2: "Se refiere al pasado habitual",
+            3: "Se refiere al futuro, no presente",
+            4: "No es hipotético, es situación actual",
+            5: "No hay duda ni emoción"
+        },
+        
+        "profesion_presente": {
+            0: "Profesión actual y permanente",
+            1: "Se refiere al pasado, no presente",
+            2: "Se refiere al pasado habitual",
+            3: "Se refiere al futuro, no presente",
+            4: "No es hipotético, es realidad actual",
+            5: "No hay duda ni emoción"
+        },
+        
+        "deseo_presente": {
+            0: "Deseo o intención actual",
+            1: "Se refiere al pasado, no presente",
+            2: "Se refiere al pasado habitual",
+            3: "Se refiere al futuro, no presente",
+            4: "No es hipotético, es sentimiento actual",
+            5: "No hay duda ni emoción"
+        },
+        
+        "accion_presente": {
+            0: "Acción habitual o actual",
+            1: "Se refiere al pasado, no presente",
+            2: "Se refiere al pasado habitual",
+            3: "Se refiere al futuro, no presente",
+            4: "No es hipotético, es acción actual",
+            5: "No hay duda ni emoción"
+        },
+        
+        "actividad_presente": {
+            0: "Actividad habitual actual",
+            1: "Se refiere al pasado, no presente",
+            2: "Se refiere al pasado habitual",
+            3: "Se refiere al futuro, no presente",
+            4: "No es hipotético, es actividad actual",
+            5: "No hay duda ni emoción"
+        },
+        
+        "mientras_presente": {
+            0: "Acción simultánea actual",
+            1: "Se refiere al pasado, no presente",
+            2: "Se refiere al pasado habitual",
+            3: "Se refiere al futuro, no presente",
+            4: "No es hipotético, es situación actual",
+            5: "No hay duda ni emoción"
+        },
+        
+        "habito_presente": {
+            0: "Hábito o comportamiento actual",
+            1: "Se refiere al pasado, no presente",
+            2: "Se refiere al pasado habitual",
+            3: "Se refiere al futuro, no presente",
+            4: "No es hipotético, es comportamiento actual",
+            5: "No hay duda ni emoción"
+        },
+        
+        "obligacion_presente": {
+            0: "Obligación o necesidad actual",
+            1: "Se refiere al pasado, no presente",
+            2: "Se refiere al pasado habitual",
+            3: "Se refiere al futuro, no presente",
+            4: "No es hipotético, es necesidad actual",
+            5: "No hay duda ni emoción"
+        },
+        
+        "capacidad_presente": {
+            0: "Capacidad o habilidad actual",
+            1: "Se refiere al pasado, no presente",
+            2: "Se refiere al pasado habitual",
+            3: "Se refiere al futuro, no presente",
+            4: "No es hipotético, es habilidad actual",
+            5: "No hay duda ni emoción"
+        },
+        
+        "frecuencia_presente": {
+            0: "Acción frecuente actual",
+            1: "Se refiere al pasado, no presente",
+            2: "Se refiere al pasado habitual",
+            3: "Se refiere al futuro, no presente",
+            4: "No es hipotético, es hábito actual",
+            5: "No hay duda ni emoción"
+        },
+        
+        "cuando_presente": {
+            0: "Situación habitual actual",
+            1: "Se refiere al pasado, no presente",
+            2: "Se refiere al pasado habitual",
+            3: "Se refiere al futuro, no presente",
+            4: "No es hipotético, es reacción actual",
+            5: "No hay duda ni emoción"
+        },
+        
+        "costumbre_presente": {
+            0: "Costumbre habitual actual",
+            1: "Se refiere al pasado, no presente",
+            2: "Se refiere al pasado habitual",
+            3: "Se refiere al futuro, no presente",
+            4: "No es hipotético, es hábito actual",
+            5: "No hay duda ni emoción"
+        },
+        
+        "generalmente_presente": {
+            0: "'Generalmente' indica hábito actual",
+            1: "Se refiere al pasado, no presente",
+            2: "Se refiere al pasado habitual",
+            3: "Se refiere al futuro, no presente",
+            4: "No es hipotético, es rutina actual",
+            5: "No hay duda ni emoción"
         }
     }
 };
