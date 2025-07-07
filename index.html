@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Entrenador de Tiempos Pasados - Español</title>
+    <title>Entrenador de Tiempos Verbales - Español</title>
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="apple-touch-icon" href="favicon.svg">
     <link rel="stylesheet" href="styles.css">
@@ -11,13 +11,49 @@
 <body>
     <div class="app">
         <header class="header">
-            <h1>Entrenador de Tiempos Pasados</h1>
-            <p class="subtitle">Domina el pretérito e imperfecto en español</p>
+            <h1>Entrenador de Tiempos Verbales</h1>
+            <p class="subtitle">Domina los 6 tiempos principales del español</p>
         </header>
 
         <main class="main">
             <div class="exercise fade-in" id="exercise-container">
                 <div class="loading">Cargando ejercicio...</div>
+            </div>
+            
+            <div class="tense-selector">
+                <h4>Tiempos verbales incluidos:</h4>
+                <div class="tense-grid">
+                    <div class="tense-option selected" data-tense="0">
+                        <div class="tense-checkbox"></div>
+                        <div class="tense-letter">A</div>
+                        <span class="tense-label">Presente</span>
+                    </div>
+                    <div class="tense-option selected" data-tense="1">
+                        <div class="tense-checkbox"></div>
+                        <div class="tense-letter">B</div>
+                        <span class="tense-label">Pretérito</span>
+                    </div>
+                    <div class="tense-option selected" data-tense="2">
+                        <div class="tense-checkbox"></div>
+                        <div class="tense-letter">C</div>
+                        <span class="tense-label">Imperfecto</span>
+                    </div>
+                    <div class="tense-option" data-tense="3">
+                        <div class="tense-checkbox"></div>
+                        <div class="tense-letter">D</div>
+                        <span class="tense-label">Futuro</span>
+                    </div>
+                    <div class="tense-option" data-tense="4">
+                        <div class="tense-checkbox"></div>
+                        <div class="tense-letter">E</div>
+                        <span class="tense-label">Condicional</span>
+                    </div>
+                    <div class="tense-option" data-tense="5">
+                        <div class="tense-checkbox"></div>
+                        <div class="tense-letter">F</div>
+                        <span class="tense-label">Subjuntivo</span>
+                    </div>
+                </div>
             </div>
             
             <div class="dashboard">
@@ -46,7 +82,7 @@
                 </div>
             </div>
             
-            <div class="keyboard-hint">💡 Usa las teclas A-D o 1-4 para responder, Enter/Espacio para continuar</div>
+            <div class="keyboard-hint">💡 Usa las teclas A-F o 1-6 para responder, Enter/Espacio para continuar</div>
         </main>
     </div>
 

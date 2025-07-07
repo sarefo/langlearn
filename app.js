@@ -1,4 +1,5 @@
-// Spanish Language Learning App - Main Application Logic
+// Spanish Language Learning App - 6 Tense System
+// A = Presente, B = Pretérito, C = Imperfecto, D = Futuro, E = Condicional, F = Subjuntivo presente
 
 // App state
 let currentExercise = null;
@@ -6,6 +7,17 @@ let currentIndex = 0;
 let stats = { correct: 0, total: 0 };
 let streak = 0;
 let answered = false;
+let selectedTenses = [0, 1, 2]; // Default: A, B, C (Presente, Pretérito, Imperfecto)
+
+// Tense names for display
+const tenseNames = [
+    'Presente',      // A
+    'Pretérito',     // B
+    'Imperfecto',    // C
+    'Futuro',        // D
+    'Condicional',   // E
+    'Subjuntivo'     // F
+];
 
 // DOM elements
 const correctEl = document.getElementById('correct');
@@ -17,16 +29,57 @@ const exerciseContainer = document.getElementById('exercise-container');
 // Initialize app
 function init() {
     loadStats();
+    initTenseSelector();
     shuffleExercises();
     loadExercise();
 }
 
+// Initialize tense selector
+function initTenseSelector() {
+    const tenseOptions = document.querySelectorAll('.tense-option');
+    tenseOptions.forEach((option, index) => {
+        option.addEventListener('click', () => toggleTense(index));
+    });
+}
+
+// Toggle tense selection
+function toggleTense(tenseIndex) {
+    const option = document.querySelector(`[data-tense="${tenseIndex}"]`);
+    
+    if (selectedTenses.includes(tenseIndex)) {
+        // Don't allow unchecking if it's the last one selected
+        if (selectedTenses.length === 1) {
+            return;
+        }
+        selectedTenses = selectedTenses.filter(t => t !== tenseIndex);
+        option.classList.remove('selected');
+    } else {
+        selectedTenses.push(tenseIndex);
+        selectedTenses.sort(); // Keep sorted for consistency
+        option.classList.add('selected');
+    }
+    
+    // Reshuffle and reload exercise with new tense selection
+    shuffleExercises();
+    loadExercise();
+}
+
+// Filter exercises that have at least one correct answer in selected tenses
+function getFilteredExercises() {
+    return exercises.filter(exercise => {
+        return exercise.correctAnswers.some(answer => selectedTenses.includes(answer));
+    });
+}
+
 // Shuffle exercises for variety
 function shuffleExercises() {
-    for (let i = exercises.length - 1; i > 0; i--) {
+    const filteredExercises = getFilteredExercises();
+    for (let i = filteredExercises.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
-        [exercises[i], exercises[j]] = [exercises[j], exercises[i]];
+        [filteredExercises[i], filteredExercises[j]] = [filteredExercises[j], filteredExercises[i]];
     }
+    // Update the global exercises array with filtered and shuffled exercises
+    window.filteredExercises = filteredExercises;
 }
 
 // Load stats from localStorage
@@ -61,12 +114,19 @@ function updateStatsDisplay() {
 
 // Load current exercise
 function loadExercise() {
-    if (currentIndex >= exercises.length) {
+    const availableExercises = window.filteredExercises || getFilteredExercises();
+    
+    if (availableExercises.length === 0) {
+        exerciseContainer.innerHTML = '<div class="loading">No hay ejercicios disponibles para los tiempos seleccionados.</div>';
+        return;
+    }
+    
+    if (currentIndex >= availableExercises.length) {
         currentIndex = 0; // Loop back to start
         shuffleExercises(); // Reshuffle for variety
     }
     
-    currentExercise = exercises[currentIndex];
+    currentExercise = availableExercises[currentIndex];
     answered = false;
     renderExercise();
 }
@@ -74,6 +134,20 @@ function loadExercise() {
 // Process text to style infinitives in brackets
 function processInfinitives(text) {
     return text.replace(/\(([^)]+)\)/g, '<span class="infinitive">($1)</span>');
+}
+
+// Check if an answer is correct for current tense selection
+function isAnswerCorrect(selectedIndex) {
+    return currentExercise.correctAnswers.includes(selectedIndex) && 
+           selectedTenses.includes(selectedIndex);
+}
+
+// Get the best correct answer from selected tenses
+function getBestCorrectAnswer() {
+    const availableCorrect = currentExercise.correctAnswers.filter(answer => 
+        selectedTenses.includes(answer)
+    );
+    return availableCorrect.length > 0 ? availableCorrect[0] : currentExercise.correctAnswers[0];
 }
 
 // Render exercise HTML
@@ -92,16 +166,23 @@ function renderExercise() {
         </div>
         
         <div class="options">
-            ${exercise.options.map((option, index) => `
-                <div class="option" onclick="selectOption(${index})">
-                    <div class="option-letter">${String.fromCharCode(65 + index)}</div>
-                    <span>${option}</span>
-                </div>
-            `).join('')}
+            ${exercise.options.map((option, index) => {
+                const letter = String.fromCharCode(65 + index); // A, B, C, D, E, F
+                const isInSelectedTenses = selectedTenses.includes(index);
+                const optionClass = isInSelectedTenses ? 'option' : 'option disabled-tense';
+                
+                return `
+                    <div class="${optionClass}" onclick="selectOption(${index})">
+                        <div class="option-letter">${letter}</div>
+                        <span>${option}</span>
+                        <span class="tense-indicator">(${tenseNames[index]})</span>
+                    </div>
+                `;
+            }).join('')}
         </div>
     `;
     
-    // Add keyboard support for A-D and 1-4
+    // Add keyboard support for A-F and 1-6
     document.onkeydown = function(e) {
         // Ignore if modifier keys are pressed
         if (e.ctrlKey || e.altKey || e.metaKey || e.shiftKey) {
@@ -119,10 +200,10 @@ function renderExercise() {
         const key = e.key.toUpperCase();
         let index = -1;
         
-        // Support both A-D and 1-4
-        if (key >= 'A' && key <= 'D') {
+        // Support both A-F and 1-6
+        if (key >= 'A' && key <= 'F') {
             index = key.charCodeAt(0) - 65;
-        } else if (key >= '1' && key <= '4') {
+        } else if (key >= '1' && key <= '6') {
             index = parseInt(key) - 1;
         }
         
@@ -138,7 +219,8 @@ function selectOption(selectedIndex) {
     if (answered) return;
     
     answered = true;
-    const isCorrect = selectedIndex === currentExercise.correct;
+    const isCorrect = isAnswerCorrect(selectedIndex);
+    const bestCorrectAnswer = getBestCorrectAnswer();
     
     // Update stats
     stats.total++;
@@ -156,25 +238,37 @@ function selectOption(selectedIndex) {
     saveStats();
     updateStatsDisplay();
     
-    // Style options and insert result after correct option
+    // Style options and insert result after the best correct option
     const options = document.querySelectorAll('.option');
     options.forEach((option, index) => {
         option.classList.add('disabled');
-        if (index === currentExercise.correct) {
+        
+        if (currentExercise.correctAnswers.includes(index)) {
             option.classList.add('correct');
             
-            // Insert result directly after the correct option
-            const resultEl = document.createElement('div');
-            resultEl.className = `result ${isCorrect ? 'correct' : 'incorrect'}`;
-            resultEl.innerHTML = `
-                <div>${isCorrect ? '✅ ¡Correcto!' : '❌ Incorrecto'}</div>
-                <div style="margin-top: 4px; font-size: 13px; color: var(--text-light);">${currentExercise.explanation}</div>
-                <button class="next-btn" onclick="nextExercise()">
-                    Siguiente ejercicio (Enter)
-                </button>
-            `;
-            option.parentNode.insertBefore(resultEl, option.nextSibling);
-            
+            // Insert result after the best correct answer for selected tenses
+            if (index === bestCorrectAnswer) {
+                const resultEl = document.createElement('div');
+                resultEl.className = `result ${isCorrect ? 'correct' : 'incorrect'}`;
+                
+                let explanationText = '';
+                if (isCorrect) {
+                    explanationText = currentExercise.explanations[selectedIndex];
+                } else {
+                    explanationText = currentExercise.explanations[selectedIndex] + '<br><br>' +
+                                    '✓ Respuesta correcta: ' + currentExercise.explanations[bestCorrectAnswer];
+                }
+                
+                resultEl.innerHTML = `
+                    <div>${isCorrect ? '✅ ¡Correcto!' : '❌ Incorrecto'}</div>
+                    <div style="margin-top: 4px; font-size: 13px; color: var(--text-light);">${explanationText}</div>
+                    <div style="margin-top: 6px; font-size: 12px; font-style: italic; color: var(--text-light);">${currentExercise.primaryExplanation}</div>
+                    <button class="next-btn" onclick="nextExercise()">
+                        Siguiente ejercicio (Enter)
+                    </button>
+                `;
+                option.parentNode.insertBefore(resultEl, option.nextSibling);
+            }
         } else if (index === selectedIndex && !isCorrect) {
             option.classList.add('incorrect');
         }
