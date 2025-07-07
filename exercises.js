@@ -609,7 +609,8 @@ const exercises = [
         text: "Conocí a María cuando _____ en Madrid.",
         infinitive: "vivir",
         options: ["vivo", "viví", "vivía", "viviré", "viviría", "viva"],
-        correctAnswers: [2]
+        correctAnswers: [2],
+        explanation: "context_main"
     },
     {
         id: 62,
@@ -618,7 +619,8 @@ const exercises = [
         text: "Anoche _____ mucho frío en la montaña.",
         infinitive: "hacer",
         options: ["hace", "hizo", "hacía", "hará", "haría", "haga"],
-        correctAnswers: [1]
+        correctAnswers: [1],
+        explanation: "ayer_past"
     },
     {
         id: 63,
@@ -627,7 +629,8 @@ const exercises = [
         text: "Siempre _____ temprano cuando trabajaba allí.",
         infinitive: "levantarse",
         options: ["me levanto", "me levanté", "me levantaba", "me levantaré", "me levantaría", "me levante"],
-        correctAnswers: [2]
+        correctAnswers: [2],
+        explanation: "siempre_habitual"
     },
     {
         id: 64,
@@ -636,7 +639,8 @@ const exercises = [
         text: "Ese día _____ todas mis cosas en una maleta.",
         infinitive: "traer",
         options: ["traigo", "traje", "traía", "traeré", "traería", "traiga"],
-        correctAnswers: [1]
+        correctAnswers: [1],
+        explanation: "poder_specific"
     },
     {
         id: 65,
@@ -645,6 +649,7 @@ const exercises = [
         text: "Cuando era pequeña, mi abuela me _____ cuentos todas las noches.",
         infinitive: "contar",
         options: ["cuenta", "contó", "contaba", "contará", "contaría", "cuente"],
-        correctAnswers: [2]
+        correctAnswers: [2],
+        explanation: "siempre_habitual"
     }
 ];
