@@ -31,7 +31,7 @@ The app implements a sophisticated dual-algorithm approach:
 - **HabitTracker.jsx** - Shows streak counter and daily goals
 
 ### Data Flow
-1. Exercises loaded from `src/data/exercises.js` (20+ exercises with metadata)
+1. Exercises loaded from `src/data/exercises.js` (47 exercises with metadata)
 2. `getNextExercise()` uses spaced repetition algorithm to prioritize exercises
 3. User answers trigger `updateProgress()` which adjusts intervals and difficulty
 4. Correct answers update streaks via `updateStreak()`
@@ -39,10 +39,12 @@ The app implements a sophisticated dual-algorithm approach:
 
 ### Key Features
 - **Spanish-only interface** for immersion learning
-- **Keyboard navigation** (A-D keys for answers)
-- **Dual deployment** - React dev version + standalone HTML version
+- **Keyboard navigation** (A-D keys for answers, Enter/Space to continue)
+- **React-only deployment** - Built for production via Vite
 - **Answer shuffling** to prevent pattern memorization
 - **Contextual explanations** with learning tips for each exercise
+- **HTML rendering** for infinitive verb hints in gray
+- **Inline result display** - Results appear directly below correct answer
 
 ### MCP Context7 Integration
 - Always use Context7 MCP to get the latest versions and best practices for all libraries and frameworks
@@ -54,3 +56,12 @@ The app implements a sophisticated dual-algorithm approach:
 - Common irregular verbs (tener, saber, poder, venir)
 - Context-based sentence completion exercises
 - Progressive difficulty from basic to advanced scenarios
+- 47 exercises across 6 categories: Pretérito vs Imperfecto, Verbos Irregulares, Descripciones, Tiempo y Frecuencia, Secuencias
+
+### Deployment Workflow
+- **Development**: `npm run dev` for local development with hot reload
+- **Current Build**: Single HTML file in `dist/index.html` with all assets inlined
+- **Deploy**: Upload `dist/index.html` to GitHub Pages or any static host
+- **Test Local**: `python -m http.server 8000` then visit `/langlearn/dist/index.html`
+- **GitHub Pages**: Accessible via parent index.html link or direct URL
+- **Note**: Future React builds can be created with `npm run build` when Node.js/Vite setup is working

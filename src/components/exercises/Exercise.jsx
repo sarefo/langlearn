@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './Exercise.css'
 
 const Exercise = ({ exercise, onAnswer }) => {
@@ -28,6 +28,35 @@ const Exercise = ({ exercise, onAnswer }) => {
     resetExercise()
   }
 
+  // Keyboard event handler
+  useEffect(() => {
+    const handleKeyPress = (event) => {
+      if (!exercise) return
+      
+      if (showResult) {
+        // Allow Enter or Space to continue to next exercise
+        if (event.code === 'Enter' || event.code === 'Space') {
+          event.preventDefault()
+          // The next exercise logic is handled by the parent component's timeout
+          return
+        }
+      } else {
+        // Only allow A-D keys to select answers
+        const key = event.key.toLowerCase()
+        if (key === 'a' || key === 'b' || key === 'c' || key === 'd') {
+          event.preventDefault()
+          const optionIndex = key.charCodeAt(0) - 'a'.charCodeAt(0)
+          if (optionIndex < exercise.options.length) {
+            handleAnswerClick(optionIndex)
+          }
+        }
+      }
+    }
+
+    document.addEventListener('keydown', handleKeyPress)
+    return () => document.removeEventListener('keydown', handleKeyPress)
+  }, [exercise, showResult, selectedAnswer])
+
   return (
     <div className="exercise">
       <div className="exercise-header">
@@ -44,7 +73,7 @@ const Exercise = ({ exercise, onAnswer }) => {
       <div className="exercise-content">
         <div className="question-section">
           <h2 className="question-title">Completa la oración:</h2>
-          <p className="question-text">{exercise.question}</p>
+          <p className="question-text" dangerouslySetInnerHTML={{ __html: exercise.question }}></p>
           
           {exercise.context && (
             <div className="context">

@@ -3,7 +3,12 @@
     "allow": [
       "mcp__context7__resolve-library-id",
       "mcp__context7__get-library-docs",
-      "Bash(npm run lint)"
+      "Bash(npm run lint)",
+      "Bash(sed:*)",
+      "Bash(grep:*)",
+      "Bash(npm run build:*)",
+      "Bash(ls:*)",
+      "Bash(npx vite:*)"
     ],
     "deny": []
   }
