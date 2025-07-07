@@ -8,6 +8,7 @@ let stats = { correct: 0, total: 0 };
 let streak = 0;
 let answered = false;
 let selectedTenses = [0, 1, 2]; // Default: A, B, C (Presente, Pretérito, Imperfecto)
+let wrongAnswers = []; // Track exercises that were answered incorrectly
 
 // Tense names for display
 const tenseNames = [
@@ -48,6 +49,7 @@ function countExercisesPerTense() {
 // Initialize app
 function init() {
     loadStats();
+    loadWrongAnswers();
     initTenseSelector();
     updateTenseCounts();
     shuffleExercises();
@@ -128,15 +130,57 @@ function getFilteredExercises() {
     });
 }
 
-// Shuffle exercises for variety
+// Shuffle exercises for variety with wrong answer prioritization
 function shuffleExercises() {
     const filteredExercises = getFilteredExercises();
-    for (let i = filteredExercises.length - 1; i > 0; i--) {
+    const wrongExercises = [];
+    const regularExercises = [];
+    
+    // Separate wrong and regular exercises
+    filteredExercises.forEach(exercise => {
+        if (wrongAnswers.some(wrong => wrong.id === exercise.id)) {
+            wrongExercises.push(exercise);
+        } else {
+            regularExercises.push(exercise);
+        }
+    });
+    
+    // Shuffle both arrays
+    for (let i = wrongExercises.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
-        [filteredExercises[i], filteredExercises[j]] = [filteredExercises[j], filteredExercises[i]];
+        [wrongExercises[i], wrongExercises[j]] = [wrongExercises[j], wrongExercises[i]];
     }
-    // Update the global exercises array with filtered and shuffled exercises
-    window.filteredExercises = filteredExercises;
+    
+    for (let i = regularExercises.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [regularExercises[i], regularExercises[j]] = [regularExercises[j], regularExercises[i]];
+    }
+    
+    // Combine with wrong answers prioritized (appear more frequently)
+    const combinedExercises = [];
+    const wrongRatio = 0.4; // 40% of exercises should be wrong answers when available
+    
+    let wrongIndex = 0;
+    let regularIndex = 0;
+    
+    for (let i = 0; i < filteredExercises.length; i++) {
+        if (wrongExercises.length > 0 && wrongIndex < wrongExercises.length && 
+            (regularExercises.length === 0 || Math.random() < wrongRatio || regularIndex >= regularExercises.length)) {
+            combinedExercises.push(wrongExercises[wrongIndex]);
+            wrongIndex++;
+            
+            // Add multiple copies of wrong exercises for extra practice
+            if (wrongIndex < wrongExercises.length && Math.random() < 0.3) {
+                combinedExercises.push(wrongExercises[wrongIndex - 1]);
+            }
+        } else if (regularIndex < regularExercises.length) {
+            combinedExercises.push(regularExercises[regularIndex]);
+            regularIndex++;
+        }
+    }
+    
+    // Update the global exercises array with prioritized exercises
+    window.filteredExercises = combinedExercises;
 }
 
 // Load stats from localStorage
@@ -154,10 +198,23 @@ function loadStats() {
     updateStatsDisplay();
 }
 
+// Load wrong answers from localStorage
+function loadWrongAnswers() {
+    const saved = localStorage.getItem('langlearn_wrong_answers');
+    if (saved) {
+        wrongAnswers = JSON.parse(saved);
+    }
+}
+
 // Save stats to localStorage
 function saveStats() {
     localStorage.setItem('langlearn_stats', JSON.stringify(stats));
     localStorage.setItem('langlearn_streak', streak.toString());
+}
+
+// Save wrong answers to localStorage
+function saveWrongAnswers() {
+    localStorage.setItem('langlearn_wrong_answers', JSON.stringify(wrongAnswers));
 }
 
 // Update stats display
@@ -282,6 +339,27 @@ function selectOption(selectedIndex) {
             streak++;
             localStorage.setItem('langlearn_last_streak_date', today);
         }
+        
+        // Remove from wrong answers if answered correctly
+        wrongAnswers = wrongAnswers.filter(wrong => wrong.id !== currentExercise.id);
+        saveWrongAnswers();
+    } else {
+        // Add to wrong answers for future practice
+        const wrongEntry = {
+            id: currentExercise.id,
+            timestamp: Date.now(),
+            wrongCount: 1
+        };
+        
+        const existingWrong = wrongAnswers.find(wrong => wrong.id === currentExercise.id);
+        if (existingWrong) {
+            existingWrong.wrongCount++;
+            existingWrong.timestamp = Date.now();
+        } else {
+            wrongAnswers.push(wrongEntry);
+        }
+        
+        saveWrongAnswers();
     }
     
     saveStats();
