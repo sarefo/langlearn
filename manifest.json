@@ -1,0 +1,28 @@
+{
+  "name": "Entrenador de Tiempos Verbales",
+  "short_name": "Tiempos Verbales",
+  "description": "Practica los 6 tiempos principales del español",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2563eb",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "favicon.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "favicon.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml"
+    }
+  ],
+  "categories": ["education", "games"],
+  "lang": "es"
+}

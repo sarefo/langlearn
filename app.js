@@ -26,14 +26,10 @@ const accuracyEl = document.getElementById('accuracy');
 const streakEl = document.getElementById('streak');
 const exerciseContainer = document.getElementById('exercise-container');
 
-// Convert difficulty number to text
-function getDifficultyText(difficulty) {
-    const difficultyMap = {
-        1: 'Fácil',
-        2: 'Medio', 
-        3: 'Difícil'
-    };
-    return difficultyMap[difficulty] || 'Medio';
+// Convert difficulty number to dots
+function getDifficultyDots(difficulty) {
+    const dots = '●'.repeat(difficulty);
+    return dots;
 }
 
 // Count exercises per tense
@@ -213,7 +209,7 @@ function renderExercise() {
     exerciseContainer.innerHTML = `
         <div class="exercise-header">
             <span class="type-badge">${exercise.type}</span>
-            <span class="difficulty">📊 ${getDifficultyText(exercise.difficulty)}</span>
+            <span class="difficulty">${getDifficultyDots(exercise.difficulty)}</span>
         </div>
         
         <div class="question">
