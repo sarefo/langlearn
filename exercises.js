@@ -222,7 +222,7 @@ const exercises = [
             "escuchaba",
             "escucharé",
             "escucharía",
-            "escuche"     // F: Subjuntivo presente
+            "escuche"
         ],
         correctAnswers: [1],
         explanations: {
@@ -274,7 +274,7 @@ const exercises = [
             "estudiabas",
             "estudiarás",
             "estudiarías",
-            "estudies"    // F: Subjuntivo presente
+            "estudies"
         ],
         correctAnswers: [1],
         explanations: {
@@ -300,7 +300,7 @@ const exercises = [
             "tenías",
             "tendrás",
             "tendrías",
-            "tengas"      // F: Subjuntivo presente
+            "tengas"
         ],
         correctAnswers: [1],
         explanations: {
@@ -326,7 +326,7 @@ const exercises = [
             "montabas",
             "montarás",
             "montarías",
-            "montes"      // F: Subjuntivo presente
+            "montes"
         ],
         correctAnswers: [2],
         explanations: {
@@ -352,7 +352,7 @@ const exercises = [
             "podías",
             "podrás",
             "podrías",
-            "puedas"      // F: Subjuntivo presente
+            "puedas"
         ],
         correctAnswers: [1],
         explanations: {
@@ -404,7 +404,7 @@ const exercises = [
             "venías",
             "vendrás",
             "vendrías",
-            "vengas"      // F: Subjuntivo presente
+            "vengas"
         ],
         correctAnswers: [1],
         explanations: {
@@ -456,7 +456,7 @@ const exercises = [
             "hablabas",
             "hablarás",
             "hablarías",
-            "hables"      // F: Subjuntivo presente
+            "hables"
         ],
         correctAnswers: [2],
         explanations: {
@@ -482,7 +482,7 @@ const exercises = [
             "trabajaba",
             "trabajará",
             "trabajaría",
-            "trabaje"     // F: Subjuntivo presente
+            "trabaje"
         ],
         correctAnswers: [2],
         explanations: {
@@ -716,7 +716,7 @@ const exercises = [
             "vivíamos",
             "viviremos",
             "viviríamos",
-            "vivamos"     // F: Subjuntivo presente
+            "vivamos"
         ],
         correctAnswers: [2],
         explanations: {
@@ -742,7 +742,7 @@ const exercises = [
             "hacíamos",
             "haremos",
             "haríamos",
-            "hagamos"     // F: Subjuntivo presente
+            "hagamos"
         ],
         correctAnswers: [1],
         explanations: {
@@ -768,7 +768,7 @@ const exercises = [
             "íbamos",
             "iremos",
             "iríamos",
-            "vayamos"     // F: Subjuntivo presente
+            "vayamos"
         ],
         correctAnswers: [2],
         explanations: {
@@ -794,7 +794,7 @@ const exercises = [
             "veníamos",
             "vendremos",
             "vendríamos",
-            "vengamos"    // F: Subjuntivo presente
+            "vengamos"
         ],
         correctAnswers: [1],
         explanations: {
@@ -820,7 +820,7 @@ const exercises = [
             "leíamos",
             "leeremos",
             "leeríamos",
-            "leamos"      // F: Subjuntivo presente
+            "leamos"
         ],
         correctAnswers: [2],
         explanations: {
@@ -846,7 +846,7 @@ const exercises = [
             "teníamos",
             "tendremos",
             "tendríamos",
-            "tengamos"    // F: Subjuntivo presente
+            "tengamos"
         ],
         correctAnswers: [1],
         explanations: {
@@ -872,7 +872,7 @@ const exercises = [
             "podíamos",
             "podremos",
             "podríamos",
-            "podamos"     // F: Subjuntivo presente
+            "podamos"
         ],
         correctAnswers: [2],
         explanations: {
@@ -898,7 +898,7 @@ const exercises = [
             "terminábamos",
             "terminaremos",
             "terminaríamos",
-            "terminemos"  // F: Subjuntivo presente
+            "terminemos"
         ],
         correctAnswers: [1],
         explanations: {
@@ -976,7 +976,7 @@ const exercises = [
             "venían",
             "vendrán",
             "vendrían",
-            "vengan"      // F: Subjuntivo presente
+            "vengan"
         ],
         correctAnswers: [1],
         explanations: {
@@ -1002,7 +1002,7 @@ const exercises = [
             "jugaban",
             "jugarán",
             "jugarían",
-            "jueguen"     // F: Subjuntivo presente
+            "jueguen"
         ],
         correctAnswers: [2],
         explanations: {
@@ -1028,7 +1028,7 @@ const exercises = [
             "podían",
             "podrán",
             "podrían",
-            "puedan"      // F: Subjuntivo presente
+            "puedan"
         ],
         correctAnswers: [1],
         explanations: {
@@ -1080,7 +1080,7 @@ const exercises = [
             "tenían",
             "tendrán",
             "tendrían",
-            "tengan"      // F: Subjuntivo presente
+            "tengan"
         ],
         correctAnswers: [1],
         explanations: {
@@ -1158,7 +1158,7 @@ const exercises = [
             "desayunaba",
             "desayunaré",
             "desayunaría",
-            "desayune"     // F: Subjuntivo presente
+            "desayune"
         ],
         correctAnswers: [1],
         explanations: {
@@ -1210,7 +1210,7 @@ const exercises = [
             "desayunaba",
             "desayunaré",
             "desayunaría",
-            "desayune"     // F: Subjuntivo presente
+            "desayune"
         ],
         correctAnswers: [2],
         explanations: {
@@ -1496,7 +1496,7 @@ const exercises = [
             "estudiaba",
             "estudiaré",
             "estudiaría",
-            "estudie"     // F: Subjuntivo presente
+            "estudie"
         ],
         correctAnswers: [2],
         explanations: {
@@ -1522,7 +1522,7 @@ const exercises = [
             "terminaba",
             "terminaré",
             "terminaría",
-            "termine"     // F: Subjuntivo presente
+            "termine"
         ],
         correctAnswers: [1],
         explanations: {
@@ -1548,7 +1548,7 @@ const exercises = [
             "venían",
             "vendrán",
             "vendrían",
-            "vengan"      // F: Subjuntivo presente
+            "vengan"
         ],
         correctAnswers: [2],
         explanations: {
@@ -1626,7 +1626,7 @@ const exercises = [
             "me levantaba",
             "me levantaré",
             "me levantaría",
-            "me levante"   // F: Subjuntivo presente
+            "me levante"
         ],
         correctAnswers: [2],
         explanations: {
@@ -1652,7 +1652,7 @@ const exercises = [
             "traía",
             "traeré",
             "traería",
-            "traiga"      // F: Subjuntivo presente
+            "traiga"
         ],
         correctAnswers: [1],
         explanations: {
@@ -1678,7 +1678,7 @@ const exercises = [
             "contaba",
             "contará",
             "contaría",
-            "cuente"      // F: Subjuntivo presente
+            "cuente"
         ],
         correctAnswers: [2],
         explanations: {
