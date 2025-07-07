@@ -208,6 +208,226 @@ export const exercises = [
     correctAnswer: 0,
     explanation: "Se usa el pretérito 'pude' porque se refiere a una situación específica de anoche.",
     tip: "'Poder' en pretérito indica capacidad/incapacidad en una situación específica."
+  },
+
+  // EJERCICIOS ADICIONALES - ACCIONES HABITUALES VS PUNTUALES
+  {
+    id: "preterite_vs_imperfect_16",
+    type: "Pretérito vs Imperfecto",
+    difficulty: "easy",
+    question: "Cada verano _____ a la playa con mi familia.",
+    options: ["fui", "iba", "voy", "iré"],
+    correctAnswer: 1,
+    explanation: "Se usa el imperfecto 'iba' porque 'cada verano' indica una acción habitual repetida.",
+    tip: "'Cada' + período de tiempo siempre indica imperfecto para acciones habituales."
+  },
+  {
+    id: "preterite_vs_imperfect_17",
+    type: "Pretérito vs Imperfecto",
+    difficulty: "easy",
+    question: "Anoche _____ una película muy interesante.",
+    options: ["veía", "vi", "veo", "veré"],
+    correctAnswer: 1,
+    explanation: "Se usa el pretérito 'vi' porque se refiere a una acción específica completada anoche.",
+    tip: "Anoche + acción específica = pretérito."
+  },
+  {
+    id: "preterite_vs_imperfect_18",
+    type: "Pretérito vs Imperfecto",
+    difficulty: "easy",
+    question: "Cuando tenía 10 años, _____ en bicicleta todos los días.",
+    options: ["monté", "montaba", "monto", "montaré"],
+    correctAnswer: 1,
+    explanation: "Se usa el imperfecto 'montaba' porque describe una actividad habitual en el pasado (todos los días).",
+    tip: "Edad + actividad habitual = imperfecto."
+  },
+  {
+    id: "preterite_vs_imperfect_19",
+    type: "Pretérito vs Imperfecto",
+    difficulty: "medium",
+    question: "_____ muy cansado cuando llegué a casa.",
+    options: ["Estuve", "Estaba", "Estoy", "Estaré"],
+    correctAnswer: 1,
+    explanation: "Se usa el imperfecto 'estaba' porque describe el estado en que se encontraba al llegar.",
+    tip: "Estados o condiciones que describen circunstancias van en imperfecto."
+  },
+  {
+    id: "preterite_vs_imperfect_20",
+    type: "Pretérito vs Imperfecto",
+    difficulty: "medium",
+    question: "El teléfono _____ cuando estaba en la ducha.",
+    options: ["sonó", "sonaba", "suena", "sonará"],
+    correctAnswer: 0,
+    explanation: "Se usa el pretérito 'sonó' porque es una acción específica que interrumpió otra acción en progreso.",
+    tip: "Acción que interrumpe = pretérito, acción interrumpida = imperfecto."
+  },
+  {
+    id: "preterite_vs_imperfect_21",
+    type: "Pretérito vs Imperfecto",
+    difficulty: "medium",
+    question: "Todos los miércoles _____ al gimnasio después del trabajo.",
+    options: ["fui", "iba", "voy", "iré"],
+    correctAnswer: 1,
+    explanation: "Se usa el imperfecto 'iba' porque describe una rutina habitual (todos los miércoles).",
+    tip: "Rutinas semanales o periódicas se expresan en imperfecto."
+  },
+  {
+    id: "preterite_vs_imperfect_22",
+    type: "Pretérito vs Imperfecto",
+    difficulty: "hard",
+    question: "Mi hermana _____ doctora cuando la conociste.",
+    options: ["fue", "era", "es", "será"],
+    correctAnswer: 1,
+    explanation: "Se usa el imperfecto 'era' porque describe su profesión como característica continua en el pasado.",
+    tip: "Profesiones y características permanentes en el pasado van en imperfecto."
+  },
+  {
+    id: "preterite_vs_imperfect_23",
+    type: "Pretérito vs Imperfecto",
+    difficulty: "hard",
+    question: "De niño, _____ muy tímido, pero un día decidí cambiar.",
+    options: ["fui", "era", "soy", "seré"],
+    correctAnswer: 1,
+    explanation: "Se usa el imperfecto 'era' porque describe una característica continua de la personalidad en el pasado.",
+    tip: "Características de personalidad o físicas en el pasado usan imperfecto."
+  },
+
+  // VERBOS IRREGULARES ADICIONALES
+  {
+    id: "irregular_verbs_06",
+    type: "Verbos Irregulares",
+    difficulty: "medium",
+    question: "Ayer _____ que estudiar toda la noche.",
+    options: ["tuve", "tenía", "tengo", "tendré"],
+    correctAnswer: 0,
+    explanation: "Se usa el pretérito 'tuve' porque se refiere a una obligación específica de ayer.",
+    tip: "Obligaciones específicas en el pasado van en pretérito."
+  },
+  {
+    id: "irregular_verbs_07",
+    type: "Verbos Irregulares",
+    difficulty: "medium",
+    question: "En aquella época, no _____ usar computadoras.",
+    options: ["supe", "sabía", "sé", "sabré"],
+    correctAnswer: 1,
+    explanation: "Se usa el imperfecto 'sabía' porque describe una falta de conocimiento continua en el pasado.",
+    tip: "Conocimientos o habilidades continuas en el pasado van en imperfecto."
+  },
+  {
+    id: "irregular_verbs_08",
+    type: "Verbos Irregulares",
+    difficulty: "hard",
+    question: "_____ a verte tan pronto como recibí tu mensaje.",
+    options: ["Vine", "Venía", "Vengo", "Vendré"],
+    correctAnswer: 0,
+    explanation: "Se usa el pretérito 'vine' porque es una acción específica en respuesta al mensaje.",
+    tip: "Acciones específicas en respuesta a eventos van en pretérito."
+  },
+  {
+    id: "irregular_verbs_09",
+    type: "Verbos Irregulares",
+    difficulty: "medium",
+    question: "Antes _____ caminar al trabajo, pero ahora manejo.",
+    options: ["pude", "podía", "puedo", "podré"],
+    correctAnswer: 1,
+    explanation: "Se usa el imperfecto 'podía' porque describe una capacidad habitual en el pasado.",
+    tip: "Capacidades o habilidades habituales en el pasado van en imperfecto."
+  },
+  {
+    id: "irregular_verbs_10",
+    type: "Verbos Irregulares",
+    difficulty: "hard",
+    question: "Cuando _____ la verdad, me sentí muy triste.",
+    options: ["supe", "sabía", "sé", "sabré"],
+    correctAnswer: 0,
+    explanation: "Se usa el pretérito 'supe' porque indica el momento específico de enterarse de la verdad.",
+    tip: "'Saber' en pretérito = enterarse/descubrir en un momento específico."
+  },
+
+  // EJERCICIOS CON DESCRIPCIONES Y NARRACIONES
+  {
+    id: "descriptions_01",
+    type: "Descripciones",
+    difficulty: "medium",
+    question: "La casa _____ muy grande y tenía un jardín hermoso.",
+    options: ["fue", "era", "es", "será"],
+    correctAnswer: 1,
+    explanation: "Se usa el imperfecto 'era' porque describe las características de la casa en el pasado.",
+    tip: "Descripciones físicas y características van en imperfecto."
+  },
+  {
+    id: "descriptions_02",
+    type: "Descripciones",
+    difficulty: "medium",
+    question: "Hacía mucho calor cuando _____ de la oficina.",
+    options: ["salí", "salía", "salgo", "saldré"],
+    correctAnswer: 0,
+    explanation: "Se usa el pretérito 'salí' porque es una acción específica, mientras que 'hacía calor' describe las condiciones.",
+    tip: "Condiciones climáticas (imperfecto) + acción específica (pretérito)."
+  },
+  {
+    id: "descriptions_03",
+    type: "Descripciones",
+    difficulty: "hard",
+    question: "El restaurante _____ lleno cuando llegamos.",
+    options: ["estuvo", "estaba", "está", "estará"],
+    correctAnswer: 1,
+    explanation: "Se usa el imperfecto 'estaba' porque describe el estado del restaurante en el momento de llegar.",
+    tip: "Estados y condiciones como contexto de otras acciones van en imperfecto."
+  },
+
+  // EJERCICIOS DE TIEMPO Y FRECUENCIA
+  {
+    id: "time_frequency_01",
+    type: "Tiempo y Frecuencia",
+    difficulty: "easy",
+    question: "A menudo _____ en ese café cuando vivía cerca.",
+    options: ["desayuné", "desayunaba", "desayuno", "desayunaré"],
+    correctAnswer: 1,
+    explanation: "Se usa el imperfecto 'desayunaba' porque 'a menudo' indica una acción habitual.",
+    tip: "'A menudo', 'frecuentemente', 'normalmente' indican imperfecto."
+  },
+  {
+    id: "time_frequency_02",
+    type: "Tiempo y Frecuencia",
+    difficulty: "medium",
+    question: "Una vez _____ un accidente muy grave en esa esquina.",
+    options: ["vi", "veía", "veo", "veré"],
+    correctAnswer: 0,
+    explanation: "Se usa el pretérito 'vi' porque 'una vez' indica una acción específica y única.",
+    tip: "'Una vez' siempre indica pretérito para acciones específicas."
+  },
+  {
+    id: "time_frequency_03",
+    type: "Tiempo y Frecuencia",
+    difficulty: "hard",
+    question: "Durante mi infancia, _____ muchos cuentos antes de dormir.",
+    options: ["leí", "leía", "leo", "leeré"],
+    correctAnswer: 1,
+    explanation: "Se usa el imperfecto 'leía' porque describe una actividad habitual durante un período largo.",
+    tip: "'Durante' + período de tiempo + actividad habitual = imperfecto."
+  },
+
+  // EJERCICIOS DE SECUENCIAS Y CAUSAS
+  {
+    id: "sequences_01",
+    type: "Secuencias",
+    difficulty: "medium",
+    question: "Primero _____ la tarea, luego salí a jugar.",
+    options: ["terminé", "terminaba", "termino", "terminaré"],
+    correctAnswer: 0,
+    explanation: "Se usa el pretérito 'terminé' porque 'primero' indica una secuencia de acciones completadas.",
+    tip: "Secuencias de acciones (primero, luego, después) van en pretérito."
+  },
+  {
+    id: "sequences_02",
+    type: "Secuencias",
+    difficulty: "hard",
+    question: "Como _____ lluvia, decidimos quedarnos en casa.",
+    options: ["hubo", "había", "hay", "habrá"],
+    correctAnswer: 1,
+    explanation: "Se usa el imperfecto 'había' porque describe la condición (lluvia) que causó la decisión.",
+    tip: "Condiciones que explican decisiones o acciones van en imperfecto."
   }
 ]
 
