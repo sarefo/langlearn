@@ -1,6 +1,6 @@
 /* Dashboard and statistics styles */
 
-/* Ultra-compact dashboard - now at bottom */
+/* Ultra-compact dashboard */
 .dashboard {
     display: grid;
     grid-template-columns: 1fr;
