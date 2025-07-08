@@ -82,6 +82,24 @@ export function renderOptionOverlays(selectedIndex) {
     });
 }
 
+export function markMultipleOptionsIncorrect(selectedIndices) {
+    // Use the same logic as selectOption but for multiple indices
+    // Just call selectOption with the first matching index to handle stats
+    if (selectedIndices.length > 0) {
+        window.selectOption(selectedIndices[0]);
+        
+        // Then add incorrect styling to all other matching indices
+        const options = document.querySelectorAll('.option');
+        selectedIndices.slice(1).forEach(index => {
+            const option = options[index];
+            if (option && !option.classList.contains('incorrect')) {
+                option.classList.add('incorrect');
+                addIncorrectOverlay(option, index);
+            }
+        });
+    }
+}
+
 function addCorrectOverlay(option, index) {
     const correctOverlay = document.createElement('div');
     correctOverlay.className = 'option-overlay correct-overlay';
@@ -178,7 +196,7 @@ export function renderActionButtons(isCorrect) {
         `;
     } else {
         bigNextButton.innerHTML = `
-            <button class="siguiente-btn" onclick="handleSiguienteClick()">
+            <button class="siguiente-btn incorrect" onclick="handleSiguienteClick()">
                 Siguiente
             </button>
         `;
@@ -248,16 +266,20 @@ export function checkTypedAnswer() {
         );
         
         if (!isCorrectPrefix) {
-            // It matches a wrong option, find and select it
-            const matchingOptionIndex = exercise.options.findIndex(option => {
-                const normalizedOption = normalizeText(option);
-                return normalizedOption.startsWith(normalizedTyped);
-            });
+            // It matches wrong option(s), find all matches and select them
+            const matchingOptionIndices = exercise.options
+                .map((option, index) => ({ option, index }))
+                .filter(({ option, index }) => {
+                    const normalizedOption = normalizeText(option);
+                    return normalizedOption.startsWith(normalizedTyped) && !exercise.correctAnswers.includes(index);
+                })
+                .map(({ index }) => index);
             
-            if (matchingOptionIndex !== -1) {
-                // Show options and select the matching option
+            if (matchingOptionIndices.length > 0) {
+                // Show options and select all matching wrong options
                 showOptions();
-                window.selectOption(matchingOptionIndex);
+                // Mark all matching options as incorrect
+                markMultipleOptionsIncorrect(matchingOptionIndices);
             }
         }
     } else {

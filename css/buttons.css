@@ -79,6 +79,16 @@
     box-shadow: 0 4px 8px rgba(37, 99, 235, 0.3);
 }
 
+.siguiente-btn.incorrect {
+    background: var(--error);
+}
+
+.siguiente-btn.incorrect:hover {
+    background: #dc2626;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(239, 68, 68, 0.3);
+}
+
 /* Difficulty buttons */
 .difficulty-btn {
     border: none;
