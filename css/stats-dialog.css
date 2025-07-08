@@ -78,6 +78,7 @@
     transition: fill 0.2s;
     display: block;
     margin: 0 auto;
+    fill: var(--surface);
 }
 
 .help-btn:hover .stats-icon {
