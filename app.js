@@ -263,6 +263,12 @@ function getBestCorrectAnswer() {
 function renderExercise() {
     const exercise = currentExercise;
     
+    // Remove any existing result overlay
+    const existingResult = document.querySelector('.tense-selector .result');
+    if (existingResult) {
+        existingResult.remove();
+    }
+    
     exerciseContainer.innerHTML = `
         <div class="question">
             <div class="question-title">
@@ -377,7 +383,7 @@ function selectOption(selectedIndex) {
         if (currentExercise.correctAnswers.includes(index)) {
             option.classList.add('correct');
             
-            // Insert result after the best correct answer for selected tenses
+            // Insert result overlay on tense-selector for the best correct answer
             if (index === bestCorrectAnswer) {
                 const resultEl = document.createElement('div');
                 resultEl.className = `result ${isCorrect ? 'correct' : 'incorrect'}`;
@@ -408,17 +414,20 @@ function selectOption(selectedIndex) {
                 if (selectedTenses.length === 1) {
                     resultHeader = `🎯 ${tenseNames[selectedIndex]}`;
                 } else {
-                    resultHeader = isCorrect ? '✅ ¡Correcto!' : '❌ Incorrecto';
+                    resultHeader = ''; // No icon, color indicates success/failure
                 }
                 
                 resultEl.innerHTML = `
-                    <div>${resultHeader}</div>
-                    <div style="margin-top: 4px; font-size: 13px; color: var(--text-light);">${explanationText}</div>
-                    <button class="next-btn" onclick="nextExercise()">
-                        Siguiente ejercicio (Enter)
+                    ${resultHeader ? `<div class="result-header">${resultHeader}</div>` : ''}
+                    <div class="result-explanation">${explanationText}</div>
+                    <button class="result-next-btn" onclick="nextExercise()">
+                        Siguiente
                     </button>
                 `;
-                option.parentNode.insertBefore(resultEl, option.nextSibling);
+                
+                // Insert result as overlay on tense-selector
+                const tenseSelector = document.querySelector('.tense-selector');
+                tenseSelector.appendChild(resultEl);
             }
         } else if (index === selectedIndex && !isCorrect) {
             option.classList.add('incorrect');
