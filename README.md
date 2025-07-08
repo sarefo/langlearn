@@ -1,13 +1,12 @@
 # LangLearn - Spanish Past Tense Trainer
 
-A modern web application for learning Spanish past tenses (pretérito vs imperfecto) using scientifically-backed spaced repetition and habit formation techniques.
+A modern web application for learning Spanish tenses using scientifically-backed spaced repetition and habit formation techniques.
 
 ## Features
 
 - **Spaced Repetition Learning** - Intelligent scheduling based on performance
 - **Spanish-Only Interface** - Complete immersion experience
 - **Habit Tracking** - Daily streak counter with motivational rewards
-- **Keyboard Navigation** - Full keyboard support (A-D for answers, Enter/Space to continue)
 - **Progress Analytics** - Track accuracy and improvement over time
 - **Mobile Responsive** - Optimized for both desktop and mobile devices
 - **Answer Shuffling** - Prevents pattern memorization, forces true comprehension
