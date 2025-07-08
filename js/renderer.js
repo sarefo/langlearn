@@ -76,11 +76,17 @@ function addCorrectOverlay(option, index) {
     }
     
     correctOverlay.innerHTML = `
-        <div class="overlay-content grid-layout">
-            <div class="overlay-verb">${appState.currentExercise.options[index]}</div>
-            <div class="overlay-title">✓ Correcto</div>
-            <div class="overlay-tense">(${tenseNames[index]})</div>
-            <div class="overlay-explanation">${correctExplanation}</div>
+        <div class="overlay-content three-column-layout">
+            <div class="overlay-left">
+                <div class="overlay-verb">${appState.currentExercise.options[index]}</div>
+                <div class="overlay-tense">(${tenseNames[index]})</div>
+            </div>
+            <div class="overlay-center">
+                <span class="check-icon">✓</span>
+            </div>
+            <div class="overlay-right">
+                <div class="overlay-explanation">${correctExplanation}</div>
+            </div>
         </div>
     `;
     
@@ -107,11 +113,17 @@ function addIncorrectOverlay(option, index) {
     }
     
     incorrectOverlay.innerHTML = `
-        <div class="overlay-content grid-layout">
-            <div class="overlay-verb">${appState.currentExercise.options[index]}</div>
-            <div class="overlay-title">✗ Incorrecto</div>
-            <div class="overlay-tense">(${tenseNames[index]})</div>
-            <div class="overlay-explanation">${incorrectExplanation}</div>
+        <div class="overlay-content three-column-layout">
+            <div class="overlay-left">
+                <div class="overlay-verb">${appState.currentExercise.options[index]}</div>
+                <div class="overlay-tense">(${tenseNames[index]})</div>
+            </div>
+            <div class="overlay-center">
+                <span class="x-icon">✗</span>
+            </div>
+            <div class="overlay-right">
+                <div class="overlay-explanation">${incorrectExplanation}</div>
+            </div>
         </div>
     `;
     

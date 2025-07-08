@@ -107,8 +107,8 @@
         padding: 6px;
     }
     
-    .grid-layout {
-        gap: 4px;
+    .three-column-layout {
+        gap: 8px;
     }
     
     .overlay-verb {
@@ -120,29 +120,35 @@
         margin-top: 1px;
     }
     
-    .overlay-title {
-        font-size: 14px;
-    }
     
     .overlay-explanation {
-        font-size: 11px;
+        font-size: 16px;
     }
     
     .big-next-button {
-        padding: 12px;
+        padding: 6px;
+        top: 8px;
+        left: 8px;
+        right: 8px;
+        bottom: 8px;
+        gap: 6px;
     }
     
     .siguiente-btn {
-        padding: 14px 28px;
-        font-size: 18px;
+        padding: 0;
+        font-size: 20px;
         min-width: 120px;
+        min-height: 70px;
+        height: 100%;
     }
     
     .difficulty-btn {
-        padding: 12px 20px;
-        font-size: 16px;
+        padding: 0;
+        font-size: 18px;
         min-width: 100px;
-        margin: 0 4px;
+        margin: 0 3px;
+        min-height: 70px;
+        height: 100%;
     }
     
     .easy-btn:hover {
