@@ -61,7 +61,7 @@ Exercises are organized by tense with unique ID prefixes to prevent conflicts:
 - **Vanilla JS deployment** - Single HTML file, no build process
 - **Exercise shuffling** with auto-reshuffle when all exercises completed
 - **Contextual explanations** with grammatical reasoning for each exercise
-- **Infinitive styling** - Verbs in parentheses displayed in gray italic
+- **Person + infinitive display** - Shows "(person + infinitive)" in gray italic below each exercise
 - **Inline result display** - Results appear directly below correct answer
 - **Mobile-first responsive design** - Fits perfectly on Pixel 7a and larger screens
 
@@ -127,8 +127,9 @@ Add new exercises to the appropriate `data/exercises/` file following this exact
     id: 66,                          // Unique incremental ID
     type: "Pretérito vs Imperfecto", // Category (see existing types)
     difficulty: 2,                   // 1=Fácil, 2=Medio, 3=Difícil
-    text: "Ayer _____ al médico.",   // Sentence with blank (use _____)
+    text: "Ayer ◯ al médico.",       // Sentence with blank (use ◯)
     infinitive: "ir",                // Verb in infinitive form
+    person: "él",                    // Person used (yo, tú, él, ella, nosotros, ellos, ustedes)
     options: [                       // Always 6 options in this order:
         "voy",                       // A = Presente
         "fui",                       // B = Pretérito  

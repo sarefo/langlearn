@@ -17,7 +17,7 @@ export function renderExercise() {
         <div class="question">
             <div class="question-text">
                 <div class="question-sentence">${exercise.text}</div>
-                <div class="question-infinitive"><span class="infinitive">(${exercise.infinitive})</span></div>
+                <div class="question-infinitive"><span class="infinitive">(${exercise.person} + ${exercise.infinitive})</span></div>
             </div>
         </div>
         
