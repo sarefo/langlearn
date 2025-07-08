@@ -16,7 +16,8 @@
       "Bash(git commit:*)",
       "mcp__puppeteer__puppeteer_evaluate",
       "Bash(find:*)",
-      "Bash(rg:*)"
+      "Bash(rg:*)",
+      "Bash(mkdir:*)"
     ],
     "deny": []
   }
