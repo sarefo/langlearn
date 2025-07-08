@@ -389,6 +389,13 @@ function renderExercise() {
         
         const key = e.key.toUpperCase();
         
+        // H or ? keys show help dialog
+        if (key === 'H' || key === '?') {
+            e.preventDefault();
+            showHelpDialog();
+            return;
+        }
+        
         // A-F keys toggle tense selection
         if (key >= 'A' && key <= 'F') {
             const tenseIndex = key.charCodeAt(0) - 65;
@@ -610,6 +617,45 @@ function nextExercise() {
     exerciseContainer.classList.remove('fade-in');
     setTimeout(() => exerciseContainer.classList.add('fade-in'), 10);
 }
+
+// Help dialog functions
+function showHelpDialog() {
+    const overlay = document.getElementById('help-dialog-overlay');
+    overlay.style.display = 'flex';
+    document.body.style.overflow = 'hidden'; // Prevent background scrolling
+}
+
+function hideHelpDialog() {
+    const overlay = document.getElementById('help-dialog-overlay');
+    overlay.style.display = 'none';
+    document.body.style.overflow = 'auto'; // Restore scrolling
+}
+
+// Global keyboard handler for help dialog
+document.addEventListener('keydown', function(e) {
+    // Ignore if modifier keys are pressed
+    if (e.ctrlKey || e.altKey || e.metaKey || e.shiftKey) {
+        return;
+    }
+    
+    const key = e.key.toUpperCase();
+    const helpDialogVisible = document.getElementById('help-dialog-overlay').style.display === 'flex';
+    
+    // ESC key closes help dialog
+    if (e.key === 'Escape' && helpDialogVisible) {
+        e.preventDefault();
+        hideHelpDialog();
+        return;
+    }
+    
+    // H or ? keys show help dialog (only when not already visible and not in input)
+    if ((key === 'H' || key === '?') && !helpDialogVisible && 
+        !e.target.matches('input, textarea, select')) {
+        e.preventDefault();
+        showHelpDialog();
+        return;
+    }
+});
 
 // Start the app when DOM is loaded
 document.addEventListener('DOMContentLoaded', init);

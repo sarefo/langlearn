@@ -924,3 +924,199 @@ body {
         box-shadow: 0 2px 6px rgba(245, 158, 11, 0.3);
     }
 }
+
+/* Help stat item */
+.help-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.help-btn {
+    width: 28px;
+    height: 28px;
+    border: none;
+    border-radius: 50%;
+    background: var(--text-light);
+    color: var(--surface);
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.help-btn:hover {
+    background: var(--text);
+    transform: scale(1.1);
+}
+
+.help-icon {
+    line-height: 1;
+}
+
+/* Help dialog */
+.help-dialog-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 20px;
+}
+
+.help-dialog {
+    background: var(--surface);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    max-width: 500px;
+    width: 100%;
+    max-height: 80vh;
+    overflow-y: auto;
+    border: 1px solid var(--border);
+}
+
+.help-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 24px 16px;
+    border-bottom: 1px solid var(--border);
+}
+
+.help-header h3 {
+    margin: 0;
+    color: var(--text);
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.help-close-btn {
+    width: 32px;
+    height: 32px;
+    border: none;
+    border-radius: 50%;
+    background: var(--text-light);
+    color: var(--surface);
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    line-height: 1;
+}
+
+.help-close-btn:hover {
+    background: var(--text);
+}
+
+.help-content {
+    padding: 20px 24px 24px;
+}
+
+.shortcut-section {
+    margin-bottom: 24px;
+}
+
+.shortcut-section:last-child {
+    margin-bottom: 0;
+}
+
+.shortcut-section h4 {
+    margin: 0 0 12px 0;
+    color: var(--text);
+    font-size: 16px;
+    font-weight: 600;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 8px;
+}
+
+.shortcut-item {
+    display: flex;
+    align-items: center;
+    padding: 8px 0;
+    gap: 16px;
+}
+
+.shortcut-key {
+    background: var(--bg);
+    color: var(--text);
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 14px;
+    font-weight: 600;
+    min-width: 60px;
+    text-align: center;
+    border: 1px solid var(--border);
+}
+
+.shortcut-desc {
+    color: var(--text);
+    font-size: 14px;
+    line-height: 1.4;
+    flex: 1;
+}
+
+/* Mobile responsive for help dialog */
+@media (max-width: 480px) {
+    .help-dialog-overlay {
+        padding: 16px;
+    }
+    
+    .help-dialog {
+        max-height: 90vh;
+    }
+    
+    .help-header {
+        padding: 16px 20px 12px;
+    }
+    
+    .help-header h3 {
+        font-size: 18px;
+    }
+    
+    .help-content {
+        padding: 16px 20px 20px;
+    }
+    
+    .shortcut-section {
+        margin-bottom: 20px;
+    }
+    
+    .shortcut-section h4 {
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+    
+    .shortcut-item {
+        gap: 12px;
+        padding: 6px 0;
+    }
+    
+    .shortcut-key {
+        min-width: 50px;
+        font-size: 13px;
+        padding: 3px 6px;
+    }
+    
+    .shortcut-desc {
+        font-size: 13px;
+    }
+    
+    .help-btn {
+        width: 24px;
+        height: 24px;
+        font-size: 14px;
+    }
+}

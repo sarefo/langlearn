@@ -85,11 +85,67 @@
                             <div class="stat-num" id="streak">0</div>
                             <div class="stat-label">Racha (días)</div>
                         </div>
+                        <div class="help-stat">
+                            <button class="help-btn" id="help-btn" onclick="showHelpDialog()">
+                                <span class="help-icon">?</span>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
             
         </main>
+    </div>
+
+    <!-- Keyboard Shortcuts Dialog -->
+    <div class="help-dialog-overlay" id="help-dialog-overlay" onclick="hideHelpDialog()">
+        <div class="help-dialog" onclick="event.stopPropagation()">
+            <div class="help-header">
+                <h3>Atajos de Teclado</h3>
+                <button class="help-close-btn" onclick="hideHelpDialog()">×</button>
+            </div>
+            <div class="help-content">
+                <div class="shortcut-section">
+                    <h4>Selección de Respuestas</h4>
+                    <div class="shortcut-item">
+                        <span class="shortcut-key">1-6</span>
+                        <span class="shortcut-desc">Seleccionar opciones de respuesta</span>
+                    </div>
+                </div>
+                
+                <div class="shortcut-section">
+                    <h4>Selección de Tiempos</h4>
+                    <div class="shortcut-item">
+                        <span class="shortcut-key">A-F</span>
+                        <span class="shortcut-desc">Alternar tiempos verbales (A=Presente, B=Pretérito, C=Imperfecto, D=Futuro, E=Condicional, F=Subjuntivo)</span>
+                    </div>
+                </div>
+                
+                <div class="shortcut-section">
+                    <h4>Navegación de Resultados</h4>
+                    <div class="shortcut-item">
+                        <span class="shortcut-key">Enter</span>
+                        <span class="shortcut-desc">Fácil (respuesta correcta) / Siguiente (respuesta incorrecta)</span>
+                    </div>
+                    <div class="shortcut-item">
+                        <span class="shortcut-key">Espacio</span>
+                        <span class="shortcut-desc">Difícil (respuesta correcta) / Siguiente (respuesta incorrecta)</span>
+                    </div>
+                </div>
+                
+                <div class="shortcut-section">
+                    <h4>Ayuda</h4>
+                    <div class="shortcut-item">
+                        <span class="shortcut-key">H / ?</span>
+                        <span class="shortcut-desc">Mostrar/ocultar atajos de teclado</span>
+                    </div>
+                    <div class="shortcut-item">
+                        <span class="shortcut-key">Esc</span>
+                        <span class="shortcut-desc">Cerrar diálogo de ayuda</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script src="explanations.js"></script>
