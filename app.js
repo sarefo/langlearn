@@ -276,18 +276,18 @@ function renderExercise() {
                 <span class="difficulty">${getDifficultyDots(exercise.difficulty)}</span>
             </div>
             <div class="question-text">${exercise.text} <span class="infinitive">(${exercise.infinitive})</span></div>
-            <div class="keyboard-hint">💡 Usa las teclas A-F o 1-6 para responder, Enter/Espacio para continuar</div>
+            <div class="keyboard-hint">💡 Usa las teclas 1-6 para responder, A-F para seleccionar tiempos, Enter/Espacio para continuar</div>
         </div>
         
         <div class="options">
             ${exercise.options.map((option, index) => {
-                const letter = String.fromCharCode(65 + index); // A, B, C, D, E, F
+                const number = index + 1; // 1, 2, 3, 4, 5, 6
                 const isAllowed = selectedTenses.includes(index);
                 const allowedClass = isAllowed ? 'allowed' : '';
                 
                 return `
                     <div class="option ${allowedClass}" onclick="selectOption(${index})">
-                        <div class="option-letter">${letter}</div>
+                        <div class="option-letter">${number}</div>
                         <span>${option}</span>
                         <span class="tense-indicator">(${tenseNames[index]})</span>
                     </div>
@@ -296,7 +296,7 @@ function renderExercise() {
         </div>
     `;
     
-    // Add keyboard support for A-F and 1-6
+    // Add keyboard support for 1-6 (options) and A-F (tense selection)
     document.onkeydown = function(e) {
         // Ignore if modifier keys are pressed
         if (e.ctrlKey || e.altKey || e.metaKey || e.shiftKey) {
@@ -312,18 +312,22 @@ function renderExercise() {
         }
         
         const key = e.key.toUpperCase();
-        let index = -1;
         
-        // Support both A-F and 1-6
+        // A-F keys toggle tense selection
         if (key >= 'A' && key <= 'F') {
-            index = key.charCodeAt(0) - 65;
-        } else if (key >= '1' && key <= '6') {
-            index = parseInt(key) - 1;
+            const tenseIndex = key.charCodeAt(0) - 65;
+            e.preventDefault();
+            toggleTense(tenseIndex);
+            return;
         }
         
-        if (index >= 0 && index < currentExercise.options.length) {
-            e.preventDefault();
-            selectOption(index);
+        // 1-6 keys select options
+        if (key >= '1' && key <= '6') {
+            const index = parseInt(key) - 1;
+            if (index >= 0 && index < currentExercise.options.length) {
+                e.preventDefault();
+                selectOption(index);
+            }
         }
     };
 }
