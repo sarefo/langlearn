@@ -1,5 +1,6 @@
 // Auto-versioning: any change to this file triggers cache update
-const CACHE_NAME = 'langlearn-cache';
+const CACHE_VERSION = '2025-01-08-v2';
+const CACHE_NAME = `langlearn-cache-${CACHE_VERSION}`;
 const STATIC_CACHE_URLS = [
   './',
   './index.html',
