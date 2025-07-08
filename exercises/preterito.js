@@ -329,5 +329,175 @@ const preteritoExercises = [
         options: ["traigo", "traje", "traía", "traeré", "traería", "traiga"],
         correctAnswers: [1],
         explanation: "poder_specific"
+    },
+    {
+        id: 234,
+        type: "Pretérito vs Imperfecto",
+        difficulty: 2,
+        text: "Ayer _____ a mi hermana en el centro comercial.",
+        infinitive: "encontrar",
+        options: ["encuentro", "encontré", "encontraba", "encontraré", "encontraría", "encuentre"],
+        correctAnswers: [1],
+        explanation: "ayer_past"
+    },
+    {
+        id: 235,
+        type: "Verbos Irregulares",
+        difficulty: 2,
+        text: "El mes pasado _____ mi primer trabajo.",
+        infinitive: "conseguir",
+        options: ["consigo", "conseguí", "conseguía", "conseguiré", "conseguiría", "consiga"],
+        correctAnswers: [1],
+        explanation: "poder_specific"
+    },
+    {
+        id: 236,
+        type: "Pretérito vs Imperfecto",
+        difficulty: 1,
+        text: "Anoche _____ pasta con salsa de tomate.",
+        infinitive: "comer",
+        options: ["como", "comí", "comía", "comeré", "comería", "coma"],
+        correctAnswers: [1],
+        explanation: "ayer_past"
+    },
+    {
+        id: 237,
+        type: "Verbos Irregulares",
+        difficulty: 3,
+        text: "Ayer _____ muy mal tiempo en la ciudad.",
+        infinitive: "hacer",
+        options: ["hace", "hizo", "hacía", "hará", "haría", "haga"],
+        correctAnswers: [1],
+        explanation: "ayer_past"
+    },
+    {
+        id: 238,
+        type: "Pretérito vs Imperfecto",
+        difficulty: 2,
+        text: "El jueves pasado _____ con mis amigos del colegio.",
+        infinitive: "reunirse",
+        options: ["me reúno", "me reuní", "me reunía", "me reuniré", "me reuniría", "me reúna"],
+        correctAnswers: [1],
+        explanation: "poder_specific"
+    },
+    {
+        id: 239,
+        type: "Verbos Irregulares",
+        difficulty: 2,
+        text: "La semana pasada _____ que trabajar hasta muy tarde.",
+        infinitive: "tener",
+        options: ["tengo", "tuve", "tenía", "tendré", "tendría", "tenga"],
+        correctAnswers: [1],
+        explanation: "poder_specific"
+    },
+    {
+        id: 240,
+        type: "Pretérito vs Imperfecto",
+        difficulty: 2,
+        text: "Cuando _____ la puerta, ya no había nadie.",
+        infinitive: "abrir",
+        options: ["abro", "abrí", "abría", "abriré", "abriría", "abra"],
+        correctAnswers: [1],
+        explanation: "sequence_completed"
+    },
+    {
+        id: 241,
+        type: "Verbos Irregulares",
+        difficulty: 3,
+        text: "Ayer _____ las llaves del coche en casa.",
+        infinitive: "dejar",
+        options: ["dejo", "dejé", "dejaba", "dejaré", "dejaría", "deje"],
+        correctAnswers: [1],
+        explanation: "ayer_past"
+    },
+    {
+        id: 242,
+        type: "Pretérito vs Imperfecto",
+        difficulty: 2,
+        text: "El fin de semana pasado _____ mucho en el parque.",
+        infinitive: "correr",
+        options: ["corro", "corrí", "corría", "correré", "correría", "corra"],
+        correctAnswers: [1],
+        explanation: "poder_specific"
+    },
+    {
+        id: 243,
+        type: "Verbos Irregulares",
+        difficulty: 3,
+        text: "Anoche _____ una carta muy importante.",
+        infinitive: "escribir",
+        options: ["escribo", "escribí", "escribía", "escribiré", "escribiría", "escriba"],
+        correctAnswers: [1],
+        explanation: "ayer_past"
+    },
+    {
+        id: 244,
+        type: "Pretérito vs Imperfecto",
+        difficulty: 2,
+        text: "El año pasado _____ a Europa por primera vez.",
+        infinitive: "viajar",
+        options: ["viajo", "viajé", "viajaba", "viajaré", "viajaría", "viaje"],
+        correctAnswers: [1],
+        explanation: "poder_specific"
+    },
+    {
+        id: 245,
+        type: "Verbos Irregulares",
+        difficulty: 2,
+        text: "Ayer _____ en el supermercado todo lo que necesitaba.",
+        infinitive: "comprar",
+        options: ["compro", "compré", "compraba", "compraré", "compraría", "compre"],
+        correctAnswers: [1],
+        explanation: "ayer_past"
+    },
+    {
+        id: 246,
+        type: "Pretérito vs Imperfecto",
+        difficulty: 3,
+        text: "Cuando _____ el avión, todos aplaudieron.",
+        infinitive: "aterrizar",
+        options: ["aterrizo", "aterricé", "aterrizaba", "aterrizaré", "aterrizaría", "aterrice"],
+        correctAnswers: [1],
+        explanation: "sequence_completed"
+    },
+    {
+        id: 247,
+        type: "Verbos Irregulares",
+        difficulty: 3,
+        text: "El mes pasado _____ de trabajo por primera vez.",
+        infinitive: "cambiar",
+        options: ["cambio", "cambié", "cambiaba", "cambiaré", "cambiaría", "cambie"],
+        correctAnswers: [1],
+        explanation: "poder_specific"
+    },
+    {
+        id: 248,
+        type: "Pretérito vs Imperfecto",
+        difficulty: 2,
+        text: "Ayer _____ todo el día preparando la presentación.",
+        infinitive: "pasar",
+        options: ["paso", "pasé", "pasaba", "pasaré", "pasaría", "pase"],
+        correctAnswers: [1],
+        explanation: "ayer_past"
+    },
+    {
+        id: 249,
+        type: "Verbos Irregulares",
+        difficulty: 2,
+        text: "La semana pasada _____ a mi jefe sobre el proyecto.",
+        infinitive: "hablar",
+        options: ["hablo", "hablé", "hablaba", "hablaré", "hablaría", "hable"],
+        correctAnswers: [1],
+        explanation: "poder_specific"
+    },
+    {
+        id: 250,
+        type: "Pretérito vs Imperfecto",
+        difficulty: 3,
+        text: "Cuando _____ de la oficina, ya era de noche.",
+        infinitive: "salir",
+        options: ["salgo", "salí", "salía", "saldré", "saldría", "salga"],
+        correctAnswers: [1],
+        explanation: "sequence_completed"
     }
 ];

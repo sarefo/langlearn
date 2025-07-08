@@ -319,5 +319,185 @@ const imperfectoExercises = [
         options: ["cuenta", "contó", "contaba", "contará", "contaría", "cuente"],
         correctAnswers: [2],
         explanation: "siempre_habitual"
+    },
+    {
+        id: 333,
+        type: "Pretérito vs Imperfecto",
+        difficulty: 2,
+        text: "Cada mañana _____ café con leche antes de ir al trabajo.",
+        infinitive: "tomar",
+        options: ["tomo", "tomé", "tomaba", "tomaré", "tomaría", "tome"],
+        correctAnswers: [2],
+        explanation: "cada_habitual"
+    },
+    {
+        id: 334,
+        type: "Verbos Irregulares",
+        difficulty: 2,
+        text: "En esa época, _____ mucho dinero en mi cuenta bancaria.",
+        infinitive: "tener",
+        options: ["tengo", "tuve", "tenía", "tendré", "tendría", "tenga"],
+        correctAnswers: [2],
+        explanation: "description_past"
+    },
+    {
+        id: 335,
+        type: "Pretérito vs Imperfecto",
+        difficulty: 2,
+        text: "Mientras _____ por la calle, me encontré con un viejo amigo.",
+        infinitive: "caminar",
+        options: ["camino", "caminé", "caminaba", "caminaré", "caminaría", "camine"],
+        correctAnswers: [2],
+        explanation: "mientras_interrupted"
+    },
+    {
+        id: 336,
+        type: "Pretérito vs Imperfecto",
+        difficulty: 3,
+        text: "En mi juventud, _____ mucho más valiente que ahora.",
+        infinitive: "ser",
+        options: ["soy", "fui", "era", "seré", "sería", "sea"],
+        correctAnswers: [2],
+        explanation: "description_past"
+    },
+    {
+        id: 337,
+        type: "Verbos Irregulares",
+        difficulty: 2,
+        text: "Antes _____ escribir cartas a mano, ahora uso el ordenador.",
+        infinitive: "poder",
+        options: ["puedo", "pude", "podía", "podré", "podría", "pueda"],
+        correctAnswers: [2],
+        explanation: "siempre_habitual"
+    },
+    {
+        id: 338,
+        type: "Pretérito vs Imperfecto",
+        difficulty: 2,
+        text: "Todos los veranos _____ en el pueblo de mis abuelos.",
+        infinitive: "pasar",
+        options: ["paso", "pasé", "pasaba", "pasaré", "pasaría", "pase"],
+        correctAnswers: [2],
+        explanation: "cada_habitual"
+    },
+    {
+        id: 339,
+        type: "Pretérito vs Imperfecto",
+        difficulty: 3,
+        text: "Mientras _____ la comida, escuchaba música clásica.",
+        infinitive: "preparar",
+        options: ["preparo", "preparé", "preparaba", "prepararé", "prepararía", "prepare"],
+        correctAnswers: [2],
+        explanation: "mientras_interrupted"
+    },
+    {
+        id: 340,
+        type: "Verbos Irregulares",
+        difficulty: 2,
+        text: "En aquellos tiempos, no _____ internet en casa.",
+        infinitive: "tener",
+        options: ["tengo", "tuve", "tenía", "tendré", "tendría", "tenga"],
+        correctAnswers: [2],
+        explanation: "description_past"
+    },
+    {
+        id: 341,
+        type: "Pretérito vs Imperfecto",
+        difficulty: 2,
+        text: "Cuando _____ estudiante, vivía en una residencia universitaria.",
+        infinitive: "ser",
+        options: ["soy", "fui", "era", "seré", "sería", "sea"],
+        correctAnswers: [2],
+        explanation: "context_main"
+    },
+    {
+        id: 342,
+        type: "Pretérito vs Imperfecto",
+        difficulty: 2,
+        text: "Los fines de semana siempre _____ con mis padres.",
+        infinitive: "almorzar",
+        options: ["almuerzo", "almorcé", "almorzaba", "almorzaré", "almorzaría", "almuerce"],
+        correctAnswers: [2],
+        explanation: "siempre_habitual"
+    },
+    {
+        id: 343,
+        type: "Verbos Irregulares",
+        difficulty: 3,
+        text: "Cada vez que _____ a visitarnos, nos traía regalos.",
+        infinitive: "venir",
+        options: ["viene", "vino", "venía", "vendrá", "vendría", "venga"],
+        correctAnswers: [2],
+        explanation: "cada_habitual"
+    },
+    {
+        id: 344,
+        type: "Pretérito vs Imperfecto",
+        difficulty: 2,
+        text: "Cuando _____ pequeño, tenía miedo de la oscuridad.",
+        infinitive: "ser",
+        options: ["soy", "fui", "era", "seré", "sería", "sea"],
+        correctAnswers: [2],
+        explanation: "description_past"
+    },
+    {
+        id: 345,
+        type: "Pretérito vs Imperfecto",
+        difficulty: 2,
+        text: "Mientras _____ el periódico, sonó el teléfono.",
+        infinitive: "leer",
+        options: ["leo", "leí", "leía", "leeré", "leería", "lea"],
+        correctAnswers: [2],
+        explanation: "mientras_interrupted"
+    },
+    {
+        id: 346,
+        type: "Verbos Irregulares",
+        difficulty: 2,
+        text: "En mi infancia, _____ mucho español con mi abuela.",
+        infinitive: "hablar",
+        options: ["hablo", "hablé", "hablaba", "hablaré", "hablaría", "hable"],
+        correctAnswers: [2],
+        explanation: "siempre_habitual"
+    },
+    {
+        id: 347,
+        type: "Pretérito vs Imperfecto",
+        difficulty: 3,
+        text: "Generalmente _____ a las seis, pero ese día me levanté tarde.",
+        infinitive: "levantarse",
+        options: ["me levanto", "me levanté", "me levantaba", "me levantaré", "me levantaría", "me levante"],
+        correctAnswers: [2],
+        explanation: "siempre_habitual"
+    },
+    {
+        id: 348,
+        type: "Pretérito vs Imperfecto",
+        difficulty: 2,
+        text: "Cuando _____ en París, visitaba museos todos los días.",
+        infinitive: "vivir",
+        options: ["vivo", "viví", "vivía", "viviré", "viviría", "viva"],
+        correctAnswers: [2],
+        explanation: "context_main"
+    },
+    {
+        id: 349,
+        type: "Verbos Irregulares",
+        difficulty: 2,
+        text: "Antes _____ más paciencia con los niños.",
+        infinitive: "tener",
+        options: ["tengo", "tuve", "tenía", "tendré", "tendría", "tenga"],
+        correctAnswers: [2],
+        explanation: "description_past"
+    },
+    {
+        id: 350,
+        type: "Pretérito vs Imperfecto",
+        difficulty: 3,
+        text: "Mientras _____ esperando el autobús, comenzó a llover.",
+        infinitive: "estar",
+        options: ["estoy", "estuve", "estaba", "estaré", "estaría", "esté"],
+        correctAnswers: [2],
+        explanation: "mientras_interrupted"
     }
 ];
