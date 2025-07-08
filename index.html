@@ -171,5 +171,31 @@
         ];
     </script>
     <script type="module" src="js/app.js"></script>
+    
+    <!-- Service Worker Registration -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./sw.js')
+                    .then(registration => {
+                        console.log('[SW] Registration successful:', registration.scope);
+                        
+                        // Check for updates
+                        registration.addEventListener('updatefound', () => {
+                            const newWorker = registration.installing;
+                            newWorker.addEventListener('statechange', () => {
+                                if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                                    // New content is available, inform user
+                                    console.log('[SW] New content available, please refresh');
+                                }
+                            });
+                        });
+                    })
+                    .catch(error => {
+                        console.log('[SW] Registration failed:', error);
+                    });
+            });
+        }
+    </script>
 </body>
 </html>
