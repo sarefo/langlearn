@@ -1,4 +1,5 @@
-const CACHE_NAME = 'langlearn-v1';
+// Auto-versioning: any change to this file triggers cache update
+const CACHE_NAME = 'langlearn-cache';
 const STATIC_CACHE_URLS = [
   './',
   './index.html',
@@ -51,26 +52,32 @@ self.addEventListener('install', event => {
   );
 });
 
-// Activate event - cleanup old caches
+// Activate event - refresh cache on service worker update
 self.addEventListener('activate', event => {
-  console.log('[SW] Activating...');
+  console.log('[SW] Activating new version...');
   event.waitUntil(
+    // Clear all caches and rebuild fresh
     caches.keys()
       .then(cacheNames => {
-        return Promise.all(
-          cacheNames.map(cacheName => {
-            if (cacheName !== CACHE_NAME) {
-              console.log('[SW] Deleting old cache:', cacheName);
-              return caches.delete(cacheName);
-            }
-          })
-        );
+        console.log('[SW] Clearing all caches for fresh update');
+        return Promise.all(cacheNames.map(name => caches.delete(name)));
+      })
+      .then(() => {
+        // Rebuild cache with fresh content
+        console.log('[SW] Rebuilding cache with fresh content');
+        return caches.open(CACHE_NAME);
+      })
+      .then(cache => {
+        return cache.addAll(STATIC_CACHE_URLS);
       })
       .then(() => self.clients.claim())
+      .then(() => {
+        console.log('[SW] ✅ Fresh cache ready with updated content');
+      })
   );
 });
 
-// Fetch event - serve from cache, fallback to network
+// Fetch event - cache first with background update
 self.addEventListener('fetch', event => {
   // Only handle GET requests
   if (event.request.method !== 'GET') {
@@ -80,15 +87,8 @@ self.addEventListener('fetch', event => {
   event.respondWith(
     caches.match(event.request)
       .then(cachedResponse => {
-        // Return cached version if available
-        if (cachedResponse) {
-          console.log('[SW] Serving from cache:', event.request.url);
-          return cachedResponse;
-        }
-
-        // Otherwise fetch from network
-        console.log('[SW] Fetching from network:', event.request.url);
-        return fetch(event.request)
+        // Background update: Always try to fetch fresh version
+        const fetchPromise = fetch(event.request)
           .then(response => {
             // Don't cache non-successful responses
             if (!response || response.status !== 200 || response.type !== 'basic') {
@@ -104,7 +104,23 @@ self.addEventListener('fetch', event => {
               });
 
             return response;
+          })
+          .catch(() => {
+            // Network failed, but that's ok - we have cache
+            console.log('[SW] Background update failed for:', event.request.url);
           });
+
+        // Return cached version immediately (fast), update in background
+        if (cachedResponse) {
+          console.log('[SW] Serving from cache:', event.request.url);
+          // Trigger background update but don't wait for it
+          fetchPromise;
+          return cachedResponse;
+        }
+
+        // No cached version, wait for network
+        console.log('[SW] No cache, fetching from network:', event.request.url);
+        return fetchPromise;
       })
       .catch(() => {
         // If both cache and network fail, return a basic offline page

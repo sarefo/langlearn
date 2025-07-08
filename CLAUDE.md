@@ -86,6 +86,30 @@ Exercises are organized by tense with unique ID prefixes to prevent conflicts:
 - **Test Local**: Visit `http://localhost:8000/langlearn/` - use puppeteer MCP
 - **GitHub Pages**: Accessible instantly at GitHub Pages URL
 
+### Service Worker & Offline Functionality
+The app includes a Service Worker (`sw.js`) that provides:
+- **Complete offline functionality** after first visit
+- **Automatic background updates** when online
+- **Zero-maintenance versioning** - updates automatically on any file change
+
+#### How Auto-Updates Work
+1. **Any change** to app files triggers Service Worker update detection
+2. **Background downloads** happen silently while user browses
+3. **Fresh content** appears automatically on next visit
+4. **No manual versioning** - completely automatic
+
+#### For Development/Updates
+- **No version bumping needed** - system is fully automatic
+- **Any file change** triggers cache refresh (HTML, CSS, JS, data)
+- **Testing**: Use Puppeteer MCP to verify offline functionality
+- **Deployment**: Just commit and push - users get updates automatically
+
+#### Technical Details
+- Uses **cache-first strategy** for instant loading
+- **Background update pattern** for seamless freshness
+- **Aggressive cache clearing** on Service Worker updates ensures fresh content
+- **Fixed cache name** eliminates manual version management
+
 ### Best Practices for Updates
 - **Test on multiple screen sizes** - Ensure mobile and desktop compatibility
 - **Keep functions small** - JavaScript is organized in clear, focused functions
