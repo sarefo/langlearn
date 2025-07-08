@@ -279,5 +279,225 @@ const presenteExercises = [
         options: ["escribe", "escribió", "escribía", "escribirá", "escribiría", "escriba"],
         correctAnswers: [0],
         explanation: "actividad_presente"
+    },
+    {
+        id: 129,
+        type: "Verbos Regulares",
+        difficulty: 1,
+        text: "Yo _____ en casa los fines de semana.",
+        infinitive: "descansar",
+        options: ["descanso", "descansé", "descansaba", "descansaré", "descansaría", "descanse"],
+        correctAnswers: [0],
+        explanation: "rutina_presente"
+    },
+    {
+        id: 130,
+        type: "Verbos Irregulares",
+        difficulty: 3,
+        text: "Tú _____ muy bien los números.",
+        infinitive: "contar",
+        options: ["cuentas", "contaste", "contabas", "contarás", "contarías", "cuentes"],
+        correctAnswers: [0],
+        explanation: "habilidad_presente"
+    },
+    {
+        id: 131,
+        type: "Verbos Regulares",
+        difficulty: 1,
+        text: "Mis padres _____ en el jardín.",
+        infinitive: "caminar",
+        options: ["caminan", "caminaron", "caminaban", "caminarán", "caminarían", "caminen"],
+        correctAnswers: [0],
+        explanation: "actividad_presente"
+    },
+    {
+        id: 132,
+        type: "Verbos Irregulares",
+        difficulty: 2,
+        text: "Yo _____ que practicar más piano.",
+        infinitive: "necesitar",
+        options: ["necesito", "necesité", "necesitaba", "necesitaré", "necesitaría", "necesite"],
+        correctAnswers: [0],
+        explanation: "obligacion_presente"
+    },
+    {
+        id: 133,
+        type: "Verbos Irregulares",
+        difficulty: 3,
+        text: "Ella _____ mucho cuando ve películas tristes.",
+        infinitive: "llorar",
+        options: ["llora", "lloró", "lloraba", "llorará", "lloraría", "llore"],
+        correctAnswers: [0],
+        explanation: "cuando_presente"
+    },
+    {
+        id: 134,
+        type: "Verbos Regulares",
+        difficulty: 1,
+        text: "Nosotros _____ la televisión por las tardes.",
+        infinitive: "mirar",
+        options: ["miramos", "miramos", "mirábamos", "miraremos", "miraríamos", "miremos"],
+        correctAnswers: [0],
+        explanation: "rutina_presente"
+    },
+    {
+        id: 135,
+        type: "Verbos Irregulares",
+        difficulty: 2,
+        text: "¿_____ dónde está la biblioteca?",
+        infinitive: "saber",
+        options: ["sabes", "supiste", "sabías", "sabrás", "sabrías", "sepas"],
+        correctAnswers: [0],
+        explanation: "pregunta_presente"
+    },
+    {
+        id: 136,
+        type: "Verbos Irregulares",
+        difficulty: 3,
+        text: "Yo _____ los platos después de cenar.",
+        infinitive: "lavar",
+        options: ["lavo", "lavé", "lavaba", "lavaré", "lavaría", "lave"],
+        correctAnswers: [0],
+        explanation: "rutina_presente"
+    },
+    {
+        id: 137,
+        type: "Verbos Irregulares",
+        difficulty: 1,
+        text: "Tú _____ muy alto.",
+        infinitive: "ser",
+        options: ["eres", "fuiste", "eras", "serás", "serías", "seas"],
+        correctAnswers: [0],
+        explanation: "caracteristica_presente"
+    },
+    {
+        id: 138,
+        type: "Verbos Regulares",
+        difficulty: 2,
+        text: "Los niños _____ en el parque.",
+        infinitive: "jugar",
+        options: ["juegan", "jugaron", "jugaban", "jugarán", "jugarían", "jueguen"],
+        correctAnswers: [0],
+        explanation: "actividad_presente"
+    },
+    {
+        id: 139,
+        type: "Verbos Irregulares",
+        difficulty: 3,
+        text: "Yo _____ mis zapatos antes de entrar.",
+        infinitive: "quitarse",
+        options: ["me quito", "me quité", "me quitaba", "me quitaré", "me quitaría", "me quite"],
+        correctAnswers: [0],
+        explanation: "costumbre_presente"
+    },
+    {
+        id: 140,
+        type: "Verbos Regulares",
+        difficulty: 1,
+        text: "Ella _____ inglés en la universidad.",
+        infinitive: "estudiar",
+        options: ["estudia", "estudió", "estudiaba", "estudiará", "estudiaría", "estudie"],
+        correctAnswers: [0],
+        explanation: "actividad_presente"
+    },
+    {
+        id: 141,
+        type: "Verbos Irregulares",
+        difficulty: 2,
+        text: "Nosotros _____ hambre antes del almuerzo.",
+        infinitive: "tener",
+        options: ["tenemos", "tuvimos", "teníamos", "tendremos", "tendríamos", "tengamos"],
+        correctAnswers: [0],
+        explanation: "estado_presente"
+    },
+    {
+        id: 142,
+        type: "Verbos Irregulares",
+        difficulty: 3,
+        text: "¿_____ la puerta cuando sales?",
+        infinitive: "cerrar",
+        options: ["cierras", "cerraste", "cerrabas", "cerrarás", "cerrarías", "cierres"],
+        correctAnswers: [0],
+        explanation: "cuando_presente"
+    },
+    {
+        id: 143,
+        type: "Verbos Regulares",
+        difficulty: 1,
+        text: "Yo _____ agua durante el ejercicio.",
+        infinitive: "beber",
+        options: ["bebo", "bebí", "bebía", "beberé", "bebería", "beba"],
+        correctAnswers: [0],
+        explanation: "durante_presente"
+    },
+    {
+        id: 144,
+        type: "Verbos Irregulares",
+        difficulty: 2,
+        text: "Tú _____ muy bien el español.",
+        infinitive: "entender",
+        options: ["entiendes", "entendiste", "entendías", "entenderás", "entenderías", "entiendas"],
+        correctAnswers: [0],
+        explanation: "habilidad_presente"
+    },
+    {
+        id: 145,
+        type: "Verbos Irregulares",
+        difficulty: 3,
+        text: "Ellos _____ a sus hijos todas las noches.",
+        infinitive: "acostar",
+        options: ["acuestan", "acostaron", "acostaban", "acostarán", "acostarían", "acuesten"],
+        correctAnswers: [0],
+        explanation: "rutina_presente"
+    },
+    {
+        id: 146,
+        type: "Verbos Regulares",
+        difficulty: 1,
+        text: "Nosotros _____ correos electrónicos diariamente.",
+        infinitive: "enviar",
+        options: ["enviamos", "enviamos", "enviábamos", "enviaremos", "enviaríamos", "enviemos"],
+        correctAnswers: [0],
+        explanation: "diariamente_presente"
+    },
+    {
+        id: 147,
+        type: "Verbos Irregulares",
+        difficulty: 2,
+        text: "Yo _____ mi bicicleta al trabajo.",
+        infinitive: "traer",
+        options: ["traigo", "traje", "traía", "traeré", "traería", "traiga"],
+        correctAnswers: [0],
+        explanation: "actividad_presente"
+    },
+    {
+        id: 148,
+        type: "Verbos Irregulares",
+        difficulty: 3,
+        text: "¿_____ ayuda con la tarea?",
+        infinitive: "necesitar",
+        options: ["necesitas", "necesitaste", "necesitabas", "necesitarás", "necesitarías", "necesites"],
+        correctAnswers: [0],
+        explanation: "pregunta_presente"
+    },
+    {
+        id: 149,
+        type: "Verbos Regulares",
+        difficulty: 1,
+        text: "Ella _____ flores en su jardín.",
+        infinitive: "plantar",
+        options: ["planta", "plantó", "plantaba", "plantará", "plantaría", "plante"],
+        correctAnswers: [0],
+        explanation: "actividad_presente"
+    },
+    {
+        id: 150,
+        type: "Verbos Irregulares",
+        difficulty: 2,
+        text: "Yo _____ la radio mientras cocino.",
+        infinitive: "escuchar",
+        options: ["escucho", "escuché", "escuchaba", "escucharé", "escucharía", "escuche"],
+        correctAnswers: [0],
+        explanation: "mientras_presente"
     }
 ];

@@ -249,5 +249,255 @@ const futuroExercises = [
         options: ["me levanto", "me levanté", "me levantaba", "me levantaré", "me levantaría", "me levante"],
         correctAnswers: [3],
         explanation: "manana_temprano_future"
+    },
+    {
+        id: 426,
+        type: "Futuro",
+        difficulty: 2,
+        text: "Cuando tengas dinero suficiente, _____ tu propio negocio.",
+        infinitive: "abrir",
+        options: ["abres", "abriste", "abrías", "abrirás", "abrirías", "abras"],
+        correctAnswers: [3],
+        explanation: "cuando_tengas_future"
+    },
+    {
+        id: 427,
+        type: "Futuro",
+        difficulty: 1,
+        text: "Esta tarde _____ la casa con mi hermana.",
+        infinitive: "limpiar",
+        options: ["limpio", "limpié", "limpiaba", "limpiaré", "limpiaría", "limpie"],
+        correctAnswers: [3],
+        explanation: "esta_tarde_future"
+    },
+    {
+        id: 428,
+        type: "Futuro",
+        difficulty: 3,
+        text: "En diez años _____ tres hijos.",
+        infinitive: "tener",
+        options: ["tengo", "tuve", "tenía", "tendré", "tendría", "tenga"],
+        correctAnswers: [3],
+        explanation: "en_anos_future"
+    },
+    {
+        id: 429,
+        type: "Futuro",
+        difficulty: 2,
+        text: "¿_____ a tiempo para la cita?",
+        infinitive: "llegar",
+        options: ["llegas", "llegaste", "llegabas", "llegarás", "llegarías", "llegues"],
+        correctAnswers: [3],
+        explanation: "a_tiempo_future"
+    },
+    {
+        id: 430,
+        type: "Futuro",
+        difficulty: 1,
+        text: "El próximo mes _____ un curso de cocina.",
+        infinitive: "empezar",
+        options: ["empiezo", "empecé", "empezaba", "empezaré", "empezaría", "empiece"],
+        correctAnswers: [3],
+        explanation: "proximo_mes_future"
+    },
+    {
+        id: 431,
+        type: "Futuro",
+        difficulty: 3,
+        text: "Jamás _____ lo que pasó aquí.",
+        infinitive: "olvidar",
+        options: ["olvido", "olvidé", "olvidaba", "olvidaré", "olvidaría", "olvide"],
+        correctAnswers: [3],
+        explanation: "jamas_future"
+    },
+    {
+        id: 432,
+        type: "Futuro",
+        difficulty: 2,
+        text: "Si llueve mañana, _____ en casa.",
+        infinitive: "quedarse",
+        options: ["me quedo", "me quedé", "me quedaba", "me quedaré", "me quedaría", "me quede"],
+        correctAnswers: [3],
+        explanation: "si_llueve_future"
+    },
+    {
+        id: 433,
+        type: "Futuro",
+        difficulty: 1,
+        text: "La semana que viene _____ mis vacaciones.",
+        infinitive: "planear",
+        options: ["planeo", "planeé", "planeaba", "planearé", "planearía", "planee"],
+        correctAnswers: [3],
+        explanation: "semana_viene_future"
+    },
+    {
+        id: 434,
+        type: "Futuro",
+        difficulty: 3,
+        text: "Nunca _____ en qué estabas pensando.",
+        infinitive: "saber",
+        options: ["sé", "supe", "sabía", "sabré", "sabría", "sepa"],
+        correctAnswers: [3],
+        explanation: "nunca_sabre_future"
+    },
+    {
+        id: 435,
+        type: "Futuro",
+        difficulty: 2,
+        text: "Dentro de una hora _____ la respuesta.",
+        infinitive: "recibir",
+        options: ["recibo", "recibí", "recibía", "recibiré", "recibiría", "reciba"],
+        correctAnswers: [3],
+        explanation: "dentro_hora_future"
+    },
+    {
+        id: 436,
+        type: "Futuro",
+        difficulty: 1,
+        text: "El viernes _____ pizza con mis amigos.",
+        infinitive: "comer",
+        options: ["como", "comí", "comía", "comeré", "comería", "coma"],
+        correctAnswers: [3],
+        explanation: "viernes_future"
+    },
+    {
+        id: 437,
+        type: "Futuro",
+        difficulty: 3,
+        text: "Cuando crezca _____ astronauta.",
+        infinitive: "ser",
+        options: ["soy", "fui", "era", "seré", "sería", "sea"],
+        correctAnswers: [3],
+        explanation: "cuando_crezca_future"
+    },
+    {
+        id: 438,
+        type: "Futuro",
+        difficulty: 2,
+        text: "Más tarde _____ con mi jefe sobre el proyecto.",
+        infinitive: "hablar",
+        options: ["hablo", "hablé", "hablaba", "hablaré", "hablaría", "hable"],
+        correctAnswers: [3],
+        explanation: "mas_tarde_future"
+    },
+    {
+        id: 439,
+        type: "Futuro",
+        difficulty: 1,
+        text: "Mañana _____ a correr al parque.",
+        infinitive: "salir",
+        options: ["salgo", "salí", "salía", "saldré", "saldría", "salga"],
+        correctAnswers: [3],
+        explanation: "manana_salir_future"
+    },
+    {
+        id: 440,
+        type: "Futuro",
+        difficulty: 3,
+        text: "Algún día _____ a escribir un libro.",
+        infinitive: "aprender",
+        options: ["aprendo", "aprendí", "aprendía", "aprenderé", "aprendería", "aprenda"],
+        correctAnswers: [3],
+        explanation: "algun_dia_future"
+    },
+    {
+        id: 441,
+        type: "Futuro",
+        difficulty: 2,
+        text: "¿_____ tu hermana a la fiesta?",
+        infinitive: "invitar",
+        options: ["invitas", "invitaste", "invitabas", "invitarás", "invitarías", "invites"],
+        correctAnswers: [3],
+        explanation: "pregunta_future"
+    },
+    {
+        id: 442,
+        type: "Futuro",
+        difficulty: 1,
+        text: "El sábado _____ la bicicleta nueva.",
+        infinitive: "estrenar",
+        options: ["estreno", "estrené", "estrenaba", "estrenaré", "estrenaría", "estrene"],
+        correctAnswers: [3],
+        explanation: "sabado_future"
+    },
+    {
+        id: 443,
+        type: "Futuro",
+        difficulty: 3,
+        text: "Cuando seas padre _____ estas cosas.",
+        infinitive: "comprender",
+        options: ["comprendes", "comprendiste", "comprendías", "comprenderás", "comprenderías", "comprendas"],
+        correctAnswers: [3],
+        explanation: "cuando_seas_padre_future"
+    },
+    {
+        id: 444,
+        type: "Futuro",
+        difficulty: 2,
+        text: "En verano _____ a la playa todos los días.",
+        infinitive: "ir",
+        options: ["voy", "fui", "iba", "iré", "iría", "vaya"],
+        correctAnswers: [3],
+        explanation: "en_verano_future"
+    },
+    {
+        id: 445,
+        type: "Futuro",
+        difficulty: 1,
+        text: "¿_____ la cena esta noche?",
+        infinitive: "preparar",
+        options: ["preparas", "preparaste", "preparabas", "prepararás", "prepararías", "prepares"],
+        correctAnswers: [3],
+        explanation: "esta_noche_future"
+    },
+    {
+        id: 446,
+        type: "Futuro",
+        difficulty: 3,
+        text: "No _____ tranquilo hasta resolver este problema.",
+        infinitive: "estar",
+        options: ["estoy", "estuve", "estaba", "estaré", "estaría", "esté"],
+        correctAnswers: [3],
+        explanation: "no_estare_future"
+    },
+    {
+        id: 447,
+        type: "Futuro",
+        difficulty: 2,
+        text: "Después del trabajo _____ ejercicio.",
+        infinitive: "hacer",
+        options: ["hago", "hice", "hacía", "haré", "haría", "haga"],
+        correctAnswers: [3],
+        explanation: "despues_trabajo_future"
+    },
+    {
+        id: 448,
+        type: "Futuro",
+        difficulty: 1,
+        text: "El domingo _____ hasta muy tarde.",
+        infinitive: "dormir",
+        options: ["duermo", "dormí", "dormía", "dormiré", "dormiría", "duerma"],
+        correctAnswers: [3],
+        explanation: "domingo_dormir_future"
+    },
+    {
+        id: 449,
+        type: "Futuro",
+        difficulty: 3,
+        text: "Mientras estudies, _____ tus objetivos.",
+        infinitive: "conseguir",
+        options: ["consigo", "conseguí", "conseguía", "conseguiré", "conseguiría", "consiga"],
+        correctAnswers: [3],
+        explanation: "mientras_estudies_future"
+    },
+    {
+        id: 450,
+        type: "Futuro",
+        difficulty: 2,
+        text: "Pronto _____ mi nueva casa.",
+        infinitive: "comprar",
+        options: ["compro", "compré", "compraba", "compraré", "compraría", "compre"],
+        correctAnswers: [3],
+        explanation: "pronto_comprar_future"
     }
 ];
