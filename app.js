@@ -50,6 +50,7 @@ function countExercisesPerTense() {
 function init() {
     loadStats();
     loadWrongAnswers();
+    loadTensesFromURL();
     initTenseSelector();
     updateTenseCounts();
     shuffleExercises();
@@ -77,14 +78,50 @@ function updateTenseCounts() {
     });
 }
 
-// Initialize tense selector
-function initTenseSelector() {
-    // Load saved tense selection from localStorage
+// Load tenses from URL parameters
+function loadTensesFromURL() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const tensesParam = urlParams.get('tenses');
+    
+    if (tensesParam) {
+        // Parse letter codes from URL (A=0, B=1, C=2, D=3, E=4, F=5)
+        const tenseIndices = tensesParam.toUpperCase()
+            .split('')
+            .map(letter => letter.charCodeAt(0) - 65) // Convert A-F to 0-5
+            .filter(index => index >= 0 && index <= 5)
+            .sort(); // Keep sorted for consistency
+        
+        if (tenseIndices.length > 0) {
+            selectedTenses = tenseIndices;
+            // Save to localStorage so it persists
+            localStorage.setItem('langlearn_selected_tenses', JSON.stringify(selectedTenses));
+            return;
+        }
+    }
+    
+    // Fallback to localStorage if no valid URL params
     const saved = localStorage.getItem('langlearn_selected_tenses');
     if (saved) {
         selectedTenses = JSON.parse(saved);
     }
+}
+
+// Update URL parameters to reflect current tense selection
+function updateURL() {
+    // Convert tense indices to letter codes (0=A, 1=B, 2=C, 3=D, 4=E, 5=F)
+    const tensesParam = selectedTenses
+        .map(index => String.fromCharCode(65 + index)) // Convert 0-5 to A-F
+        .join('');
     
+    const url = new URL(window.location);
+    url.searchParams.set('tenses', tensesParam);
+    
+    // Update URL without reloading the page
+    window.history.pushState({}, '', url.toString());
+}
+
+// Initialize tense selector
+function initTenseSelector() {
     const tenseOptions = document.querySelectorAll('.tense-option');
     tenseOptions.forEach((option, index) => {
         option.addEventListener('click', () => toggleTense(index));
@@ -113,6 +150,9 @@ function toggleTense(tenseIndex) {
     
     // Save tense selection to localStorage
     localStorage.setItem('langlearn_selected_tenses', JSON.stringify(selectedTenses));
+    
+    // Update URL parameters
+    updateURL();
     
     // Reshuffle and reload exercise with new tense selection
     shuffleExercises();
