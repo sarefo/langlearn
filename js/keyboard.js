@@ -21,7 +21,7 @@ export function handleKeyboardInput(e) {
         return;
     }
     
-    if (key === 'H' || key === '?') {
+    if ((key === 'H' || key === '?') && !e.target.matches('input, textarea, select')) {
         e.preventDefault();
         showHelpDialog();
         return;
@@ -85,11 +85,11 @@ function handleAnsweredState(e) {
     const siguienteBtn = document.querySelector('.siguiente-btn');
     
     if (easyBtn && hardBtn) {
-        if (e.key === 'ArrowLeft') {
+        if (e.key === 'ArrowLeft' || e.key === ' ') {
             e.preventDefault();
             window.handleDifficultyFeedback('hard');
             return;
-        } else if (e.key === 'ArrowRight') {
+        } else if (e.key === 'ArrowRight' || e.key === 'Enter') {
             e.preventDefault();
             window.handleDifficultyFeedback('easy');
             return;

@@ -207,23 +207,63 @@ export function checkTypedAnswer() {
     if (!input || appState.answered) return;
     
     const typedAnswer = input.value.trim();
-    if (!typedAnswer) return;
+    if (!typedAnswer) {
+        // Clear any error styling when input is empty
+        input.style.borderColor = '';
+        return;
+    }
     
     // Normalize the typed answer for comparison
     const normalizedTyped = normalizeText(typedAnswer);
     
-    // Check if the typed answer matches any of the exercise options (accent-insensitive)
     const exercise = appState.currentExercise;
-    const matchingOptionIndex = exercise.options.findIndex(option => 
+    
+    // First check if typed answer exactly matches any option
+    const exactMatchIndex = exercise.options.findIndex(option => 
         normalizeText(option) === normalizedTyped
     );
     
-    if (matchingOptionIndex !== -1) {
-        // Show options
+    if (exactMatchIndex !== -1) {
+        // Clear any error styling
+        input.style.borderColor = '';
+        // Show options and select the matching option
         showOptions();
+        window.selectOption(exactMatchIndex);
+        return;
+    }
+    
+    // Check if typed answer matches the beginning of any option
+    const anyOptionMatch = exercise.options.some(option => 
+        normalizeText(option).startsWith(normalizedTyped)
+    );
+    
+    if (anyOptionMatch) {
+        // Clear any error styling if it matches any option
+        input.style.borderColor = '';
         
-        // Select the matching option
-        window.selectOption(matchingOptionIndex);
+        // Check if it's a prefix of correct answer - if so, let them continue
+        const correctAnswers = exercise.correctAnswers.map(index => normalizeText(exercise.options[index]));
+        const isCorrectPrefix = correctAnswers.some(correctAnswer => 
+            correctAnswer.startsWith(normalizedTyped)
+        );
+        
+        if (!isCorrectPrefix) {
+            // It matches a wrong option, find and select it
+            const matchingOptionIndex = exercise.options.findIndex(option => {
+                const normalizedOption = normalizeText(option);
+                return normalizedOption.startsWith(normalizedTyped);
+            });
+            
+            if (matchingOptionIndex !== -1) {
+                // Show options and select the matching option
+                showOptions();
+                window.selectOption(matchingOptionIndex);
+            }
+        }
+    } else {
+        // No option matches - show visual feedback but don't select anything
+        input.style.borderColor = '#ff4444';
+        input.style.borderWidth = '2px';
     }
 }
 
@@ -232,9 +272,12 @@ export function handleInputKeydown(event) {
         event.preventDefault();
         // First check if typed answer is valid
         checkTypedAnswer();
-        // If no valid typed answer, show options
+        // If no valid typed answer and no error styling, show options
         if (!appState.answered) {
-            showOptions();
+            const input = document.querySelector('.answer-input');
+            if (input && input.style.borderColor !== 'rgb(255, 68, 68)') {
+                showOptions();
+            }
         }
     }
 }
