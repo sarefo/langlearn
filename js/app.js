@@ -5,8 +5,10 @@ import { initTenseSelector, updateTenseCounts } from './tenses.js';
 import { shuffleExercises } from './exercises.js';
 import { loadExercise } from './game.js';
 import { initGlobalKeyboardHandler } from './keyboard.js';
+import { loadDialogs } from './dialogs.js';
 
-export function init() {
+export async function init() {
+    await loadDialogs();
     loadStats();
     loadWrongAnswers();
     loadExerciseDifficulty();

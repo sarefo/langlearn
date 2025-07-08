@@ -1,0 +1,42 @@
+<!-- Stats Dialog -->
+<div class="help-dialog-overlay" id="stats-dialog-overlay" onclick="window.hideStatsDialog()">
+    <div class="help-dialog" onclick="event.stopPropagation()">
+        <div class="help-header">
+            <h3>Estadísticas Detalladas</h3>
+            <button class="help-close-btn" onclick="window.hideStatsDialog()">×</button>
+        </div>
+        <div class="help-content">
+            <div class="shortcut-section">
+                <h4>Respuestas Incorrectas</h4>
+                <div id="wrong-answers-list" class="stats-list">
+                    <div class="stats-empty">No hay respuestas incorrectas registradas</div>
+                </div>
+            </div>
+            
+            <div class="shortcut-section">
+                <h4>Ejercicios Marcados como Difíciles</h4>
+                <div id="hard-exercises-list" class="stats-list">
+                    <div class="stats-empty">No hay ejercicios marcados como difíciles</div>
+                </div>
+            </div>
+
+            <div class="shortcut-section">
+                <h4>Resumen de Rendimiento</h4>
+                <div class="stats-summary">
+                    <div class="stat-item">
+                        <span class="stat-label">Ejercicios con errores:</span>
+                        <span class="stat-value" id="wrong-count">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Ejercicios difíciles:</span>
+                        <span class="stat-value" id="hard-count">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Errores totales:</span>
+                        <span class="stat-value" id="total-errors">0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

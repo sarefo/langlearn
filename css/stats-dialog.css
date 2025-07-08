@@ -1,0 +1,85 @@
+/* Stats dialog specific styles */
+
+.stats-list {
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: var(--bg);
+}
+
+.stats-empty {
+    padding: 16px;
+    color: var(--text-light);
+    font-style: italic;
+    text-align: center;
+}
+
+.stats-item {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.stats-item:last-child {
+    border-bottom: none;
+}
+
+.stats-item .exercise-text {
+    color: var(--text);
+    font-size: 14px;
+    flex: 1;
+    margin-right: 8px;
+}
+
+.stats-item .exercise-info {
+    color: var(--text-light);
+    font-size: 12px;
+    text-align: right;
+}
+
+.stats-summary {
+    background: var(--bg);
+    border-radius: 6px;
+    padding: 16px;
+    border: 1px solid var(--border);
+}
+
+.stat-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.stat-item:last-child {
+    border-bottom: none;
+}
+
+.stat-item .stat-label {
+    color: var(--text);
+    font-size: 14px;
+}
+
+.stat-item .stat-value {
+    color: var(--primary);
+    font-weight: 600;
+    font-size: 14px;
+}
+
+/* Stats icon */
+.stats-icon {
+    width: 16px;
+    height: 16px;
+    fill: #555;
+    transition: fill 0.2s;
+    display: block;
+    margin: 0 auto;
+}
+
+.help-btn:hover .stats-icon {
+    fill: #333;
+}
