@@ -86,7 +86,7 @@
                             <div class="stat-label">Racha (días)</div>
                         </div>
                         <div class="help-stat">
-                            <button class="help-btn" id="help-btn" onclick="showHelpDialog()">
+                            <button class="help-btn" id="help-btn" onclick="window.showHelpDialog()">
                                 <span class="help-icon">?</span>
                             </button>
                         </div>
@@ -98,11 +98,11 @@
     </div>
 
     <!-- Keyboard Shortcuts Dialog -->
-    <div class="help-dialog-overlay" id="help-dialog-overlay" onclick="hideHelpDialog()">
+    <div class="help-dialog-overlay" id="help-dialog-overlay" onclick="window.hideHelpDialog()">
         <div class="help-dialog" onclick="event.stopPropagation()">
             <div class="help-header">
                 <h3>Atajos de Teclado</h3>
-                <button class="help-close-btn" onclick="hideHelpDialog()">×</button>
+                <button class="help-close-btn" onclick="window.hideHelpDialog()">×</button>
             </div>
             <div class="help-content">
                 <div class="shortcut-section">
@@ -170,6 +170,6 @@
             ...subjuntivoExercises
         ];
     </script>
-    <script src="app.js"></script>
+    <script type="module" src="js/app.js"></script>
 </body>
 </html>
