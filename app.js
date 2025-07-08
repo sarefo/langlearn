@@ -9,6 +9,7 @@ let streak = 0;
 let answered = false;
 let selectedTenses = [0, 1, 2]; // Default: A, B, C (Presente, Pretérito, Imperfecto)
 let wrongAnswers = []; // Track exercises that were answered incorrectly
+let exerciseDifficulty = {}; // Track user-reported difficulty per exercise
 
 // Tense names for display
 const tenseNames = [
@@ -50,6 +51,7 @@ function countExercisesPerTense() {
 function init() {
     loadStats();
     loadWrongAnswers();
+    loadExerciseDifficulty();
     loadTensesFromURL();
     initTenseSelector();
     updateTenseCounts();
@@ -166,42 +168,46 @@ function getFilteredExercises() {
     });
 }
 
-// Shuffle exercises for variety with wrong answer prioritization
+// Shuffle exercises for variety with wrong answer and difficulty prioritization
 function shuffleExercises() {
     const filteredExercises = getFilteredExercises();
     const wrongExercises = [];
+    const hardExercises = [];
     const regularExercises = [];
     
-    // Separate wrong and regular exercises
+    // Separate wrong, hard, and regular exercises
     filteredExercises.forEach(exercise => {
         if (wrongAnswers.some(wrong => wrong.id === exercise.id)) {
             wrongExercises.push(exercise);
+        } else if (exerciseDifficulty[exercise.id] === 'hard') {
+            hardExercises.push(exercise);
         } else {
             regularExercises.push(exercise);
         }
     });
     
-    // Shuffle both arrays
-    for (let i = wrongExercises.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [wrongExercises[i], wrongExercises[j]] = [wrongExercises[j], wrongExercises[i]];
-    }
+    // Shuffle all arrays
+    [wrongExercises, hardExercises, regularExercises].forEach(arr => {
+        for (let i = arr.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [arr[i], arr[j]] = [arr[j], arr[i]];
+        }
+    });
     
-    for (let i = regularExercises.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [regularExercises[i], regularExercises[j]] = [regularExercises[j], regularExercises[i]];
-    }
-    
-    // Combine with wrong answers prioritized (appear more frequently)
+    // Combine with prioritization: wrong (40%), hard (30%), regular (30%)
     const combinedExercises = [];
-    const wrongRatio = 0.4; // 40% of exercises should be wrong answers when available
+    const wrongRatio = 0.4;
+    const hardRatio = 0.3;
     
     let wrongIndex = 0;
+    let hardIndex = 0;
     let regularIndex = 0;
     
     for (let i = 0; i < filteredExercises.length; i++) {
+        const rand = Math.random();
+        
         if (wrongExercises.length > 0 && wrongIndex < wrongExercises.length && 
-            (regularExercises.length === 0 || Math.random() < wrongRatio || regularIndex >= regularExercises.length)) {
+            (rand < wrongRatio || (hardIndex >= hardExercises.length && regularIndex >= regularExercises.length))) {
             combinedExercises.push(wrongExercises[wrongIndex]);
             wrongIndex++;
             
@@ -209,6 +215,10 @@ function shuffleExercises() {
             if (wrongIndex < wrongExercises.length && Math.random() < 0.3) {
                 combinedExercises.push(wrongExercises[wrongIndex - 1]);
             }
+        } else if (hardExercises.length > 0 && hardIndex < hardExercises.length && 
+                   (rand < wrongRatio + hardRatio || regularIndex >= regularExercises.length)) {
+            combinedExercises.push(hardExercises[hardIndex]);
+            hardIndex++;
         } else if (regularIndex < regularExercises.length) {
             combinedExercises.push(regularExercises[regularIndex]);
             regularIndex++;
@@ -242,6 +252,14 @@ function loadWrongAnswers() {
     }
 }
 
+// Load exercise difficulty from localStorage
+function loadExerciseDifficulty() {
+    const saved = localStorage.getItem('langlearn_exercise_difficulty');
+    if (saved) {
+        exerciseDifficulty = JSON.parse(saved);
+    }
+}
+
 // Save stats to localStorage
 function saveStats() {
     localStorage.setItem('langlearn_stats', JSON.stringify(stats));
@@ -251,6 +269,11 @@ function saveStats() {
 // Save wrong answers to localStorage
 function saveWrongAnswers() {
     localStorage.setItem('langlearn_wrong_answers', JSON.stringify(wrongAnswers));
+}
+
+// Save exercise difficulty to localStorage
+function saveExerciseDifficulty() {
+    localStorage.setItem('langlearn_exercise_difficulty', JSON.stringify(exerciseDifficulty));
 }
 
 // Update stats display
@@ -344,7 +367,22 @@ function renderExercise() {
         if (answered) {
             if (e.key === 'Enter' || e.key === ' ') {
                 e.preventDefault();
-                nextExercise();
+                // Check if we have difficulty buttons (correct answer) or siguiente button (wrong answer)
+                const easyBtn = document.querySelector('.easy-btn');
+                const hardBtn = document.querySelector('.hard-btn');
+                const siguienteBtn = document.querySelector('.siguiente-btn');
+                
+                if (easyBtn && hardBtn) {
+                    // For correct answers, Enter = Fácil, Space = Difícil
+                    if (e.key === 'Enter') {
+                        handleDifficultyFeedback('easy');
+                    } else if (e.key === ' ') {
+                        handleDifficultyFeedback('hard');
+                    }
+                } else if (siguienteBtn) {
+                    // For wrong answers, both Enter and Space = Siguiente
+                    handleSiguienteClick();
+                }
             }
             return;
         }
@@ -505,18 +543,50 @@ function selectOption(selectedIndex) {
     
     const bigNextButton = document.createElement('div');
     bigNextButton.className = 'big-next-button';
-    bigNextButton.innerHTML = `
-        <button class="siguiente-btn" onclick="handleSiguienteClick()">
-            Siguiente
-        </button>
-    `;
+    
+    // Show different buttons based on whether the answer was correct
+    if (isCorrect) {
+        // For correct answers: show Fácil/Difícil buttons
+        bigNextButton.innerHTML = `
+            <button class="difficulty-btn easy-btn" onclick="handleDifficultyFeedback('easy')">
+                Fácil
+            </button>
+            <button class="difficulty-btn hard-btn" onclick="handleDifficultyFeedback('hard')">
+                Difícil
+            </button>
+        `;
+    } else {
+        // For incorrect answers: show Siguiente button (automatically marked as wrong)
+        bigNextButton.innerHTML = `
+            <button class="siguiente-btn" onclick="handleSiguienteClick()">
+                Siguiente
+            </button>
+        `;
+    }
     
     // Insert the big button as an overlay above the tense selector
     tenseSelector.appendChild(bigNextButton);
 }
 
-// Handle Siguiente button click
+// Handle difficulty feedback
+function handleDifficultyFeedback(difficulty) {
+    // Store difficulty feedback
+    exerciseDifficulty[currentExercise.id] = difficulty;
+    saveExerciseDifficulty();
+    
+    // Remove the big next button overlay
+    const bigNextButton = document.querySelector('.big-next-button');
+    if (bigNextButton) {
+        bigNextButton.remove();
+    }
+    
+    // Proceed to next exercise
+    nextExercise();
+}
+
+// Handle Siguiente button click (for wrong answers)
 function handleSiguienteClick() {
+    // For wrong answers, automatically mark as "wrong" (already handled in selectOption)
     // Remove the big next button overlay
     const bigNextButton = document.querySelector('.big-next-button');
     if (bigNextButton) {
