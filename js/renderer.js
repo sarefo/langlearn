@@ -16,7 +16,7 @@ export function renderExercise() {
     exerciseContainer.innerHTML = `
         <div class="question">
             <div class="question-text">
-                <div class="question-sentence">${exercise.text}</div>
+                <div class="question-sentence">${exercise.text.replace(/◯/g, '•••')}</div>
                 <div class="question-infinitive"><span class="infinitive">(${exercise.person} + ${exercise.infinitive})</span></div>
             </div>
         </div>
