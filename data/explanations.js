@@ -1,5 +1,5 @@
 // Spanish verb tense explanations - contextual but non-redundant
-const explanations = {
+window.explanations = {
     // Common explanation patterns that can be reused
     patterns: {
         // Time indicators that require pretérito

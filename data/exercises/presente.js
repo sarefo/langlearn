@@ -1,5 +1,5 @@
 // Presente exercises - IDs: 100-199
-const presenteExercises = [
+window.presenteExercises = [
     {
         id: 101,
         type: "Verbos Irregulares",

@@ -1,5 +1,5 @@
 // Condicional exercises - IDs: 500-599
-const condicionalExercises = [
+window.condicionalExercises = [
     {
         id: 501,
         type: "Condicional",

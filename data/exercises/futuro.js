@@ -1,5 +1,5 @@
 // Futuro exercises - IDs: 400-499
-const futuroExercises = [
+window.futuroExercises = [
     {
         id: 401,
         type: "Futuro",

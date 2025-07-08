@@ -1,5 +1,5 @@
 // Imperfecto exercises - IDs: 300-399
-const imperfectoExercises = [
+window.imperfectoExercises = [
     {
         id: 301,
         type: "Pretérito vs Imperfecto",

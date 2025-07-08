@@ -1,5 +1,5 @@
 // Subjuntivo exercises - IDs: 600-699
-const subjuntivoExercises = [
+window.subjuntivoExercises = [
     {
         id: 601,
         type: "Subjuntivo",
