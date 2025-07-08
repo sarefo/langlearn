@@ -104,6 +104,12 @@ function handleAnsweredState(e) {
     }
 }
 
+// Helper function to check if a dialog is visible
+function isDialogVisible(dialogId) {
+    const dialog = document.getElementById(dialogId);
+    return dialog && dialog.style.display === 'flex';
+}
+
 function handleTwoTenseArrows(e) {
     e.preventDefault();
     const allowedOptions = appState.currentExercise.options
@@ -124,15 +130,22 @@ export function initGlobalKeyboardHandler() {
         }
         
         const key = e.key.toUpperCase();
-        const helpDialogVisible = document.getElementById('help-dialog-overlay').style.display === 'flex';
         
-        if (e.key === 'Escape' && helpDialogVisible) {
-            e.preventDefault();
-            hideHelpDialog();
-            return;
+        // Handle ESC key for any visible dialog
+        if (e.key === 'Escape') {
+            if (isDialogVisible('help-dialog-overlay')) {
+                e.preventDefault();
+                hideHelpDialog();
+                return;
+            }
+            if (isDialogVisible('stats-dialog-overlay')) {
+                e.preventDefault();
+                window.hideStatsDialog();
+                return;
+            }
         }
         
-        if ((key === 'H' || key === '?') && !helpDialogVisible && 
+        if ((key === 'H' || key === '?') && !isDialogVisible('help-dialog-overlay') && 
             !e.target.matches('input, textarea, select')) {
             e.preventDefault();
             showHelpDialog();

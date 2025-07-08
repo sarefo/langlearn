@@ -62,7 +62,7 @@ function updateStatsDialogContent() {
             
             return `
                 <div class="stats-item">
-                    <div class="exercise-text">${exercise.text.replace('_____', exercise.options[exercise.correctAnswers[0]])}</div>
+                    <div class="exercise-text">${exercise.text.replace('◯', exercise.options[exercise.correctAnswers[0]])}</div>
                     <div class="exercise-info">${wrong.wrongCount} ${plural}<br>${date}</div>
                 </div>
             `;
@@ -83,7 +83,7 @@ function updateStatsDialogContent() {
     } else {
         hardExercisesList.innerHTML = hardExercises.map(({ exercise }) => `
             <div class="stats-item">
-                <div class="exercise-text">${exercise.text.replace('_____', exercise.options[exercise.correctAnswers[0]])}</div>
+                <div class="exercise-text">${exercise.text.replace('◯', exercise.options[exercise.correctAnswers[0]])}</div>
                 <div class="exercise-info">Marcado como difícil</div>
             </div>
         `).join('');
