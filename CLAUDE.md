@@ -42,14 +42,8 @@ Exercises are organized by tense with unique ID prefixes to prevent conflicts:
 - **condicional.js** - IDs: 500-599 (30 exercises: 501-530)
 - **subjuntivo.js** - IDs: 600-699 (27 exercises: 601-627)
 
-**Benefits:**
-- Zero overhead - no build tools needed
-- Visual clarity - ID tells you which tense
-- Future-proof - 100 IDs per tense
-- No conflicts - impossible to have duplicate IDs
-
 ### Data Flow
-1. Exercises loaded from separate tense files and combined (122 total exercises)
+1. Exercises loaded from separate tense files and combined
 2. `shuffleExercises()` randomizes order for variety
 3. User answers trigger statistics and streak updates
 4. Progress persists to localStorage for session continuity
@@ -57,8 +51,8 @@ Exercises are organized by tense with unique ID prefixes to prevent conflicts:
 
 ### Key Features
 - **Spanish-only interface** for immersion learning
-- **Dual keyboard navigation** (A-F keys AND 1-6 number keys for answers, Enter/Space to continue)
-- **Vanilla JS deployment** - Single HTML file, no build process
+- **Keyboard navigation** (1-6 number keys for answers, etc.)
+- **Vanilla JS deployment** - no build process
 - **Exercise shuffling** with auto-reshuffle when all exercises completed
 - **Contextual explanations** with grammatical reasoning for each exercise
 - **Person + infinitive display** - Shows "(person + infinitive)" in gray italic below each exercise
