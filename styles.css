@@ -426,6 +426,106 @@ body {
     color: var(--text);
 }
 
+/* Option overlays */
+.option-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--surface);
+    border-radius: 6px;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+    border: 2px solid;
+}
+
+.correct-overlay {
+    background: var(--surface);
+    border-color: var(--success);
+    color: var(--success);
+}
+
+.incorrect-overlay {
+    background: var(--surface);
+    border-color: var(--error);
+    color: var(--error);
+}
+
+.overlay-content {
+    width: 100%;
+    height: 100%;
+    padding: 8px;
+}
+
+.grid-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 4px;
+    height: 100%;
+    align-items: center;
+}
+
+.overlay-verb {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text);
+    line-height: 1.1;
+    text-align: center;
+}
+
+.overlay-tense {
+    font-size: 14px;
+    color: var(--text-light);
+    font-style: italic;
+    text-align: center;
+}
+
+.overlay-title {
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.overlay-explanation {
+    font-size: 13px;
+    line-height: 1.2;
+    color: var(--text);
+    text-align: center;
+}
+
+/* Big Siguiente button */
+.big-next-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+}
+
+.siguiente-btn {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 16px 32px;
+    border-radius: 12px;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: var(--shadow);
+    min-width: 140px;
+}
+
+.siguiente-btn:hover {
+    background: var(--primary-dark);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(37, 99, 235, 0.3);
+}
+
 .result-next-btn {
     background: var(--primary);
     color: white;
@@ -678,5 +778,44 @@ body {
     .section-content {
         font-size: 12px;
         line-height: 1.2;
+    }
+    
+    .option-overlay {
+        padding: 10px 12px;
+    }
+    
+    .overlay-content {
+        padding: 6px;
+    }
+    
+    .grid-layout {
+        gap: 4px;
+    }
+    
+    .overlay-verb {
+        font-size: 18px;
+    }
+    
+    .overlay-tense {
+        font-size: 12px;
+        margin-top: 1px;
+    }
+    
+    .overlay-title {
+        font-size: 14px;
+    }
+    
+    .overlay-explanation {
+        font-size: 11px;
+    }
+    
+    .big-next-button {
+        padding: 12px;
+    }
+    
+    .siguiente-btn {
+        padding: 14px 28px;
+        font-size: 18px;
+        min-width: 120px;
     }
 }

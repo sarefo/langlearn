@@ -374,78 +374,127 @@ function selectOption(selectedIndex) {
         updateStatsDisplay();
     }
     
-    // Style options and insert result after the best correct option
+    // Style options and add overlays
     const options = document.querySelectorAll('.option');
     options.forEach((option, index) => {
         option.classList.add('disabled');
+        option.style.position = 'relative'; // Ensure options can have overlays
         
         if (currentExercise.correctAnswers.includes(index)) {
             option.classList.add('correct');
             
-            // Insert result overlay on tense-selector for the best correct answer
+            // Add overlay on correct option
             if (index === bestCorrectAnswer) {
-                const resultEl = document.createElement('div');
-                resultEl.className = `result ${isCorrect ? 'correct' : 'incorrect'}`;
+                const correctOverlay = document.createElement('div');
+                correctOverlay.className = 'option-overlay correct-overlay';
                 
-                let explanationText = '';
                 const pattern = currentExercise.explanation;
-                
+                let correctExplanation = '';
                 if (pattern && explanations.patterns[pattern]) {
-                    if (selectedTenses.length === 1) {
-                        // In single tense mode, show explanation for selected answer
-                        explanationText = explanations.patterns[pattern][selectedIndex];
-                    } else if (isCorrect) {
-                        explanationText = explanations.patterns[pattern][selectedIndex];
-                    } else {
-                        explanationText = `
-                            <div class="incorrect-explanation">
-                                <div class="incorrect-section">
-                                    <div class="section-title">Tu respuesta:</div>
-                                    <div class="section-content">${explanations.patterns[pattern][selectedIndex]}</div>
-                                </div>
-                                <div class="correct-section">
-                                    <div class="section-title">Respuesta correcta:</div>
-                                    <div class="section-content">${explanations.patterns[pattern][bestCorrectAnswer]}</div>
-                                </div>
-                            </div>
-                        `;
-                    }
+                    correctExplanation = explanations.patterns[pattern][bestCorrectAnswer];
                 } else {
-                    // Fallback for exercises without explanation patterns
-                    if (selectedTenses.length === 1) {
-                        explanationText = `${tenseNames[selectedIndex]} seleccionado`;
-                    } else {
-                        explanationText = isCorrect ? 'Selección correcta' : 'Selección incorrecta';
-                    }
+                    correctExplanation = 'Respuesta correcta';
                 }
                 
-                let resultHeader;
-                if (selectedTenses.length === 1) {
-                    resultHeader = `🎯 ${tenseNames[selectedIndex]}`;
-                } else {
-                    resultHeader = ''; // No icon, color indicates success/failure
-                }
-                
-                resultEl.innerHTML = `
-                    ${resultHeader ? `<div class="result-header">${resultHeader}</div>` : ''}
-                    <div class="result-explanation">${explanationText}</div>
-                    <button class="result-next-btn" onclick="nextExercise()">
-                        Siguiente
-                    </button>
+                correctOverlay.innerHTML = `
+                    <div class="overlay-content grid-layout">
+                        <div class="overlay-verb">${currentExercise.options[bestCorrectAnswer]}</div>
+                        <div class="overlay-title">✓ Correcto</div>
+                        <div class="overlay-tense">(${tenseNames[bestCorrectAnswer]})</div>
+                        <div class="overlay-explanation">${correctExplanation}</div>
+                    </div>
                 `;
                 
-                // Insert result as overlay on tense-selector
-                const tenseSelector = document.querySelector('.tense-selector');
-                tenseSelector.appendChild(resultEl);
+                // Make overlay clickable
+                correctOverlay.addEventListener('click', nextExercise);
+                correctOverlay.style.cursor = 'pointer';
+                
+                option.appendChild(correctOverlay);
             }
         } else if (index === selectedIndex && !isCorrect) {
             option.classList.add('incorrect');
+            
+            // Add overlay on incorrect option
+            const incorrectOverlay = document.createElement('div');
+            incorrectOverlay.className = 'option-overlay incorrect-overlay';
+            
+            const pattern = currentExercise.explanation;
+            let incorrectExplanation = '';
+            if (pattern && explanations.patterns[pattern]) {
+                incorrectExplanation = explanations.patterns[pattern][selectedIndex];
+            } else {
+                incorrectExplanation = 'Respuesta incorrecta';
+            }
+            
+            incorrectOverlay.innerHTML = `
+                <div class="overlay-content grid-layout">
+                    <div class="overlay-verb">${currentExercise.options[selectedIndex]}</div>
+                    <div class="overlay-title">✗ Incorrecto</div>
+                    <div class="overlay-tense">(${tenseNames[selectedIndex]})</div>
+                    <div class="overlay-explanation">${incorrectExplanation}</div>
+                </div>
+            `;
+            
+            // Make overlay clickable
+            incorrectOverlay.addEventListener('click', nextExercise);
+            incorrectOverlay.style.cursor = 'pointer';
+            
+            option.appendChild(incorrectOverlay);
         }
     });
+    
+    // Replace tense-selector with big Siguiente button
+    const tenseSelector = document.querySelector('.tense-selector');
+    tenseSelector.style.display = 'none'; // Hide tense selector
+    
+    // Remove any existing big next button first
+    const existingButton = document.querySelector('.big-next-button');
+    if (existingButton) {
+        existingButton.remove();
+    }
+    
+    const bigNextButton = document.createElement('div');
+    bigNextButton.className = 'big-next-button';
+    bigNextButton.innerHTML = `
+        <button class="siguiente-btn" onclick="handleSiguienteClick()">
+            Siguiente
+        </button>
+    `;
+    
+    // Insert the big button after tense selector
+    tenseSelector.parentNode.insertBefore(bigNextButton, tenseSelector.nextSibling);
+}
+
+// Handle Siguiente button click
+function handleSiguienteClick() {
+    // Remove the big next button
+    const bigNextButton = document.querySelector('.big-next-button');
+    if (bigNextButton) {
+        bigNextButton.remove();
+    }
+    
+    // Show tense selector again
+    const tenseSelector = document.querySelector('.tense-selector');
+    tenseSelector.style.display = 'block';
+    
+    // Proceed to next exercise
+    nextExercise();
 }
 
 // Load next exercise
 function nextExercise() {
+    // Clean up any existing big next button
+    const bigNextButton = document.querySelector('.big-next-button');
+    if (bigNextButton) {
+        bigNextButton.remove();
+    }
+    
+    // Show tense selector again
+    const tenseSelector = document.querySelector('.tense-selector');
+    if (tenseSelector) {
+        tenseSelector.style.display = 'block';
+    }
+    
     currentIndex++;
     loadExercise();
     exerciseContainer.classList.remove('fade-in');
