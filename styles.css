@@ -25,6 +25,14 @@
         --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.4);
     }
     
+    .tense-option {
+        background: #374151 !important;
+    }
+    
+    .question-text {
+        background: #374151 !important;
+    }
+    
     .result {
         background: #1e293b !important;
     }
@@ -440,13 +448,6 @@ body {
     }
 }
 
-.keyboard-hint {
-    font-size: 11px;
-    color: var(--text-light);
-    text-align: center;
-    margin: 12px;
-    font-style: italic;
-}
 
 .infinitive {
     color: var(--text-light);
@@ -464,13 +465,6 @@ body {
     position: relative;
 }
 
-.tense-selector h4 {
-    font-size: 16px;
-    font-weight: 600;
-    margin-bottom: 8px;
-    color: var(--text);
-    text-align: center;
-}
 
 .tense-grid {
     display: grid;
@@ -488,10 +482,10 @@ body {
     padding: 6px 8px;
     background: var(--bg);
     border: 1px solid var(--border);
-    border-radius: 4px;
+    border-radius: 8px;
     cursor: pointer;
     transition: all 0.2s;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .tense-option:hover {
@@ -574,7 +568,7 @@ body {
 
     .tense-option {
         padding: 4px 6px;
-        font-size: 11px;
+        font-size: 13px;
     }
 
     .tense-selector {

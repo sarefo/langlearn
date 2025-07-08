@@ -272,7 +272,6 @@ function renderExercise() {
     exerciseContainer.innerHTML = `
         <div class="question">
             <div class="question-text">${exercise.text} <span class="infinitive">(${exercise.infinitive})</span></div>
-            <div class="keyboard-hint">💡 Usa las teclas 1-6 para responder, A-F para seleccionar tiempos, Enter/Espacio para continuar</div>
         </div>
         
         <div class="options">
