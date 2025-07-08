@@ -483,9 +483,8 @@ function selectOption(selectedIndex) {
         }
     });
     
-    // Replace tense-selector with big Siguiente button
+    // Add overlay button above tense selector (preserving layout)
     const tenseSelector = document.querySelector('.tense-selector');
-    tenseSelector.style.display = 'none'; // Hide tense selector
     
     // Remove any existing big next button first
     const existingButton = document.querySelector('.big-next-button');
@@ -501,21 +500,17 @@ function selectOption(selectedIndex) {
         </button>
     `;
     
-    // Insert the big button after tense selector
-    tenseSelector.parentNode.insertBefore(bigNextButton, tenseSelector.nextSibling);
+    // Insert the big button as an overlay above the tense selector
+    tenseSelector.appendChild(bigNextButton);
 }
 
 // Handle Siguiente button click
 function handleSiguienteClick() {
-    // Remove the big next button
+    // Remove the big next button overlay
     const bigNextButton = document.querySelector('.big-next-button');
     if (bigNextButton) {
         bigNextButton.remove();
     }
-    
-    // Show tense selector again
-    const tenseSelector = document.querySelector('.tense-selector');
-    tenseSelector.style.display = 'block';
     
     // Proceed to next exercise
     nextExercise();
@@ -527,12 +522,6 @@ function nextExercise() {
     const bigNextButton = document.querySelector('.big-next-button');
     if (bigNextButton) {
         bigNextButton.remove();
-    }
-    
-    // Show tense selector again
-    const tenseSelector = document.querySelector('.tense-selector');
-    if (tenseSelector) {
-        tenseSelector.style.display = 'block';
     }
     
     currentIndex++;

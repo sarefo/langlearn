@@ -498,12 +498,22 @@ body {
     text-align: center;
 }
 
-/* Big Siguiente button */
+/* Big Siguiente button - overlay style */
 .big-next-button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--surface);
+    border-radius: 6px;
+    border: 1px solid var(--border);
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 16px;
+    z-index: 10;
+    box-shadow: var(--shadow);
 }
 
 .siguiente-btn {
