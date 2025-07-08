@@ -173,5 +173,46 @@
     </script>
     <script type="module" src="js/app.js"></script>
     
+    <!-- Emergency Service Worker Reset -->
+    <script>
+        // Immediate aggressive cleanup for broken Service Workers
+        if ('serviceWorker' in navigator) {
+            (async () => {
+                try {
+                    console.log('[Emergency] Starting Service Worker cleanup...');
+                    
+                    // Force unregister ALL service workers immediately
+                    const registrations = await navigator.serviceWorker.getRegistrations();
+                    console.log('[Emergency] Found registrations:', registrations.length);
+                    
+                    await Promise.all(registrations.map(async reg => {
+                        console.log('[Emergency] Unregistering:', reg.scope);
+                        await reg.unregister();
+                    }));
+                    
+                    // Force clear ALL caches
+                    if ('caches' in window) {
+                        const cacheNames = await caches.keys();
+                        console.log('[Emergency] Found caches:', cacheNames);
+                        await Promise.all(cacheNames.map(async name => {
+                            console.log('[Emergency] Deleting cache:', name);
+                            await caches.delete(name);
+                        }));
+                    }
+                    
+                    console.log('[Emergency] Cleanup complete');
+                    
+                    // Only reload if we actually found and cleared stuff
+                    if (registrations.length > 0) {
+                        console.log('[Emergency] Reloading page...');
+                        setTimeout(() => window.location.reload(true), 100);
+                    }
+                    
+                } catch (error) {
+                    console.error('[Emergency] Cleanup failed:', error);
+                }
+            })();
+        }
+    </script>
 </body>
 </html>

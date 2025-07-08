@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Worker Rescue</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .rescue-box {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 { color: #d32f2f; }
+        button {
+            background: #1976d2;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px 0;
+        }
+        button:hover { background: #1565c0; }
+        .status { 
+            margin: 20px 0;
+            padding: 15px;
+            border-radius: 5px;
+            background: #e3f2fd;
+            border: 1px solid #2196f3;
+        }
+        .success { background: #e8f5e8; border-color: #4caf50; }
+        .error { background: #ffebee; border-color: #f44336; }
+    </style>
+</head>
+<body>
+    <div class="rescue-box">
+        <h1>🚨 Service Worker Rescue Tool</h1>
+        <p>This page will help you fix a broken Service Worker that's preventing the app from loading.</p>
+        
+        <div id="status" class="status">
+            <strong>Status:</strong> <span id="status-text">Ready to scan...</span>
+        </div>
+        
+        <button onclick="startRescue()">🔧 Start Rescue Operation</button>
+        <button onclick="testApp()">🧪 Test App</button>
+        
+        <div id="details" style="margin-top: 20px;"></div>
+    </div>
+
+    <script>
+        let detailsDiv = document.getElementById('details');
+        let statusDiv = document.getElementById('status');
+        let statusText = document.getElementById('status-text');
+        
+        function log(message, type = 'info') {
+            console.log(message);
+            const p = document.createElement('p');
+            p.textContent = `[${new Date().toLocaleTimeString()}] ${message}`;
+            if (type === 'error') p.style.color = 'red';
+            if (type === 'success') p.style.color = 'green';
+            detailsDiv.appendChild(p);
+            detailsDiv.scrollTop = detailsDiv.scrollHeight;
+        }
+        
+        function updateStatus(message, type = 'info') {
+            statusText.textContent = message;
+            statusDiv.className = `status ${type}`;
+        }
+        
+        async function startRescue() {
+            log('🚨 Starting rescue operation...');
+            updateStatus('Running rescue...', 'info');
+            
+            try {
+                // Step 1: Check for Service Workers
+                if ('serviceWorker' in navigator) {
+                    log('✅ Service Worker API available');
+                    
+                    const registrations = await navigator.serviceWorker.getRegistrations();
+                    log(`Found ${registrations.length} Service Worker registrations`);
+                    
+                    // Step 2: Unregister all
+                    for (let reg of registrations) {
+                        log(`Unregistering: ${reg.scope}`);
+                        await reg.unregister();
+                        log(`✅ Unregistered: ${reg.scope}`);
+                    }
+                    
+                    // Step 3: Clear caches
+                    if ('caches' in window) {
+                        const cacheNames = await caches.keys();
+                        log(`Found ${cacheNames.length} caches`);
+                        
+                        for (let name of cacheNames) {
+                            log(`Clearing cache: ${name}`);
+                            await caches.delete(name);
+                            log(`✅ Cleared: ${name}`);
+                        }
+                    }
+                    
+                    log('🎉 Rescue operation complete!');
+                    updateStatus('Rescue complete! Try the app now.', 'success');
+                    
+                } else {
+                    log('❌ Service Worker API not available');
+                    updateStatus('Service Worker API not available', 'error');
+                }
+                
+            } catch (error) {
+                log(`❌ Rescue failed: ${error.message}`, 'error');
+                updateStatus(`Rescue failed: ${error.message}`, 'error');
+            }
+        }
+        
+        function testApp() {
+            log('🧪 Testing app...');
+            window.open('./index.html', '_blank');
+        }
+        
+        // Auto-run rescue on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            log('🔍 Rescue page loaded');
+            log('You can manually run the rescue or test the app');
+        });
+    </script>
+</body>
+</html>
