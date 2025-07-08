@@ -375,6 +375,94 @@ window.preteritoExercises = [
         explanation: "ayer_past"
     },
     {
+        id: 251,
+        type: "Verbos Irregulares",
+        difficulty: 2,
+        text: "¿◯ el regalo que te mandé?",
+        infinitive: "recibir",
+        person: "tú",
+        options: ["recibes", "recibiste", "recibías", "recibirás", "recibirías", "recibas"],
+        correctAnswers: [1],
+        explanation: "question_specific"
+    },
+    {
+        id: 252,
+        type: "Pretérito vs Imperfecto",
+        difficulty: 2,
+        text: "El doctor ◯ que era solo una gripe.",
+        infinitive: "decir",
+        person: "él",
+        options: ["dice", "dijo", "decía", "dirá", "diría", "diga"],
+        correctAnswers: [1],
+        explanation: "poder_specific"
+    },
+    {
+        id: 253,
+        type: "Verbos Irregulares",
+        difficulty: 3,
+        text: "Ella ◯ toda la verdad en la reunión.",
+        infinitive: "decir",
+        person: "ella",
+        options: ["dice", "dijo", "decía", "dirá", "diría", "diga"],
+        correctAnswers: [1],
+        explanation: "poder_specific"
+    },
+    {
+        id: 254,
+        type: "Pretérito vs Imperfecto",
+        difficulty: 2,
+        text: "Nosotros ◯ muy temprano para evitar el tráfico.",
+        infinitive: "salir",
+        person: "nosotros",
+        options: ["salimos", "salimos", "salíamos", "saldremos", "saldríamos", "salgamos"],
+        correctAnswers: [1],
+        explanation: "poder_specific"
+    },
+    {
+        id: 255,
+        type: "Verbos Irregulares",
+        difficulty: 2,
+        text: "¿◯ la película que recomendé?",
+        infinitive: "ver",
+        person: "ustedes",
+        options: ["ven", "vieron", "veían", "verán", "verían", "vean"],
+        correctAnswers: [1],
+        explanation: "question_specific"
+    },
+    {
+        id: 256,
+        type: "Pretérito vs Imperfecto",
+        difficulty: 3,
+        text: "Ellas ◯ muchas fotos durante las vacaciones.",
+        infinitive: "tomar",
+        person: "ellas",
+        options: ["toman", "tomaron", "tomaban", "tomarán", "tomarían", "tomen"],
+        correctAnswers: [1],
+        explanation: "poder_specific"
+    },
+    {
+        id: 257,
+        type: "Verbos Irregulares",
+        difficulty: 2,
+        text: "Mi hermano ◯ una bicicleta nueva el mes pasado.",
+        infinitive: "comprar",
+        person: "él",
+        options: ["compra", "compró", "compraba", "comprará", "compraría", "compre"],
+        correctAnswers: [1],
+        explanation: "poder_specific"
+    },
+    {
+        id: 258,
+        type: "Pretérito vs Imperfecto",
+        difficulty: 2,
+        text: "Ustedes ◯ muy bien en el examen de ayer.",
+        infinitive: "hacer",
+        person: "ustedes",
+        options: ["hacen", "hicieron", "hacían", "harán", "harían", "hagan"],
+        correctAnswers: [1],
+        explanation: "ayer_past"
+    },
+    {
         id: 235,
         type: "Verbos Irregulares",
         difficulty: 2,
@@ -549,5 +637,192 @@ window.preteritoExercises = [
         options: ["salgo", "salí", "salía", "saldré", "saldría", "salga"],
         correctAnswers: [1],
         explanation: "sequence_completed"
+    },
+    {
+        id: 259,
+        type: "Pretérito vs Imperfecto",
+        difficulty: 2,
+        text: "Ayer ◯ a las cinco de la mañana.",
+        infinitive: "despertarse",
+        person: "yo",
+        options: ["me despierto", "me desperté", "me despertaba", "me despertaré", "me despertaría", "me despierte"],
+        correctAnswers: [1],
+        explanation: "ayer_past"
+    },
+    {
+        id: 260,
+        type: "Verbos Irregulares",
+        difficulty: 3,
+        text: "Anoche ◯ una pesadilla terrible.",
+        infinitive: "tener",
+        person: "yo",
+        options: ["tengo", "tuve", "tenía", "tendré", "tendría", "tenga"],
+        correctAnswers: [1],
+        explanation: "ayer_past"
+    },
+    {
+        id: 261,
+        type: "Pretérito vs Imperfecto",
+        difficulty: 2,
+        text: "El sábado ◯ con mi prima en el parque.",
+        infinitive: "correr",
+        person: "yo",
+        options: ["corro", "corrí", "corría", "correré", "correría", "corra"],
+        correctAnswers: [1],
+        explanation: "poder_specific"
+    },
+    {
+        id: 262,
+        type: "Verbos Irregulares",
+        difficulty: 2,
+        text: "Ustedes ◯ muy tarde a la conferencia.",
+        infinitive: "llegar",
+        person: "ustedes",
+        options: ["llegan", "llegaron", "llegaban", "llegarán", "llegarían", "lleguen"],
+        correctAnswers: [1],
+        explanation: "poder_specific"
+    },
+    {
+        id: 263,
+        type: "Pretérito vs Imperfecto",
+        difficulty: 3,
+        text: "Tú ◯ mucho español durante tu viaje a México.",
+        infinitive: "aprender",
+        person: "tú",
+        options: ["aprendes", "aprendiste", "aprendías", "aprenderás", "aprenderías", "aprendas"],
+        correctAnswers: [1],
+        explanation: "poder_specific"
+    },
+    {
+        id: 264,
+        type: "Verbos Irregulares",
+        difficulty: 2,
+        text: "El mes pasado ◯ a mi familia en otra ciudad.",
+        infinitive: "visitar",
+        person: "yo",
+        options: ["visito", "visité", "visitaba", "visitaré", "visitaría", "visite"],
+        correctAnswers: [1],
+        explanation: "poder_specific"
+    },
+    {
+        id: 265,
+        type: "Pretérito vs Imperfecto",
+        difficulty: 2,
+        text: "Nosotros ◯ pizza para la cena anoche.",
+        infinitive: "pedir",
+        person: "nosotros",
+        options: ["pedimos", "pedimos", "pedíamos", "pediremos", "pediríamos", "pidamos"],
+        correctAnswers: [1],
+        explanation: "ayer_past"
+    },
+    {
+        id: 266,
+        type: "Verbos Irregulares",
+        difficulty: 3,
+        text: "Ella ◯ su trabajo el viernes pasado.",
+        infinitive: "renunciar",
+        person: "ella",
+        options: ["renuncia", "renunció", "renunciaba", "renunciará", "renunciaría", "renuncie"],
+        correctAnswers: [1],
+        explanation: "poder_specific"
+    },
+    {
+        id: 267,
+        type: "Pretérito vs Imperfecto",
+        difficulty: 2,
+        text: "Ellos ◯ el partido de fútbol ayer.",
+        infinitive: "ganar",
+        person: "ellos",
+        options: ["ganan", "ganaron", "ganaban", "ganarán", "ganarían", "ganen"],
+        correctAnswers: [1],
+        explanation: "ayer_past"
+    },
+    {
+        id: 268,
+        type: "Verbos Irregulares",
+        difficulty: 2,
+        text: "Usted ◯ muy amable conmigo ayer.",
+        infinitive: "ser",
+        person: "usted",
+        options: ["es", "fue", "era", "será", "sería", "sea"],
+        correctAnswers: [1],
+        explanation: "ayer_past"
+    },
+    {
+        id: 269,
+        type: "Pretérito vs Imperfecto",
+        difficulty: 3,
+        text: "Después de cenar, ◯ un paseo por el centro.",
+        infinitive: "dar",
+        person: "yo",
+        options: ["doy", "di", "daba", "daré", "daría", "dé"],
+        correctAnswers: [1],
+        explanation: "sequence_completed"
+    },
+    {
+        id: 270,
+        type: "Verbos Irregulares",
+        difficulty: 2,
+        text: "Tú ◯ una mentira muy convincente.",
+        infinitive: "inventar",
+        person: "tú",
+        options: ["inventas", "inventaste", "inventabas", "inventarás", "inventarías", "inventes"],
+        correctAnswers: [1],
+        explanation: "poder_specific"
+    },
+    {
+        id: 271,
+        type: "Pretérito vs Imperfecto",
+        difficulty: 2,
+        text: "Nosotros ◯ mucho dinero en las rebajas.",
+        infinitive: "gastar",
+        person: "nosotros",
+        options: ["gastamos", "gastamos", "gastábamos", "gastaremos", "gastaríamos", "gastemos"],
+        correctAnswers: [1],
+        explanation: "poder_specific"
+    },
+    {
+        id: 272,
+        type: "Verbos Irregulares",
+        difficulty: 3,
+        text: "Ellas ◯ los boletos para el concierto.",
+        infinitive: "conseguir",
+        person: "ellas",
+        options: ["consiguen", "consiguieron", "conseguían", "conseguirán", "conseguirían", "consigan"],
+        correctAnswers: [1],
+        explanation: "poder_specific"
+    },
+    {
+        id: 273,
+        type: "Pretérito vs Imperfecto",
+        difficulty: 2,
+        text: "Ayer ◯ mi teléfono en el autobús.",
+        infinitive: "olvidar",
+        person: "yo",
+        options: ["olvido", "olvidé", "olvidaba", "olvidaré", "olvidaría", "olvide"],
+        correctAnswers: [1],
+        explanation: "ayer_past"
+    },
+    {
+        id: 274,
+        type: "Verbos Irregulares",
+        difficulty: 2,
+        text: "Él ◯ tres libros durante las vacaciones.",
+        infinitive: "leer",
+        person: "él",
+        options: ["lee", "leyó", "leía", "leerá", "leería", "lea"],
+        correctAnswers: [1],
+        explanation: "poder_specific"
+    },
+    {
+        id: 275,
+        type: "Pretérito vs Imperfecto",
+        difficulty: 3,
+        text: "Ustedes ◯ muy temprano del trabajo ayer.",
+        infinitive: "irse",
+        person: "ustedes",
+        options: ["se van", "se fueron", "se iban", "se irán", "se irían", "se vayan"],
+        correctAnswers: [1],
+        explanation: "ayer_past"
     }
 ];
