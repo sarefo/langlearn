@@ -173,45 +173,56 @@
     </script>
     <script type="module" src="js/app.js"></script>
     
-    <!-- Emergency Service Worker Reset -->
+    <!-- Robust Service Worker with Emergency Cleanup -->
     <script>
-        // Immediate aggressive cleanup for broken Service Workers
         if ('serviceWorker' in navigator) {
-            (async () => {
+            window.addEventListener('load', async () => {
                 try {
-                    console.log('[Emergency] Starting Service Worker cleanup...');
+                    // First, check if there are any broken registrations
+                    const existingRegistrations = await navigator.serviceWorker.getRegistrations();
                     
-                    // Force unregister ALL service workers immediately
-                    const registrations = await navigator.serviceWorker.getRegistrations();
-                    console.log('[Emergency] Found registrations:', registrations.length);
-                    
-                    await Promise.all(registrations.map(async reg => {
-                        console.log('[Emergency] Unregistering:', reg.scope);
-                        await reg.unregister();
-                    }));
-                    
-                    // Force clear ALL caches
-                    if ('caches' in window) {
+                    // If there are registrations but no controller, they might be broken
+                    if (existingRegistrations.length > 0 && !navigator.serviceWorker.controller) {
+                        console.log('[SW] Found broken registrations, cleaning up...');
+                        
+                        // Clear broken registrations
+                        await Promise.all(existingRegistrations.map(reg => reg.unregister()));
+                        
+                        // Clear caches
                         const cacheNames = await caches.keys();
-                        console.log('[Emergency] Found caches:', cacheNames);
-                        await Promise.all(cacheNames.map(async name => {
-                            console.log('[Emergency] Deleting cache:', name);
-                            await caches.delete(name);
-                        }));
+                        await Promise.all(
+                            cacheNames.filter(name => name.startsWith('langlearn-'))
+                                     .map(name => caches.delete(name))
+                        );
+                        
+                        console.log('[SW] Cleanup complete');
                     }
                     
-                    console.log('[Emergency] Cleanup complete');
+                    // Register the new Service Worker
+                    const registration = await navigator.serviceWorker.register('./sw.js');
+                    console.log('[SW] Registration successful');
                     
-                    // Only reload if we actually found and cleared stuff
-                    if (registrations.length > 0) {
-                        console.log('[Emergency] Reloading page...');
-                        setTimeout(() => window.location.reload(true), 100);
-                    }
+                    // Handle updates
+                    registration.addEventListener('updatefound', () => {
+                        const newWorker = registration.installing;
+                        console.log('[SW] New version found, installing...');
+                        
+                        newWorker.addEventListener('statechange', () => {
+                            if (newWorker.state === 'installed') {
+                                if (navigator.serviceWorker.controller) {
+                                    console.log('[SW] New version installed - will activate on next visit');
+                                } else {
+                                    console.log('[SW] Service Worker ready for offline use');
+                                }
+                            }
+                        });
+                    });
                     
                 } catch (error) {
-                    console.error('[Emergency] Cleanup failed:', error);
+                    console.log('[SW] Registration failed:', error);
+                    // App still works without Service Worker
                 }
-            })();
+            });
         }
     </script>
 </body>
