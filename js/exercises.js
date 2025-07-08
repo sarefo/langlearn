@@ -5,6 +5,9 @@ import { DIFFICULTY_RATIOS } from './constants.js';
 export function countExercisesPerTense() {
     const counts = [0, 0, 0, 0, 0, 0];
     
+    // Access the global exercises variable
+    const exercises = window.exercises || [];
+    
     exercises.forEach(exercise => {
         exercise.correctAnswers.forEach(answerIndex => {
             counts[answerIndex]++;
@@ -15,6 +18,7 @@ export function countExercisesPerTense() {
 }
 
 export function getFilteredExercises() {
+    const exercises = window.exercises || [];
     return exercises.filter(exercise => {
         return exercise.correctAnswers.some(answer => appState.selectedTenses.includes(answer));
     });
