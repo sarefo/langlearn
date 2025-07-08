@@ -1,7 +1,8 @@
 /* Answer options styling */
 
 .options {
-    display: grid;
+    display: none; /* Initially hidden */
+    grid-template-columns: 1fr;
     gap: 6px;
     flex: 1;
 }

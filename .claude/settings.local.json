@@ -18,7 +18,8 @@
       "Bash(find:*)",
       "Bash(rg:*)",
       "Bash(mkdir:*)",
-      "Bash(git mv:*)"
+      "Bash(git mv:*)",
+      "mcp__puppeteer__puppeteer_fill"
     ],
     "deny": []
   }

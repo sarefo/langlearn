@@ -2,6 +2,7 @@
 import { appState } from './state.js';
 import { toggleTense } from './tenses.js';
 import { showHelpDialog, hideHelpDialog } from './dom.js';
+import { showOptions, checkTypedAnswer } from './renderer.js';
 
 export function handleKeyboardInput(e) {
     if (e.ctrlKey || e.altKey || e.metaKey || e.shiftKey) {
@@ -24,6 +25,32 @@ export function handleKeyboardInput(e) {
         e.preventDefault();
         showHelpDialog();
         return;
+    }
+    
+    // Check if we're in the input field
+    const isInputFocused = document.activeElement && document.activeElement.classList.contains('answer-input');
+    
+    if (isInputFocused) {
+        if (e.key === 'Enter') {
+            e.preventDefault();
+            // First check if typed answer is valid
+            checkTypedAnswer();
+            // If no valid typed answer, show options
+            if (!appState.answered) {
+                showOptions();
+            }
+        }
+        return; // Let normal typing happen in input field
+    }
+    
+    // If Enter is pressed and options are hidden, show them
+    if (e.key === 'Enter') {
+        const overlay = document.querySelector('.options-overlay');
+        if (overlay && overlay.style.display !== 'none') {
+            e.preventDefault();
+            showOptions();
+            return;
+        }
     }
     
     if (appState.selectedTenses.length === 2 && (e.key === 'ArrowUp' || e.key === 'ArrowDown')) {

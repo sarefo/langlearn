@@ -21,22 +21,41 @@ export function renderExercise() {
             </div>
         </div>
         
-        <div class="options">
-            ${exercise.options.map((option, index) => {
-                const number = index + 1;
-                const isAllowed = appState.selectedTenses.includes(index);
-                const allowedClass = isAllowed ? 'allowed' : '';
-                
-                return `
-                    <div class="option ${allowedClass}" onclick="selectOption(${index})">
-                        <div class="option-letter">${number}</div>
-                        <span>${option}</span>
-                        <span class="tense-indicator">(${tenseNames[index]})</span>
-                    </div>
-                `;
-            }).join('')}
+        <div class="options-container">
+            <div class="options-overlay">
+                <div class="type-answer">
+                    <input type="text" class="answer-input" placeholder="Escribe tu respuesta..." autocomplete="off" autocorrect="off" spellcheck="false" oninput="checkTypedAnswer()" onkeydown="handleInputKeydown(event)">
+                </div>
+                <button class="show-options-btn" onclick="showOptions()">
+                    <span class="btn-text">Mostrar opciones</span>
+                    <span class="btn-hint">o presiona Enter</span>
+                </button>
+            </div>
+            <div class="options">
+                ${exercise.options.map((option, index) => {
+                    const number = index + 1;
+                    const isAllowed = appState.selectedTenses.includes(index);
+                    const allowedClass = isAllowed ? 'allowed' : '';
+                    
+                    return `
+                        <div class="option ${allowedClass}" onclick="selectOption(${index})">
+                            <div class="option-letter">${number}</div>
+                            <span>${option}</span>
+                            <span class="tense-indicator">(${tenseNames[index]})</span>
+                        </div>
+                    `;
+                }).join('')}
+            </div>
         </div>
     `;
+    
+    // Focus on the input field
+    setTimeout(() => {
+        const input = document.querySelector('.answer-input');
+        if (input) {
+            input.focus();
+        }
+    }, 100);
     
     document.onkeydown = handleKeyboardInput;
 }
@@ -167,3 +186,60 @@ export function renderActionButtons(isCorrect) {
     
     tenseSelector.appendChild(bigNextButton);
 }
+
+export function showOptions() {
+    const overlay = document.querySelector('.options-overlay');
+    const optionsContainer = document.querySelector('.options');
+    
+    if (overlay && optionsContainer) {
+        overlay.style.display = 'none';
+        optionsContainer.style.display = 'grid';
+    }
+}
+
+// Utility function to normalize text by removing accents
+function normalizeText(text) {
+    return text.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+}
+
+export function checkTypedAnswer() {
+    const input = document.querySelector('.answer-input');
+    if (!input || appState.answered) return;
+    
+    const typedAnswer = input.value.trim();
+    if (!typedAnswer) return;
+    
+    // Normalize the typed answer for comparison
+    const normalizedTyped = normalizeText(typedAnswer);
+    
+    // Check if the typed answer matches any of the exercise options (accent-insensitive)
+    const exercise = appState.currentExercise;
+    const matchingOptionIndex = exercise.options.findIndex(option => 
+        normalizeText(option) === normalizedTyped
+    );
+    
+    if (matchingOptionIndex !== -1) {
+        // Show options
+        showOptions();
+        
+        // Select the matching option
+        window.selectOption(matchingOptionIndex);
+    }
+}
+
+export function handleInputKeydown(event) {
+    if (event.key === 'Enter') {
+        event.preventDefault();
+        // First check if typed answer is valid
+        checkTypedAnswer();
+        // If no valid typed answer, show options
+        if (!appState.answered) {
+            showOptions();
+        }
+    }
+}
+
+// Make functions available globally
+window.showOptions = showOptions;
+window.checkTypedAnswer = checkTypedAnswer;
+window.handleInputKeydown = handleInputKeydown;
