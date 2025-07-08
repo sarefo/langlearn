@@ -1,4 +1,4 @@
-// Condicional exercises - IDs: 500-599
+// Condicional exercises - IDs: 500-599 (75 exercises: 501-575)
 window.condicionalExercises = [
     {
         id: 501,
@@ -499,5 +499,255 @@ window.condicionalExercises = [
         options: ["es", "fue", "era", "será", "sería", "sea"],
         correctAnswers: [4],
         explanation: "reported_speech"
+    },
+    {
+        id: 551,
+        type: "Condicional",
+        difficulty: 3,
+        text: "Si hubiera sabido la verdad, _____ de manera diferente.",
+        infinitive: "actuar",
+        options: ["actúo", "actué", "actuaba", "actuaré", "actuaría", "actúe"],
+        correctAnswers: [4],
+        explanation: "si_supiera_conditional"
+    },
+    {
+        id: 552,
+        type: "Condicional",
+        difficulty: 2,
+        text: "¿_____ tan amable de explicarme esto?",
+        infinitive: "ser",
+        options: ["eres", "fuiste", "eras", "serás", "serías", "seas"],
+        correctAnswers: [4],
+        explanation: "polite_request"
+    },
+    {
+        id: 553,
+        type: "Condicional",
+        difficulty: 3,
+        text: "En mi lugar, ¿qué _____?",
+        infinitive: "hacer",
+        options: ["haces", "hiciste", "hacías", "harás", "harías", "hagas"],
+        correctAnswers: [4],
+        explanation: "advice_conditional"
+    },
+    {
+        id: 554,
+        type: "Condicional",
+        difficulty: 2,
+        text: "Me prometió que _____ más responsable.",
+        infinitive: "ser",
+        options: ["es", "fue", "era", "será", "sería", "sea"],
+        correctAnswers: [4],
+        explanation: "reported_speech"
+    },
+    {
+        id: 555,
+        type: "Condicional",
+        difficulty: 3,
+        text: "Si tuviera más experiencia, _____ mejor este proyecto.",
+        infinitive: "manejar",
+        options: ["manejo", "manejé", "manejaba", "manejaré", "manejaría", "maneje"],
+        correctAnswers: [4],
+        explanation: "si_tuviera_conditional"
+    },
+    {
+        id: 556,
+        type: "Condicional",
+        difficulty: 2,
+        text: "¿_____ acompañarme al aeropuerto?",
+        infinitive: "poder",
+        options: ["puedes", "pudiste", "podías", "podrás", "podrías", "puedas"],
+        correctAnswers: [4],
+        explanation: "polite_request"
+    },
+    {
+        id: 557,
+        type: "Condicional",
+        difficulty: 3,
+        text: "Con más recursos, _____ un programa mejor.",
+        infinitive: "desarrollar",
+        options: ["desarrollo", "desarrollé", "desarrollaba", "desarrollaré", "desarrollaría", "desarrolle"],
+        correctAnswers: [4],
+        explanation: "hypothetical_condition"
+    },
+    {
+        id: 558,
+        type: "Condicional",
+        difficulty: 2,
+        text: "Dijiste que _____ más tarde.",
+        infinitive: "llamar",
+        options: ["llamas", "llamaste", "llamabas", "llamarás", "llamarías", "llames"],
+        correctAnswers: [4],
+        explanation: "reported_speech"
+    },
+    {
+        id: 559,
+        type: "Condicional",
+        difficulty: 3,
+        text: "Si no fuera por ti, _____ perdido.",
+        infinitive: "estar",
+        options: ["estoy", "estuve", "estaba", "estaré", "estaría", "esté"],
+        correctAnswers: [4],
+        explanation: "si_fuera_conditional"
+    },
+    {
+        id: 560,
+        type: "Condicional",
+        difficulty: 2,
+        text: "¿_____ prestarte tu teléfono?",
+        infinitive: "poder",
+        options: ["puedes", "pudiste", "podías", "podrás", "podrías", "puedas"],
+        correctAnswers: [4],
+        explanation: "polite_request"
+    },
+    {
+        id: 561,
+        type: "Condicional",
+        difficulty: 3,
+        text: "Si pudiera volver atrás, _____ todo diferente.",
+        infinitive: "hacer",
+        options: ["hago", "hice", "hacía", "haré", "haría", "haga"],
+        correctAnswers: [4],
+        explanation: "si_pudiera_conditional"
+    },
+    {
+        id: 562,
+        type: "Condicional",
+        difficulty: 2,
+        text: "En tu situación, yo _____ mucho cuidado.",
+        infinitive: "tener",
+        options: ["tengo", "tuve", "tenía", "tendré", "tendría", "tenga"],
+        correctAnswers: [4],
+        explanation: "advice_conditional"
+    },
+    {
+        id: 563,
+        type: "Condicional",
+        difficulty: 3,
+        text: "Si no tuviera tanto trabajo, _____ contigo.",
+        infinitive: "salir",
+        options: ["salgo", "salí", "salía", "saldré", "saldría", "salga"],
+        correctAnswers: [4],
+        explanation: "si_tuviera_conditional"
+    },
+    {
+        id: 564,
+        type: "Condicional",
+        difficulty: 2,
+        text: "Me aseguró que _____ todo listo.",
+        infinitive: "tener",
+        options: ["tiene", "tuvo", "tenía", "tendrá", "tendría", "tenga"],
+        correctAnswers: [4],
+        explanation: "reported_speech"
+    },
+    {
+        id: 565,
+        type: "Condicional",
+        difficulty: 3,
+        text: "Con mejor salud, _____ más actividades.",
+        infinitive: "hacer",
+        options: ["hago", "hice", "hacía", "haré", "haría", "haga"],
+        correctAnswers: [4],
+        explanation: "hypothetical_condition"
+    },
+    {
+        id: 566,
+        type: "Condicional",
+        difficulty: 2,
+        text: "¿_____ venir a cenar el domingo?",
+        infinitive: "querer",
+        options: ["quieres", "quisiste", "querías", "querrás", "querrías", "quieras"],
+        correctAnswers: [4],
+        explanation: "polite_invitation"
+    },
+    {
+        id: 567,
+        type: "Condicional",
+        difficulty: 3,
+        text: "Si hubiera más tiempo, _____ un proyecto más ambicioso.",
+        infinitive: "emprender",
+        options: ["emprendo", "emprendí", "emprendía", "emprenderé", "emprendería", "emprenda"],
+        correctAnswers: [4],
+        explanation: "si_tuviera_conditional"
+    },
+    {
+        id: 568,
+        type: "Condicional",
+        difficulty: 2,
+        text: "Yo que tú, _____ esa oportunidad.",
+        infinitive: "aprovechar",
+        options: ["aprovecho", "aproveché", "aprovechaba", "aprovecharé", "aprovecharía", "aproveche"],
+        correctAnswers: [4],
+        explanation: "advice_conditional"
+    },
+    {
+        id: 569,
+        type: "Condicional",
+        difficulty: 3,
+        text: "Si fuera más joven, _____ el mundo.",
+        infinitive: "recorrer",
+        options: ["recorro", "recorrí", "recorría", "recorreré", "recorrería", "recorra"],
+        correctAnswers: [4],
+        explanation: "si_fuera_conditional"
+    },
+    {
+        id: 570,
+        type: "Condicional",
+        difficulty: 2,
+        text: "¿_____ ayudarme con las maletas?",
+        infinitive: "poder",
+        options: ["puedes", "pudiste", "podías", "podrás", "podrías", "puedas"],
+        correctAnswers: [4],
+        explanation: "polite_request"
+    },
+    {
+        id: 571,
+        type: "Condicional",
+        difficulty: 3,
+        text: "Si tuviera su número, le _____ ahora mismo.",
+        infinitive: "llamar",
+        options: ["llamo", "llamé", "llamaba", "llamaré", "llamaría", "llame"],
+        correctAnswers: [4],
+        explanation: "si_tuviera_conditional"
+    },
+    {
+        id: 572,
+        type: "Condicional",
+        difficulty: 2,
+        text: "Me comentó que _____ muy contento.",
+        infinitive: "estar",
+        options: ["está", "estuvo", "estaba", "estará", "estaría", "esté"],
+        correctAnswers: [4],
+        explanation: "reported_speech"
+    },
+    {
+        id: 573,
+        type: "Condicional",
+        difficulty: 3,
+        text: "Con más apoyo, _____ grandes cosas.",
+        infinitive: "lograr",
+        options: ["logro", "logré", "lograba", "lograré", "lograría", "logre"],
+        correctAnswers: [4],
+        explanation: "hypothetical_condition"
+    },
+    {
+        id: 574,
+        type: "Condicional",
+        difficulty: 2,
+        text: "¿_____ pasar por mi oficina mañana?",
+        infinitive: "poder",
+        options: ["puedes", "pudiste", "podías", "podrás", "podrías", "puedas"],
+        correctAnswers: [4],
+        explanation: "polite_request"
+    },
+    {
+        id: 575,
+        type: "Condicional",
+        difficulty: 3,
+        text: "Si no fuera tan orgulloso, _____ disculpas.",
+        infinitive: "pedir",
+        options: ["pido", "pedí", "pedía", "pediré", "pediría", "pida"],
+        correctAnswers: [4],
+        explanation: "si_fuera_conditional"
     }
 ];

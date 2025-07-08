@@ -1,4 +1,4 @@
-// Subjuntivo exercises - IDs: 600-699
+// Subjuntivo exercises - IDs: 600-699 (75 exercises: 601-675)
 window.subjuntivoExercises = [
     {
         id: 601,
@@ -499,5 +499,255 @@ window.subjuntivoExercises = [
         options: ["llueve", "llovió", "llovía", "lloverá", "llovería", "llueva"],
         correctAnswers: [5],
         explanation: "tal_vez_maybe"
+    },
+    {
+        id: 651,
+        type: "Subjuntivo",
+        difficulty: 3,
+        text: "No creo que _____ la solución correcta.",
+        infinitive: "encontrar",
+        options: ["encuentras", "encontraste", "encontrabas", "encontrarás", "encontrarías", "encuentres"],
+        correctAnswers: [5],
+        explanation: "dudar_doubt"
+    },
+    {
+        id: 652,
+        type: "Subjuntivo",
+        difficulty: 2,
+        text: "Espero que _____ un buen viaje.",
+        infinitive: "tener",
+        options: ["tienes", "tuviste", "tenías", "tendrás", "tendrías", "tengas"],
+        correctAnswers: [5],
+        explanation: "esperar_emotion"
+    },
+    {
+        id: 653,
+        type: "Subjuntivo",
+        difficulty: 3,
+        text: "Cuando _____ los resultados, te llamo.",
+        infinitive: "saber",
+        options: ["sabes", "supiste", "sabías", "sabrás", "sabrías", "sepas"],
+        correctAnswers: [5],
+        explanation: "cuando_future"
+    },
+    {
+        id: 654,
+        type: "Subjuntivo",
+        difficulty: 2,
+        text: "Quiero que _____ la verdad siempre.",
+        infinitive: "decir",
+        options: ["dices", "dijiste", "decías", "dirás", "dirías", "digas"],
+        correctAnswers: [5],
+        explanation: "querer_desire"
+    },
+    {
+        id: 655,
+        type: "Subjuntivo",
+        difficulty: 3,
+        text: "Es increíble que _____ tanto talento.",
+        infinitive: "tener",
+        options: ["tienes", "tuviste", "tenías", "tendrás", "tendrías", "tengas"],
+        correctAnswers: [5],
+        explanation: "es_bueno_opinion"
+    },
+    {
+        id: 656,
+        type: "Subjuntivo",
+        difficulty: 2,
+        text: "Dudo que _____ esta noche.",
+        infinitive: "llover",
+        options: ["llueve", "llovió", "llovía", "lloverá", "llovería", "llueva"],
+        correctAnswers: [5],
+        explanation: "dudar_doubt"
+    },
+    {
+        id: 657,
+        type: "Subjuntivo",
+        difficulty: 3,
+        text: "Te llamo en cuanto _____ en casa.",
+        infinitive: "estar",
+        options: ["estás", "estuviste", "estabas", "estarás", "estarías", "estés"],
+        correctAnswers: [5],
+        explanation: "cuando_future"
+    },
+    {
+        id: 658,
+        type: "Subjuntivo",
+        difficulty: 2,
+        text: "Es normal que _____ nervioso antes del examen.",
+        infinitive: "estar",
+        options: ["estás", "estuviste", "estabas", "estarás", "estarías", "estés"],
+        correctAnswers: [5],
+        explanation: "es_bueno_opinion"
+    },
+    {
+        id: 659,
+        type: "Subjuntivo",
+        difficulty: 3,
+        text: "No hay quien _____ con él en ajedrez.",
+        infinitive: "ganar",
+        options: ["gana", "ganó", "ganaba", "ganará", "ganaría", "gane"],
+        correctAnswers: [5],
+        explanation: "dudar_doubt"
+    },
+    {
+        id: 660,
+        type: "Subjuntivo",
+        difficulty: 2,
+        text: "Me alegra que _____ tanto éxito.",
+        infinitive: "tener",
+        options: ["tienes", "tuviste", "tenías", "tendrás", "tendrías", "tengas"],
+        correctAnswers: [5],
+        explanation: "esperar_emotion"
+    },
+    {
+        id: 661,
+        type: "Subjuntivo",
+        difficulty: 3,
+        text: "Sin que nadie lo _____, se fue de la fiesta.",
+        infinitive: "ver",
+        options: ["ve", "vio", "veía", "verá", "vería", "viera"],
+        correctAnswers: [5],
+        explanation: "sin_que_negative"
+    },
+    {
+        id: 662,
+        type: "Subjuntivo",
+        difficulty: 2,
+        text: "Ojalá que _____ pronto una cura.",
+        infinitive: "encontrar",
+        options: ["encuentra", "encontró", "encontraba", "encontrará", "encontraría", "encuentren"],
+        correctAnswers: [5],
+        explanation: "esperar_emotion"
+    },
+    {
+        id: 663,
+        type: "Subjuntivo",
+        difficulty: 3,
+        text: "Por más que _____, no me vas a convencer.",
+        infinitive: "intentar",
+        options: ["intentas", "intentaste", "intentabas", "intentarás", "intentarías", "intentes"],
+        correctAnswers: [5],
+        explanation: "aunque_concession"
+    },
+    {
+        id: 664,
+        type: "Subjuntivo",
+        difficulty: 2,
+        text: "Es fundamental que _____ todas las reglas.",
+        infinitive: "conocer",
+        options: ["conoces", "conociste", "conocías", "conocerás", "conocerías", "conozcas"],
+        correctAnswers: [5],
+        explanation: "necesitar_need"
+    },
+    {
+        id: 665,
+        type: "Subjuntivo",
+        difficulty: 3,
+        text: "No existe nadie que _____ mejor que tú.",
+        infinitive: "cocinar",
+        options: ["cocina", "cocinó", "cocinaba", "cocinará", "cocinaría", "cocine"],
+        correctAnswers: [5],
+        explanation: "dudar_doubt"
+    },
+    {
+        id: 666,
+        type: "Subjuntivo",
+        difficulty: 2,
+        text: "Me da igual que _____ o no.",
+        infinitive: "venir",
+        options: ["vienes", "viniste", "venías", "vendrás", "vendrías", "vengas"],
+        correctAnswers: [5],
+        explanation: "esperar_emotion"
+    },
+    {
+        id: 667,
+        type: "Subjuntivo",
+        difficulty: 3,
+        text: "Tan pronto como _____ el problema, avísame.",
+        infinitive: "resolver",
+        options: ["resuelves", "resolviste", "resolvías", "resolverás", "resolverías", "resuelvas"],
+        correctAnswers: [5],
+        explanation: "cuando_future"
+    },
+    {
+        id: 668,
+        type: "Subjuntivo",
+        difficulty: 2,
+        text: "Es bueno que _____ ejercicio regularmente.",
+        infinitive: "hacer",
+        options: ["haces", "hiciste", "hacías", "harás", "harías", "hagas"],
+        correctAnswers: [5],
+        explanation: "es_bueno_opinion"
+    },
+    {
+        id: 669,
+        type: "Subjuntivo",
+        difficulty: 3,
+        text: "Dondequiera que _____, siempre te recordaré.",
+        infinitive: "ir",
+        options: ["vas", "fuiste", "ibas", "irás", "irías", "vayas"],
+        correctAnswers: [5],
+        explanation: "cuando_future"
+    },
+    {
+        id: 670,
+        type: "Subjuntivo",
+        difficulty: 2,
+        text: "Te ruego que _____ mi decisión.",
+        infinitive: "respetar",
+        options: ["respetas", "respetaste", "respetabas", "respetarás", "respetarías", "respetes"],
+        correctAnswers: [5],
+        explanation: "querer_desire"
+    },
+    {
+        id: 671,
+        type: "Subjuntivo",
+        difficulty: 3,
+        text: "Es raro que no _____ todavía.",
+        infinitive: "llegar",
+        options: ["llegas", "llegaste", "llegabas", "llegarás", "llegarías", "haya llegado"],
+        correctAnswers: [5],
+        explanation: "tal_vez_maybe"
+    },
+    {
+        id: 672,
+        type: "Subjuntivo",
+        difficulty: 2,
+        text: "Espero que _____ tu mejor esfuerzo.",
+        infinitive: "hacer",
+        options: ["haces", "hiciste", "hacías", "harás", "harías", "hagas"],
+        correctAnswers: [5],
+        explanation: "esperar_emotion"
+    },
+    {
+        id: 673,
+        type: "Subjuntivo",
+        difficulty: 3,
+        text: "No importa lo que _____, yo te apoyaré.",
+        infinitive: "decidir",
+        options: ["decides", "decidiste", "decidías", "decidirás", "decidirías", "decidas"],
+        correctAnswers: [5],
+        explanation: "cuando_future"
+    },
+    {
+        id: 674,
+        type: "Subjuntivo",
+        difficulty: 2,
+        text: "Es obvio que _____ mucho trabajo.",
+        infinitive: "tener",
+        options: ["tienes", "tuviste", "tenías", "tendrás", "tendrías", "tengas"],
+        correctAnswers: [0],
+        explanation: "es_bueno_opinion"
+    },
+    {
+        id: 675,
+        type: "Subjuntivo",
+        difficulty: 3,
+        text: "Mientras _____ aquí, eres bienvenido.",
+        infinitive: "estar",
+        options: ["estás", "estuviste", "estabas", "estarás", "estarías", "estés"],
+        correctAnswers: [5],
+        explanation: "cuando_future"
     }
 ];
