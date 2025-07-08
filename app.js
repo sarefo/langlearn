@@ -397,8 +397,18 @@ function selectOption(selectedIndex) {
                     } else if (isCorrect) {
                         explanationText = explanations.patterns[pattern][selectedIndex];
                     } else {
-                        explanationText = explanations.patterns[pattern][selectedIndex] + '<br><br>' +
-                                        'Respuesta correcta: ' + explanations.patterns[pattern][bestCorrectAnswer];
+                        explanationText = `
+                            <div class="incorrect-explanation">
+                                <div class="incorrect-section">
+                                    <div class="section-title">Tu respuesta:</div>
+                                    <div class="section-content">${explanations.patterns[pattern][selectedIndex]}</div>
+                                </div>
+                                <div class="correct-section">
+                                    <div class="section-title">Respuesta correcta:</div>
+                                    <div class="section-content">${explanations.patterns[pattern][bestCorrectAnswer]}</div>
+                                </div>
+                            </div>
+                        `;
                     }
                 } else {
                     // Fallback for exercises without explanation patterns
