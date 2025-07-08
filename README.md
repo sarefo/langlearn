@@ -1,91 +1,98 @@
-# LangLearn - Spanish Past Tense Trainer
+# LangLearn - Spanish Verb Tense Trainer
 
-A modern web application for learning Spanish tenses using scientifically-backed spaced repetition and habit formation techniques.
+A modern web application for mastering Spanish verb tenses with immersive learning and intelligent practice systems.
 
 ## Features
 
-- **Spaced Repetition Learning** - Intelligent scheduling based on performance
+- **Six Essential Tenses** - Presente, Pretérito, Imperfecto, Futuro, Condicional, Subjuntivo
 - **Spanish-Only Interface** - Complete immersion experience
-- **Habit Tracking** - Daily streak counter with motivational rewards
-- **Progress Analytics** - Track accuracy and improvement over time
-- **Mobile Responsive** - Optimized for both desktop and mobile devices
-- **Answer Shuffling** - Prevents pattern memorization, forces true comprehension
+- **Dual Keyboard Navigation** - A-F keys AND 1-6 number keys for answers
+- **Daily Streak System** - Habit formation with streak tracking
+- **Statistics Tracking** - Progress analytics with accuracy percentage
+- **Exercise Shuffling** - Prevents pattern memorization, forces true comprehension
+- **Contextual Explanations** - Immediate grammatical feedback for each exercise
+- **Mobile-First Design** - Optimized for all screen sizes
 
 ## Quick Start
 
-### Development
-For local development with hot reload:
+### Local Development
+The app uses vanilla HTML/CSS/JavaScript - no build tools required:
 
 ```bash
-npm install
-npm run dev
-# Visit: http://localhost:5173
-```
-
-### Production Build & Deployment
-
-```bash
-# Build for production
-npm run build
-
-# Deploy dist/ folder to GitHub Pages or any static host
-# The built files will be in the dist/ directory
+# Start a local server (server already running at localhost:8000)
+# Visit: http://localhost:8000/langlearn/
 ```
 
 ### GitHub Pages Deployment
-1. Build the app: `npm run build`
-2. Commit the `dist/` folder contents to your gh-pages branch
-3. Or use GitHub Actions for automatic deployment
+Deploy instantly without build steps:
+1. Push changes to your repository
+2. Enable GitHub Pages on the main branch
+3. Access via your GitHub Pages URL
 
-### Local Testing of Built Version
-```bash
-# After building, test the production version
-python -m http.server 8000 -d dist
-# Visit: http://localhost:8000
-```
+## Learning System
 
-## Learning Science
+The app implements a sophisticated dual-algorithm approach:
 
-The app implements modern learning research:
-
-- **Active Retrieval** - Multiple choice questions force recall
-- **Spaced Intervals** - 1 day → 3 days → 1 week → 2 weeks → 1 month
-- **Difficulty Calibration** - Adjusts based on performance
-- **Habit Formation** - Daily practice goals with streak tracking
-- **Immediate Feedback** - Explanations and tips after each answer
+- **Statistics Tracking** - Accuracy percentage and total correct answers
+- **Daily Streak System** - Updates only on first correct answer each day
+- **Exercise Shuffling** - Auto-reshuffle when all exercises completed
+- **Contextual Feedback** - Grammatical explanations for each tense choice
+- **Progressive Difficulty** - Fácil → Medio → Difícil levels
 
 ## Keyboard Shortcuts
 
-- **A, B, C, D** - Select answer options
+### Answer Selection
+- **1-6** or **A-F** - Select answer options
+- **↑ / ↓** - Select first/second option (single tense mode)
+
+### Tense Selection
+- **A-F** - Toggle verb tenses (A=Presente, B=Pretérito, C=Imperfecto, D=Futuro, E=Condicional, F=Subjuntivo)
+
+### Navigation
+- **← / →** - Rate difficulty (correct answers)
 - **Enter/Space** - Continue to next exercise
-- **↵** - Visual indicator for continue action
+- **H** - Show/hide keyboard shortcuts help
+- **Esc** - Close help dialog
 
-## Content Focus
+## Exercise Content
 
-Initial content covers the most challenging aspect of Spanish past tenses:
+**122 Total Exercises** across six tenses:
+- **Presente** - IDs 100-199 (expandable)
+- **Pretérito** - IDs 200-299 (33 exercises: 201-233)
+- **Imperfecto** - IDs 300-399 (32 exercises: 301-332)
+- **Futuro** - IDs 400-499 (expandable)
+- **Condicional** - IDs 500-599 (30 exercises: 501-530)
+- **Subjuntivo** - IDs 600-699 (27 exercises: 601-627)
 
-- **Preterite vs Imperfect** distinction
-- **Common irregular verbs** (tener, saber, poder, venir)
-- **Contextual usage** patterns
-- **Progressive difficulty** from basic to advanced
+### Exercise Categories
+- Pretérito vs Imperfecto distinctions
+- Irregular verbs (poder, tener, venir, hacer, saber, poner, estar, ser)
+- Context-based scenarios (specific vs habitual actions)
+- Time expressions and frequency indicators
+- Progressive difficulty levels
 
 ## Technology Stack
 
-- **Frontend**: React + Vite
-- **Build**: Vite (fast bundling and dev server)
-- **Storage**: LocalStorage for progress persistence
-- **Styling**: Modern CSS with custom properties
-- **Architecture**: Modular, expandable component design
-- **Deployment**: Static files (works on GitHub Pages, Netlify, etc.)
+- **Vanilla JavaScript** - Zero build complexity, maximum compatibility
+- **LocalStorage** - Progress persistence across sessions
+- **Modular Architecture** - Organized exercise files by tense
+- **Responsive Design** - Mobile-first with touch-friendly interface
+- **GitHub Pages Ready** - Deploy instantly without build steps
 
-## Future Enhancements
+## Architecture
 
-- Additional tenses (subjunctive, conditional)
-- Speech recognition for pronunciation practice
-- More content (100+ exercises)
-- Gamification features
-- Analytics dashboard
-- Multi-language support
+### File Structure
+- **index.html** - Main application file
+- **js/app.js** - Core application logic
+- **exercises/** - Exercise data organized by tense
+- **explanations.js** - Reusable explanation patterns
+- **css/main.css** - Responsive styling
+
+### Data Flow
+1. Exercises loaded from separate tense files (122 total)
+2. `shuffleExercises()` randomizes order for variety
+3. Statistics and streaks update in localStorage
+4. Results display directly below correct option
 
 ## Contributing
 

@@ -28,9 +28,9 @@ The app implements a sophisticated dual-algorithm approach:
 
 ### Application Structure
 - **index.html** - Main application file
-- **app.js** - Core application logic and exercise handling
-- **exercises/** - Exercise data organized by tense (see ID System below)
-- **explanations.js** - Reusable explanation patterns for contextual feedback
+- **js/app.js** - Core application logic and exercise handling
+- **data/exercises/** - Exercise data organized by tense (see ID System below)
+- **data/explanations.js** - Reusable explanation patterns for contextual feedback
 
 ### Exercise ID System
 Exercises are organized by tense with unique ID prefixes to prevent conflicts:
@@ -97,7 +97,7 @@ Exercises are organized by tense with unique ID prefixes to prevent conflicts:
 **IMPORTANT: Follow this structure to maintain low redundancy and high-quality explanations.**
 
 #### Exercise Structure
-Add new exercises to `exercises.js` following this exact structure:
+Add new exercises to the appropriate `data/exercises/` file following this exact structure:
 ```javascript
 {
     id: 66,                          // Unique incremental ID
@@ -121,12 +121,12 @@ Add new exercises to `exercises.js` following this exact structure:
 #### Explanation System
 **DO NOT create unique explanations for each exercise.** Instead:
 
-1. **Check existing patterns** in `explanations.js` first
+1. **Check existing patterns** in `data/explanations.js` first
 2. **Reuse patterns** when the grammatical context is similar
 3. **Add new patterns** only when existing ones don't fit
 
 #### Available Explanation Patterns
-Current patterns in `explanations.js`:
+Current patterns in `data/explanations.js`:
 - **`ayer_past`** - For "ayer" and other specific past time indicators
 - **`siempre_habitual`** - For "siempre" and habitual actions
 - **`cada_habitual`** - For "cada X" (cada día, cada verano, etc.)
@@ -141,7 +141,7 @@ Current patterns in `explanations.js`:
 - **`context_main`** - For context-setting vs main actions
 
 #### When to Add New Patterns
-Add a new pattern to `explanations.js` only when:
+Add a new pattern to `data/explanations.js` only when:
 1. **No existing pattern fits** the grammatical context
 2. **Multiple exercises** would benefit from the same pattern
 3. **The pattern is grammatically distinct** from existing ones
