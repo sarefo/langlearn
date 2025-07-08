@@ -103,10 +103,6 @@ function toggleTense(tenseIndex) {
     const option = document.querySelector(`[data-tense="${tenseIndex}"]`);
     
     if (selectedTenses.includes(tenseIndex)) {
-        // Don't allow unchecking if it's the last one selected
-        if (selectedTenses.length === 1) {
-            return;
-        }
         selectedTenses = selectedTenses.filter(t => t !== tenseIndex);
         option.classList.remove('selected');
     } else {
@@ -247,6 +243,10 @@ function loadExercise() {
 
 // Check if an answer is correct for current tense selection
 function isAnswerCorrect(selectedIndex) {
+    // In single tense mode, don't score answers
+    if (selectedTenses.length === 1) {
+        return true; // All answers are "correct" in learning mode
+    }
     return currentExercise.correctAnswers.includes(selectedIndex) && 
            selectedTenses.includes(selectedIndex);
 }
@@ -276,9 +276,11 @@ function renderExercise() {
         <div class="options">
             ${exercise.options.map((option, index) => {
                 const letter = String.fromCharCode(65 + index); // A, B, C, D, E, F
+                const isAllowed = selectedTenses.includes(index);
+                const allowedClass = isAllowed ? 'allowed' : '';
                 
                 return `
-                    <div class="option" onclick="selectOption(${index})">
+                    <div class="option ${allowedClass}" onclick="selectOption(${index})">
                         <div class="option-letter">${letter}</div>
                         <span>${option}</span>
                         <span class="tense-indicator">(${tenseNames[index]})</span>
@@ -328,42 +330,44 @@ function selectOption(selectedIndex) {
     const isCorrect = isAnswerCorrect(selectedIndex);
     const bestCorrectAnswer = getBestCorrectAnswer();
     
-    // Update stats
-    stats.total++;
-    if (isCorrect) {
-        stats.correct++;
-        // Update streak for first correct answer of the day
-        const today = new Date().toDateString();
-        const lastStreakDate = localStorage.getItem('langlearn_last_streak_date');
-        if (lastStreakDate !== today) {
-            streak++;
-            localStorage.setItem('langlearn_last_streak_date', today);
-        }
-        
-        // Remove from wrong answers if answered correctly
-        wrongAnswers = wrongAnswers.filter(wrong => wrong.id !== currentExercise.id);
-        saveWrongAnswers();
-    } else {
-        // Add to wrong answers for future practice
-        const wrongEntry = {
-            id: currentExercise.id,
-            timestamp: Date.now(),
-            wrongCount: 1
-        };
-        
-        const existingWrong = wrongAnswers.find(wrong => wrong.id === currentExercise.id);
-        if (existingWrong) {
-            existingWrong.wrongCount++;
-            existingWrong.timestamp = Date.now();
+    // Update stats only if not in single tense mode
+    if (selectedTenses.length > 1) {
+        stats.total++;
+        if (isCorrect) {
+            stats.correct++;
+            // Update streak for first correct answer of the day
+            const today = new Date().toDateString();
+            const lastStreakDate = localStorage.getItem('langlearn_last_streak_date');
+            if (lastStreakDate !== today) {
+                streak++;
+                localStorage.setItem('langlearn_last_streak_date', today);
+            }
+            
+            // Remove from wrong answers if answered correctly
+            wrongAnswers = wrongAnswers.filter(wrong => wrong.id !== currentExercise.id);
+            saveWrongAnswers();
         } else {
-            wrongAnswers.push(wrongEntry);
+            // Add to wrong answers for future practice
+            const wrongEntry = {
+                id: currentExercise.id,
+                timestamp: Date.now(),
+                wrongCount: 1
+            };
+            
+            const existingWrong = wrongAnswers.find(wrong => wrong.id === currentExercise.id);
+            if (existingWrong) {
+                existingWrong.wrongCount++;
+                existingWrong.timestamp = Date.now();
+            } else {
+                wrongAnswers.push(wrongEntry);
+            }
+            
+            saveWrongAnswers();
         }
         
-        saveWrongAnswers();
+        saveStats();
+        updateStatsDisplay();
     }
-    
-    saveStats();
-    updateStatsDisplay();
     
     // Style options and insert result after the best correct option
     const options = document.querySelectorAll('.option');
@@ -382,7 +386,10 @@ function selectOption(selectedIndex) {
                 const pattern = currentExercise.explanation;
                 
                 if (pattern && explanations.patterns[pattern]) {
-                    if (isCorrect) {
+                    if (selectedTenses.length === 1) {
+                        // In single tense mode, show explanation for selected answer
+                        explanationText = explanations.patterns[pattern][selectedIndex];
+                    } else if (isCorrect) {
                         explanationText = explanations.patterns[pattern][selectedIndex];
                     } else {
                         explanationText = explanations.patterns[pattern][selectedIndex] + '<br><br>' +
@@ -390,11 +397,22 @@ function selectOption(selectedIndex) {
                     }
                 } else {
                     // Fallback for exercises without explanation patterns
-                    explanationText = isCorrect ? 'Selección correcta' : 'Selección incorrecta';
+                    if (selectedTenses.length === 1) {
+                        explanationText = `${tenseNames[selectedIndex]} seleccionado`;
+                    } else {
+                        explanationText = isCorrect ? 'Selección correcta' : 'Selección incorrecta';
+                    }
+                }
+                
+                let resultHeader;
+                if (selectedTenses.length === 1) {
+                    resultHeader = `🎯 ${tenseNames[selectedIndex]}`;
+                } else {
+                    resultHeader = isCorrect ? '✅ ¡Correcto!' : '❌ Incorrecto';
                 }
                 
                 resultEl.innerHTML = `
-                    <div>${isCorrect ? '✅ ¡Correcto!' : '❌ Incorrecto'}</div>
+                    <div>${resultHeader}</div>
                     <div style="margin-top: 4px; font-size: 13px; color: var(--text-light);">${explanationText}</div>
                     <button class="next-btn" onclick="nextExercise()">
                         Siguiente ejercicio (Enter)
