@@ -1,0 +1,13 @@
+/* Main CSS file - imports all modular CSS files */
+
+@import url('variables.css');
+@import url('base.css');
+@import url('dashboard.css');
+@import url('exercise.css');
+@import url('options.css');
+@import url('result.css');
+@import url('buttons.css');
+@import url('tense-selector.css');
+@import url('help-dialog.css');
+@import url('dark-mode.css');
+@import url('responsive.css');

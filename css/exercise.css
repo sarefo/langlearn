@@ -1,0 +1,64 @@
+/* Exercise display and question styles */
+
+/* Exercise - now takes main space */
+.exercise {
+    background: var(--surface);
+    border-radius: 6px;
+    padding: 12px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 0;
+}
+
+.type-badge {
+    background: var(--primary);
+    color: white;
+    padding: 2px 6px;
+    border-radius: 10px;
+    font-size: 11px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.difficulty {
+    font-size: 14px;
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.question {
+    text-align: center;
+}
+
+.question-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.question-text {
+    background: var(--bg);
+    padding: 16px;
+    border-radius: 8px;
+    border: 2px solid var(--primary);
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.1);
+    text-align: center;
+}
+
+.question-sentence {
+    margin-bottom: 6px;
+}
+
+.question-infinitive {
+    font-size: 16px;
+}

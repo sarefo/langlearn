@@ -1,0 +1,49 @@
+/* Dark mode specific overrides */
+
+@media (prefers-color-scheme: dark) {
+    .tense-option {
+        background: #374151 !important;
+    }
+    
+    .question-text {
+        background: #374151 !important;
+    }
+    
+    .result {
+        background: #1e293b !important;
+    }
+    
+    .result.correct {
+        background: #1e293b !important;
+    }
+    
+    .result.incorrect {
+        background: #1e293b !important;
+    }
+    
+    .option.allowed {
+        background: rgba(96, 165, 250, 0.1) !important;
+        border-color: #60a5fa !important;
+        color: #60a5fa !important;
+    }
+    
+    .option.allowed:hover {
+        background: rgba(96, 165, 250, 0.2) !important;
+        border-color: #60a5fa !important;
+    }
+    
+    .tense-option.selected {
+        background: rgba(96, 165, 250, 0.1) !important;
+        border-color: #60a5fa !important;
+        color: #60a5fa !important;
+    }
+    
+    .tense-option.selected .tense-checkbox {
+        background: #60a5fa !important;
+        border-color: #60a5fa !important;
+    }
+    
+    .tense-option.selected .tense-letter {
+        background: #60a5fa !important;
+    }
+}
