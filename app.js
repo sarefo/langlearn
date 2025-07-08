@@ -365,21 +365,27 @@ function renderExercise() {
         }
         
         if (answered) {
+            // Check if we have difficulty buttons (correct answer) or siguiente button (wrong answer)
+            const easyBtn = document.querySelector('.easy-btn');
+            const hardBtn = document.querySelector('.hard-btn');
+            const siguienteBtn = document.querySelector('.siguiente-btn');
+            
+            if (easyBtn && hardBtn) {
+                // For correct answers, Left = Difícil, Right = Fácil
+                if (e.key === 'ArrowLeft') {
+                    e.preventDefault();
+                    handleDifficultyFeedback('hard');
+                    return;
+                } else if (e.key === 'ArrowRight') {
+                    e.preventDefault();
+                    handleDifficultyFeedback('easy');
+                    return;
+                }
+            }
+            
             if (e.key === 'Enter' || e.key === ' ') {
                 e.preventDefault();
-                // Check if we have difficulty buttons (correct answer) or siguiente button (wrong answer)
-                const easyBtn = document.querySelector('.easy-btn');
-                const hardBtn = document.querySelector('.hard-btn');
-                const siguienteBtn = document.querySelector('.siguiente-btn');
-                
-                if (easyBtn && hardBtn) {
-                    // For correct answers, Enter = Fácil, Space = Difícil
-                    if (e.key === 'Enter') {
-                        handleDifficultyFeedback('easy');
-                    } else if (e.key === ' ') {
-                        handleDifficultyFeedback('hard');
-                    }
-                } else if (siguienteBtn) {
+                if (siguienteBtn) {
                     // For wrong answers, both Enter and Space = Siguiente
                     handleSiguienteClick();
                 }
@@ -389,10 +395,37 @@ function renderExercise() {
         
         const key = e.key.toUpperCase();
         
+        // ESC key - prevent any action
+        if (e.key === 'Escape') {
+            e.preventDefault();
+            return;
+        }
+        
         // H or ? keys show help dialog
         if (key === 'H' || key === '?') {
             e.preventDefault();
             showHelpDialog();
+            return;
+        }
+        
+        // Arrow keys for two-tense mode: Up/Down select first/second allowed option
+        if (selectedTenses.length === 2 && (e.key === 'ArrowUp' || e.key === 'ArrowDown')) {
+            e.preventDefault();
+            const allowedOptions = currentExercise.options
+                .map((option, index) => ({ index, allowed: selectedTenses.includes(index) }))
+                .filter(opt => opt.allowed)
+                .map(opt => opt.index);
+            
+            if (allowedOptions.length >= 2) {
+                const selectedIndex = e.key === 'ArrowUp' ? allowedOptions[0] : allowedOptions[1];
+                selectOption(selectedIndex);
+            }
+            return;
+        }
+        
+        // Prevent arrow keys from doing anything else (fix for unintended tense toggling)
+        if (e.key.startsWith('Arrow')) {
+            e.preventDefault();
             return;
         }
         
@@ -553,13 +586,13 @@ function selectOption(selectedIndex) {
     
     // Show different buttons based on whether the answer was correct
     if (isCorrect) {
-        // For correct answers: show Fácil/Difícil buttons
+        // For correct answers: show Difícil/Fácil buttons
         bigNextButton.innerHTML = `
-            <button class="difficulty-btn easy-btn" onclick="handleDifficultyFeedback('easy')">
-                Fácil
-            </button>
             <button class="difficulty-btn hard-btn" onclick="handleDifficultyFeedback('hard')">
                 Difícil
+            </button>
+            <button class="difficulty-btn easy-btn" onclick="handleDifficultyFeedback('easy')">
+                Fácil
             </button>
         `;
     } else {
