@@ -358,7 +358,7 @@ window.preteritoExercises = [
         difficulty: 2,
         text: "Ese día ◯ todas mis cosas en una maleta.",
         infinitive: "traer",
-        person: "él",
+        person: "yo",
         options: ["traigo", "traje", "traía", "traeré", "traería", "traiga"],
         correctAnswers: [1],
         explanation: "poder_specific"
@@ -501,7 +501,7 @@ window.preteritoExercises = [
         difficulty: 3,
         text: "Cuando ◯ el avión, todos aplaudieron.",
         infinitive: "aterrizar",
-        person: "él",
+        person: "yo",
         options: ["aterrizo", "aterricé", "aterrizaba", "aterrizaré", "aterrizaría", "aterrice"],
         correctAnswers: [1],
         explanation: "sequence_completed"

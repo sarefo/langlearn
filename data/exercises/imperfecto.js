@@ -6,7 +6,7 @@ window.imperfectoExercises = [
         difficulty: 2,
         text: "Cuando era niño, siempre ◯ en el parque.",
         infinitive: "jugar",
-        person: "él",
+        person: "yo",
         options: ["juego", "jugué", "jugaba", "jugaré", "jugaría", "juegue"],
         correctAnswers: [2],
         explanation: "siempre_habitual"
@@ -39,7 +39,7 @@ window.imperfectoExercises = [
         difficulty: 2,
         text: "Mientras ◯ la televisión, sonó el teléfono.",
         infinitive: "ver",
-        person: "él",
+        person: "yo",
         options: ["veo", "vi", "veía", "veré", "vería", "vea"],
         correctAnswers: [2],
         explanation: "mientras_interrupted"
@@ -226,7 +226,7 @@ window.imperfectoExercises = [
         difficulty: 1,
         text: "A menudo ◯ en ese café cuando vivía cerca.",
         infinitive: "desayunar",
-        person: "él",
+        person: "yo",
         options: ["desayuno", "desayuné", "desayunaba", "desayunaré", "desayunaría", "desayune"],
         correctAnswers: [2],
         explanation: "siempre_habitual"
@@ -248,7 +248,7 @@ window.imperfectoExercises = [
         difficulty: 3,
         text: "De niño, ◯ muy tímido, pero un día decidí cambiar.",
         infinitive: "ser",
-        person: "él",
+        person: "yo",
         options: ["soy", "fui", "era", "seré", "sería", "sea"],
         correctAnswers: [2],
         explanation: "description_past"
@@ -281,7 +281,7 @@ window.imperfectoExercises = [
         difficulty: 2,
         text: "No pude salir porque ◯ enfermo.",
         infinitive: "estar",
-        person: "nosotros",
+        person: "yo",
         options: ["estoy", "estuve", "estaba", "estaré", "estaría", "esté"],
         correctAnswers: [2],
         explanation: "description_past"
@@ -292,7 +292,7 @@ window.imperfectoExercises = [
         difficulty: 2,
         text: "En aquella época, no ◯ usar computadoras.",
         infinitive: "saber",
-        person: "ella",
+        person: "yo",
         options: ["sé", "supe", "sabía", "sabré", "sabría", "sepa"],
         correctAnswers: [2],
         explanation: "saber_continuous"
@@ -303,7 +303,7 @@ window.imperfectoExercises = [
         difficulty: 2,
         text: "El año pasado ◯ español en la universidad.",
         infinitive: "estudiar",
-        person: "él",
+        person: "yo",
         options: ["estudio", "estudié", "estudiaba", "estudiaré", "estudiaría", "estudie"],
         correctAnswers: [2],
         explanation: "context_main"
@@ -325,7 +325,7 @@ window.imperfectoExercises = [
         difficulty: 2,
         text: "Conocí a María cuando ◯ en Madrid.",
         infinitive: "vivir",
-        person: "ella",
+        person: "yo",
         options: ["vivo", "viví", "vivía", "viviré", "viviría", "viva"],
         correctAnswers: [2],
         explanation: "context_main"
@@ -358,7 +358,7 @@ window.imperfectoExercises = [
         difficulty: 2,
         text: "Cada mañana ◯ café con leche antes de ir al trabajo.",
         infinitive: "tomar",
-        person: "ella",
+        person: "yo",
         options: ["tomo", "tomé", "tomaba", "tomaré", "tomaría", "tome"],
         correctAnswers: [2],
         explanation: "cada_habitual"
@@ -369,7 +369,7 @@ window.imperfectoExercises = [
         difficulty: 2,
         text: "En esa época, ◯ mucho dinero en mi cuenta bancaria.",
         infinitive: "tener",
-        person: "tú",
+        person: "yo",
         options: ["tengo", "tuve", "tenía", "tendré", "tendría", "tenga"],
         correctAnswers: [2],
         explanation: "description_past"
@@ -391,7 +391,7 @@ window.imperfectoExercises = [
         difficulty: 3,
         text: "En mi juventud, ◯ mucho más valiente que ahora.",
         infinitive: "ser",
-        person: "tú",
+        person: "yo",
         options: ["soy", "fui", "era", "seré", "sería", "sea"],
         correctAnswers: [2],
         explanation: "description_past"
@@ -402,7 +402,7 @@ window.imperfectoExercises = [
         difficulty: 2,
         text: "Antes ◯ escribir cartas a mano, ahora uso el ordenador.",
         infinitive: "poder",
-        person: "él",
+        person: "yo",
         options: ["puedo", "pude", "podía", "podré", "podría", "pueda"],
         correctAnswers: [2],
         explanation: "siempre_habitual"
@@ -413,7 +413,7 @@ window.imperfectoExercises = [
         difficulty: 2,
         text: "Todos los veranos ◯ en el pueblo de mis abuelos.",
         infinitive: "pasar",
-        person: "él",
+        person: "yo",
         options: ["paso", "pasé", "pasaba", "pasaré", "pasaría", "pase"],
         correctAnswers: [2],
         explanation: "cada_habitual"
@@ -479,7 +479,7 @@ window.imperfectoExercises = [
         difficulty: 2,
         text: "Cuando ◯ pequeño, tenía miedo de la oscuridad.",
         infinitive: "ser",
-        person: "él",
+        person: "yo",
         options: ["soy", "fui", "era", "seré", "sería", "sea"],
         correctAnswers: [2],
         explanation: "description_past"
@@ -490,7 +490,7 @@ window.imperfectoExercises = [
         difficulty: 2,
         text: "Mientras ◯ el periódico, sonó el teléfono.",
         infinitive: "leer",
-        person: "él",
+        person: "yo",
         options: ["leo", "leí", "leía", "leeré", "leería", "lea"],
         correctAnswers: [2],
         explanation: "mientras_interrupted"
@@ -523,7 +523,7 @@ window.imperfectoExercises = [
         difficulty: 2,
         text: "Cuando ◯ en París, visitaba museos todos los días.",
         infinitive: "vivir",
-        person: "tú",
+        person: "yo",
         options: ["vivo", "viví", "vivía", "viviré", "viviría", "viva"],
         correctAnswers: [2],
         explanation: "context_main"
@@ -545,7 +545,7 @@ window.imperfectoExercises = [
         difficulty: 3,
         text: "Mientras ◯ esperando el autobús, comenzó a llover.",
         infinitive: "estar",
-        person: "él",
+        person: "yo",
         options: ["estoy", "estuve", "estaba", "estaré", "estaría", "esté"],
         correctAnswers: [2],
         explanation: "mientras_interrupted"

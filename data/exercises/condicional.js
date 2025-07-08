@@ -50,7 +50,7 @@ window.condicionalExercises = [
         difficulty: 3,
         text: "Si pudiera viajar, ◯ a Japón.",
         infinitive: "ir",
-        person: "él",
+        person: "yo",
         options: ["voy", "fui", "iba", "iré", "iría", "vaya"],
         correctAnswers: [4],
         explanation: "si_pudiera_conditional"
@@ -94,7 +94,7 @@ window.condicionalExercises = [
         difficulty: 3,
         text: "Si fuera rico, ◯ una casa en la playa.",
         infinitive: "tener",
-        person: "tú",
+        person: "yo",
         options: ["tengo", "tuve", "tenía", "tendré", "tendría", "tenga"],
         correctAnswers: [4],
         explanation: "si_fuera_conditional"
@@ -127,7 +127,7 @@ window.condicionalExercises = [
         difficulty: 3,
         text: "Si supiera la respuesta, te la ◯.",
         infinitive: "decir",
-        person: "él",
+        person: "yo",
         options: ["digo", "dije", "decía", "diré", "diría", "diga"],
         correctAnswers: [4],
         explanation: "si_supiera_conditional"
@@ -149,7 +149,7 @@ window.condicionalExercises = [
         difficulty: 2,
         text: "¿◯ cenar conmigo mañana?",
         infinitive: "querer",
-        person: "ella",
+        person: "tú",
         options: ["quieres", "quisiste", "querías", "querrás", "querrías", "quieras"],
         correctAnswers: [4],
         explanation: "polite_invitation"
@@ -182,7 +182,7 @@ window.condicionalExercises = [
         difficulty: 2,
         text: "Con mejor clima, ◯ al parque.",
         infinitive: "ir",
-        person: "ella",
+        person: "yo",
         options: ["voy", "fui", "iba", "iré", "iría", "vaya"],
         correctAnswers: [4],
         explanation: "hypothetical_condition"
@@ -237,7 +237,7 @@ window.condicionalExercises = [
         difficulty: 2,
         text: "Me prometió que ◯ temprano.",
         infinitive: "llegar",
-        person: "ella",
+        person: "yo",
         options: ["llego", "llegué", "llegaba", "llegaré", "llegaría", "llegue"],
         correctAnswers: [4],
         explanation: "reported_speech"
@@ -259,7 +259,7 @@ window.condicionalExercises = [
         difficulty: 3,
         text: "Si fuera presidente, ◯ muchas cosas.",
         infinitive: "cambiar",
-        person: "tú",
+        person: "yo",
         options: ["cambio", "cambié", "cambiaba", "cambiaré", "cambiaría", "cambie"],
         correctAnswers: [4],
         explanation: "si_fuera_conditional"
@@ -281,7 +281,7 @@ window.condicionalExercises = [
         difficulty: 3,
         text: "Si pudiera elegir, ◯ en el campo.",
         infinitive: "vivir",
-        person: "él",
+        person: "yo",
         options: ["vivo", "viví", "vivía", "viviré", "viviría", "viva"],
         correctAnswers: [4],
         explanation: "si_pudiera_conditional"
@@ -303,7 +303,7 @@ window.condicionalExercises = [
         difficulty: 2,
         text: "Dijiste que ◯ a visitarme.",
         infinitive: "venir",
-        person: "ellos",
+        person: "tú",
         options: ["vienes", "viniste", "venías", "vendrás", "vendrías", "vengas"],
         correctAnswers: [4],
         explanation: "reported_speech"
@@ -336,7 +336,7 @@ window.condicionalExercises = [
         difficulty: 2,
         text: "¿◯ tan amable de cerrar la ventana?",
         infinitive: "ser",
-        person: "ella",
+        person: "tú",
         options: ["eres", "fuiste", "eras", "serás", "serías", "seas"],
         correctAnswers: [4],
         explanation: "polite_request"
@@ -347,7 +347,7 @@ window.condicionalExercises = [
         difficulty: 3,
         text: "Si tuviera alas, ◯ por todo el mundo.",
         infinitive: "volar",
-        person: "él",
+        person: "yo",
         options: ["vuelo", "volé", "volaba", "volaré", "volaría", "vuele"],
         correctAnswers: [4],
         explanation: "si_tuviera_conditional"
@@ -358,7 +358,7 @@ window.condicionalExercises = [
         difficulty: 2,
         text: "Me encantó que me dijeras que ◯ conmigo.",
         infinitive: "quedar",
-        person: "ella",
+        person: "tú",
         options: ["quedas", "quedaste", "quedabas", "quedarás", "quedarías", "quedes"],
         correctAnswers: [4],
         explanation: "reported_speech"
@@ -369,7 +369,7 @@ window.condicionalExercises = [
         difficulty: 1,
         text: "¿◯ acompañarme al médico?",
         infinitive: "poder",
-        person: "ella",
+        person: "tú",
         options: ["puedes", "pudiste", "podías", "podrás", "podrías", "puedas"],
         correctAnswers: [4],
         explanation: "polite_request"
@@ -413,7 +413,7 @@ window.condicionalExercises = [
         difficulty: 3,
         text: "Si no fuera tan tímido, ◯ más amigos.",
         infinitive: "tener",
-        person: "ella",
+        person: "yo",
         options: ["tengo", "tuve", "tenía", "tendré", "tendría", "tenga"],
         correctAnswers: [4],
         explanation: "si_fuera_conditional"
@@ -435,7 +435,7 @@ window.condicionalExercises = [
         difficulty: 2,
         text: "En mi opinión, ◯ buscar otra solución.",
         infinitive: "deber",
-        person: "ella",
+        person: "yo",
         options: ["debo", "debí", "debía", "deberé", "debería", "deba"],
         correctAnswers: [4],
         explanation: "advice_conditional"
@@ -446,7 +446,7 @@ window.condicionalExercises = [
         difficulty: 3,
         text: "Si lloviera menos, ◯ más al parque.",
         infinitive: "salir",
-        person: "tú",
+        person: "yo",
         options: ["salgo", "salí", "salía", "saldré", "saldría", "salga"],
         correctAnswers: [4],
         explanation: "si_lloviera_conditional"
@@ -479,7 +479,7 @@ window.condicionalExercises = [
         difficulty: 3,
         text: "Si tuviera superpoderes, ◯ el mundo.",
         infinitive: "salvar",
-        person: "él",
+        person: "yo",
         options: ["salvo", "salvé", "salvaba", "salvaré", "salvaría", "salve"],
         correctAnswers: [4],
         explanation: "si_tuviera_conditional"
@@ -501,7 +501,7 @@ window.condicionalExercises = [
         difficulty: 3,
         text: "Si fuera millonario, ◯ una fundación.",
         infinitive: "crear",
-        person: "él",
+        person: "yo",
         options: ["creo", "creé", "creaba", "crearé", "crearía", "cree"],
         correctAnswers: [4],
         explanation: "si_fuera_conditional"
@@ -534,7 +534,7 @@ window.condicionalExercises = [
         difficulty: 3,
         text: "Si pudiera cambiar algo, ◯ más tiempo con la familia.",
         infinitive: "pasar",
-        person: "ella",
+        person: "yo",
         options: ["paso", "pasé", "pasaba", "pasaré", "pasaría", "pase"],
         correctAnswers: [4],
         explanation: "si_pudiera_conditional"
@@ -556,7 +556,7 @@ window.condicionalExercises = [
         difficulty: 3,
         text: "Si hubiera sabido la verdad, ◯ de manera diferente.",
         infinitive: "actuar",
-        person: "ellos",
+        person: "yo",
         options: ["actúo", "actué", "actuaba", "actuaré", "actuaría", "actúe"],
         correctAnswers: [4],
         explanation: "si_supiera_conditional"
@@ -578,7 +578,7 @@ window.condicionalExercises = [
         difficulty: 3,
         text: "En mi lugar, ¿qué ◯?",
         infinitive: "hacer",
-        person: "ella",
+        person: "tú",
         options: ["haces", "hiciste", "hacías", "harás", "harías", "hagas"],
         correctAnswers: [4],
         explanation: "advice_conditional"
@@ -600,7 +600,7 @@ window.condicionalExercises = [
         difficulty: 3,
         text: "Si tuviera más experiencia, ◯ mejor este proyecto.",
         infinitive: "manejar",
-        person: "ella",
+        person: "yo",
         options: ["manejo", "manejé", "manejaba", "manejaré", "manejaría", "maneje"],
         correctAnswers: [4],
         explanation: "si_tuviera_conditional"
@@ -611,7 +611,7 @@ window.condicionalExercises = [
         difficulty: 2,
         text: "¿◯ acompañarme al aeropuerto?",
         infinitive: "poder",
-        person: "ella",
+        person: "tú",
         options: ["puedes", "pudiste", "podías", "podrás", "podrías", "puedas"],
         correctAnswers: [4],
         explanation: "polite_request"
@@ -622,7 +622,7 @@ window.condicionalExercises = [
         difficulty: 3,
         text: "Con más recursos, ◯ un programa mejor.",
         infinitive: "desarrollar",
-        person: "ellos",
+        person: "yo",
         options: ["desarrollo", "desarrollé", "desarrollaba", "desarrollaré", "desarrollaría", "desarrolle"],
         correctAnswers: [4],
         explanation: "hypothetical_condition"
@@ -633,7 +633,7 @@ window.condicionalExercises = [
         difficulty: 2,
         text: "Dijiste que ◯ más tarde.",
         infinitive: "llamar",
-        person: "ella",
+        person: "tú",
         options: ["llamas", "llamaste", "llamabas", "llamarás", "llamarías", "llames"],
         correctAnswers: [4],
         explanation: "reported_speech"
@@ -644,7 +644,7 @@ window.condicionalExercises = [
         difficulty: 3,
         text: "Si no fuera por ti, ◯ perdido.",
         infinitive: "estar",
-        person: "ellos",
+        person: "yo",
         options: ["estoy", "estuve", "estaba", "estaré", "estaría", "esté"],
         correctAnswers: [4],
         explanation: "si_fuera_conditional"
@@ -666,7 +666,7 @@ window.condicionalExercises = [
         difficulty: 3,
         text: "Si pudiera volver atrás, ◯ todo diferente.",
         infinitive: "hacer",
-        person: "ella",
+        person: "yo",
         options: ["hago", "hice", "hacía", "haré", "haría", "haga"],
         correctAnswers: [4],
         explanation: "si_pudiera_conditional"
@@ -688,7 +688,7 @@ window.condicionalExercises = [
         difficulty: 3,
         text: "Si no tuviera tanto trabajo, ◯ contigo.",
         infinitive: "salir",
-        person: "él",
+        person: "yo",
         options: ["salgo", "salí", "salía", "saldré", "saldría", "salga"],
         correctAnswers: [4],
         explanation: "si_tuviera_conditional"
@@ -721,7 +721,7 @@ window.condicionalExercises = [
         difficulty: 2,
         text: "¿◯ venir a cenar el domingo?",
         infinitive: "querer",
-        person: "él",
+        person: "tú",
         options: ["quieres", "quisiste", "querías", "querrás", "querrías", "quieras"],
         correctAnswers: [4],
         explanation: "polite_invitation"
@@ -732,7 +732,7 @@ window.condicionalExercises = [
         difficulty: 3,
         text: "Si hubiera más tiempo, ◯ un proyecto más ambicioso.",
         infinitive: "emprender",
-        person: "ellos",
+        person: "yo",
         options: ["emprendo", "emprendí", "emprendía", "emprenderé", "emprendería", "emprenda"],
         correctAnswers: [4],
         explanation: "si_tuviera_conditional"
@@ -754,7 +754,7 @@ window.condicionalExercises = [
         difficulty: 3,
         text: "Si fuera más joven, ◯ el mundo.",
         infinitive: "recorrer",
-        person: "él",
+        person: "yo",
         options: ["recorro", "recorrí", "recorría", "recorreré", "recorrería", "recorra"],
         correctAnswers: [4],
         explanation: "si_fuera_conditional"
@@ -776,7 +776,7 @@ window.condicionalExercises = [
         difficulty: 3,
         text: "Si tuviera su número, le ◯ ahora mismo.",
         infinitive: "llamar",
-        person: "nosotros",
+        person: "yo",
         options: ["llamo", "llamé", "llamaba", "llamaré", "llamaría", "llame"],
         correctAnswers: [4],
         explanation: "si_tuviera_conditional"
@@ -798,7 +798,7 @@ window.condicionalExercises = [
         difficulty: 3,
         text: "Con más apoyo, ◯ grandes cosas.",
         infinitive: "lograr",
-        person: "él",
+        person: "yo",
         options: ["logro", "logré", "lograba", "lograré", "lograría", "logre"],
         correctAnswers: [4],
         explanation: "hypothetical_condition"
@@ -809,7 +809,7 @@ window.condicionalExercises = [
         difficulty: 2,
         text: "¿◯ pasar por mi oficina mañana?",
         infinitive: "poder",
-        person: "ella",
+        person: "tú",
         options: ["puedes", "pudiste", "podías", "podrás", "podrías", "puedas"],
         correctAnswers: [4],
         explanation: "polite_request"
@@ -820,7 +820,7 @@ window.condicionalExercises = [
         difficulty: 3,
         text: "Si no fuera tan orgulloso, ◯ disculpas.",
         infinitive: "pedir",
-        person: "ellos",
+        person: "yo",
         options: ["pido", "pedí", "pedía", "pediré", "pediría", "pida"],
         correctAnswers: [4],
         explanation: "si_fuera_conditional"

@@ -72,7 +72,7 @@ window.subjuntivoExercises = [
         difficulty: 2,
         text: "Lo haré para que ◯ orgulloso de mí.",
         infinitive: "estar",
-        person: "él",
+        person: "tú",
         options: ["estás", "estuviste", "estabas", "estarás", "estarías", "estés"],
         correctAnswers: [5],
         explanation: "para_que_purpose"
@@ -160,7 +160,7 @@ window.subjuntivoExercises = [
         difficulty: 2,
         text: "Ojalá que ◯ buen tiempo.",
         infinitive: "hacer",
-        person: "nosotros",
+        person: "tú",
         options: ["haces", "hiciste", "hacías", "harás", "harías", "hagas"],
         correctAnswers: [5],
         explanation: "esperar_emotion"
@@ -204,7 +204,7 @@ window.subjuntivoExercises = [
         difficulty: 2,
         text: "Es posible que ◯ tarde.",
         infinitive: "llegar",
-        person: "ellos",
+        person: "tú",
         options: ["llegas", "llegaste", "llegabas", "llegarás", "llegarías", "llegues"],
         correctAnswers: [5],
         explanation: "tal_vez_maybe"
@@ -226,7 +226,7 @@ window.subjuntivoExercises = [
         difficulty: 2,
         text: "Es necesario que ◯ más ejercicio.",
         infinitive: "hacer",
-        person: "él",
+        person: "tú",
         options: ["haces", "hiciste", "hacías", "harás", "harías", "hagas"],
         correctAnswers: [5],
         explanation: "necesitar_need"
@@ -237,7 +237,7 @@ window.subjuntivoExercises = [
         difficulty: 3,
         text: "Me sorprende que no ◯ la respuesta.",
         infinitive: "conocer",
-        person: "ellos",
+        person: "tú",
         options: ["conoces", "conociste", "conocías", "conocerás", "conocerías", "conozcas"],
         correctAnswers: [5],
         explanation: "esperar_emotion"
@@ -248,7 +248,7 @@ window.subjuntivoExercises = [
         difficulty: 2,
         text: "Le pido que ◯ cuidado.",
         infinitive: "tener",
-        person: "ella",
+        person: "tú",
         options: ["tienes", "tuviste", "tenías", "tendrás", "tendrías", "tenga"],
         correctAnswers: [5],
         explanation: "querer_desire"
@@ -292,7 +292,7 @@ window.subjuntivoExercises = [
         difficulty: 2,
         text: "Es una pena que ◯ enfermo.",
         infinitive: "estar",
-        person: "él",
+        person: "tú",
         options: ["estás", "estuviste", "estabas", "estarás", "estarías", "estés"],
         correctAnswers: [5],
         explanation: "es_bueno_opinion"
@@ -303,7 +303,7 @@ window.subjuntivoExercises = [
         difficulty: 2,
         text: "Espero que ◯ un buen día.",
         infinitive: "tener",
-        person: "nosotros",
+        person: "tú",
         options: ["tienes", "tuviste", "tenías", "tendrás", "tendrías", "tengas"],
         correctAnswers: [5],
         explanation: "esperar_emotion"
@@ -314,7 +314,7 @@ window.subjuntivoExercises = [
         difficulty: 3,
         text: "Es imposible que ◯ eso.",
         infinitive: "hacer",
-        person: "él",
+        person: "tú",
         options: ["haces", "hiciste", "hacías", "harás", "harías", "hagas"],
         correctAnswers: [5],
         explanation: "dudar_doubt"
@@ -325,7 +325,7 @@ window.subjuntivoExercises = [
         difficulty: 2,
         text: "Insisto en que ◯ la verdad.",
         infinitive: "decir",
-        person: "ellos",
+        person: "tú",
         options: ["dices", "dijiste", "decías", "dirás", "dirías", "digas"],
         correctAnswers: [5],
         explanation: "necesitar_need"
@@ -336,7 +336,7 @@ window.subjuntivoExercises = [
         difficulty: 3,
         text: "En caso de que ◯, llámame.",
         infinitive: "necesitar",
-        person: "ellos",
+        person: "tú",
         options: ["necesitas", "necesitaste", "necesitabas", "necesitarás", "necesitarías", "necesites"],
         correctAnswers: [5],
         explanation: "cuando_future"
@@ -347,7 +347,7 @@ window.subjuntivoExercises = [
         difficulty: 2,
         text: "Me molesta que ◯ tanto ruido.",
         infinitive: "hacer",
-        person: "ellos",
+        person: "tú",
         options: ["haces", "hiciste", "hacías", "harás", "harías", "hagas"],
         correctAnswers: [5],
         explanation: "esperar_emotion"
@@ -358,7 +358,7 @@ window.subjuntivoExercises = [
         difficulty: 3,
         text: "Después de que ◯ el trabajo, podremos salir.",
         infinitive: "terminar",
-        person: "él",
+        person: "tú",
         options: ["terminas", "terminaste", "terminabas", "terminarás", "terminarías", "termines"],
         correctAnswers: [5],
         explanation: "cuando_future"
@@ -380,7 +380,7 @@ window.subjuntivoExercises = [
         difficulty: 3,
         text: "Por mucho que ◯, no me convencerás.",
         infinitive: "insistir",
-        person: "yo",
+        person: "tú",
         options: ["insistes", "insististe", "insistías", "insistirás", "insistirías", "insistas"],
         correctAnswers: [5],
         explanation: "aunque_concession"
@@ -391,7 +391,7 @@ window.subjuntivoExercises = [
         difficulty: 2,
         text: "Siento que ◯ problemas.",
         infinitive: "tener",
-        person: "ellos",
+        person: "tú",
         options: ["tienes", "tuviste", "tenías", "tendrás", "tendrías", "tengas"],
         correctAnswers: [5],
         explanation: "esperar_emotion"
@@ -413,7 +413,7 @@ window.subjuntivoExercises = [
         difficulty: 2,
         text: "Te ruego que ◯ comprensivo.",
         infinitive: "ser",
-        person: "nosotros",
+        person: "tú",
         options: ["eres", "fuiste", "eras", "serás", "serías", "seas"],
         correctAnswers: [5],
         explanation: "querer_desire"
@@ -424,7 +424,7 @@ window.subjuntivoExercises = [
         difficulty: 3,
         text: "Es extraño que no ◯ nada.",
         infinitive: "decir",
-        person: "yo",
+        person: "tú",
         options: ["dices", "dijiste", "decías", "dirás", "dirías", "digas"],
         correctAnswers: [5],
         explanation: "tal_vez_maybe"
@@ -446,7 +446,7 @@ window.subjuntivoExercises = [
         difficulty: 3,
         text: "Hasta que no ◯ la carta, no sabré nada.",
         infinitive: "recibir",
-        person: "ellos",
+        person: "tú",
         options: ["recibes", "recibiste", "recibías", "recibirás", "recibirías", "recibas"],
         correctAnswers: [5],
         explanation: "cuando_future"
@@ -457,7 +457,7 @@ window.subjuntivoExercises = [
         difficulty: 2,
         text: "Es fantástico que ◯ tan feliz.",
         infinitive: "estar",
-        person: "él",
+        person: "tú",
         options: ["estás", "estuviste", "estabas", "estarás", "estarías", "estés"],
         correctAnswers: [5],
         explanation: "es_bueno_opinion"
@@ -479,7 +479,7 @@ window.subjuntivoExercises = [
         difficulty: 2,
         text: "Deseo que ◯ mucha suerte.",
         infinitive: "tener",
-        person: "yo",
+        person: "tú",
         options: ["tienes", "tuviste", "tenías", "tendrás", "tendrías", "tengas"],
         correctAnswers: [5],
         explanation: "querer_desire"
@@ -501,7 +501,7 @@ window.subjuntivoExercises = [
         difficulty: 2,
         text: "Es lógico que ◯ cansado.",
         infinitive: "estar",
-        person: "ella",
+        person: "tú",
         options: ["estás", "estuviste", "estabas", "estarás", "estarías", "estés"],
         correctAnswers: [5],
         explanation: "es_bueno_opinion"
@@ -512,7 +512,7 @@ window.subjuntivoExercises = [
         difficulty: 3,
         text: "Siempre que ◯ tiempo, te ayudo.",
         infinitive: "tener",
-        person: "ellos",
+        person: "tú",
         options: ["tienes", "tuviste", "tenías", "tendrás", "tendrías", "tengas"],
         correctAnswers: [5],
         explanation: "cuando_future"
@@ -523,7 +523,7 @@ window.subjuntivoExercises = [
         difficulty: 2,
         text: "Me da miedo que ◯ solo.",
         infinitive: "estar",
-        person: "ella",
+        person: "tú",
         options: ["estás", "estuviste", "estabas", "estarás", "estarías", "estés"],
         correctAnswers: [5],
         explanation: "esperar_emotion"
@@ -556,7 +556,7 @@ window.subjuntivoExercises = [
         difficulty: 3,
         text: "No creo que ◯ la solución correcta.",
         infinitive: "encontrar",
-        person: "yo",
+        person: "tú",
         options: ["encuentras", "encontraste", "encontrabas", "encontrarás", "encontrarías", "encuentres"],
         correctAnswers: [5],
         explanation: "dudar_doubt"
@@ -567,7 +567,7 @@ window.subjuntivoExercises = [
         difficulty: 2,
         text: "Espero que ◯ un buen viaje.",
         infinitive: "tener",
-        person: "yo",
+        person: "tú",
         options: ["tienes", "tuviste", "tenías", "tendrás", "tendrías", "tengas"],
         correctAnswers: [5],
         explanation: "esperar_emotion"
@@ -578,7 +578,7 @@ window.subjuntivoExercises = [
         difficulty: 3,
         text: "Cuando ◯ los resultados, te llamo.",
         infinitive: "saber",
-        person: "ellos",
+        person: "tú",
         options: ["sabes", "supiste", "sabías", "sabrás", "sabrías", "sepas"],
         correctAnswers: [5],
         explanation: "cuando_future"
@@ -589,7 +589,7 @@ window.subjuntivoExercises = [
         difficulty: 2,
         text: "Quiero que ◯ la verdad siempre.",
         infinitive: "decir",
-        person: "él",
+        person: "tú",
         options: ["dices", "dijiste", "decías", "dirás", "dirías", "digas"],
         correctAnswers: [5],
         explanation: "querer_desire"
@@ -600,7 +600,7 @@ window.subjuntivoExercises = [
         difficulty: 3,
         text: "Es increíble que ◯ tanto talento.",
         infinitive: "tener",
-        person: "yo",
+        person: "tú",
         options: ["tienes", "tuviste", "tenías", "tendrás", "tendrías", "tengas"],
         correctAnswers: [5],
         explanation: "es_bueno_opinion"
@@ -633,7 +633,7 @@ window.subjuntivoExercises = [
         difficulty: 2,
         text: "Es normal que ◯ nervioso antes del examen.",
         infinitive: "estar",
-        person: "él",
+        person: "tú",
         options: ["estás", "estuviste", "estabas", "estarás", "estarías", "estés"],
         correctAnswers: [5],
         explanation: "es_bueno_opinion"
@@ -688,7 +688,7 @@ window.subjuntivoExercises = [
         difficulty: 3,
         text: "Por más que ◯, no me vas a convencer.",
         infinitive: "intentar",
-        person: "él",
+        person: "tú",
         options: ["intentas", "intentaste", "intentabas", "intentarás", "intentarías", "intentes"],
         correctAnswers: [5],
         explanation: "aunque_concession"
@@ -699,7 +699,7 @@ window.subjuntivoExercises = [
         difficulty: 2,
         text: "Es fundamental que ◯ todas las reglas.",
         infinitive: "conocer",
-        person: "yo",
+        person: "tú",
         options: ["conoces", "conociste", "conocías", "conocerás", "conocerías", "conozcas"],
         correctAnswers: [5],
         explanation: "necesitar_need"
@@ -721,7 +721,7 @@ window.subjuntivoExercises = [
         difficulty: 2,
         text: "Me da igual que ◯ o no.",
         infinitive: "venir",
-        person: "nosotros",
+        person: "tú",
         options: ["vienes", "viniste", "venías", "vendrás", "vendrías", "vengas"],
         correctAnswers: [5],
         explanation: "esperar_emotion"
@@ -732,7 +732,7 @@ window.subjuntivoExercises = [
         difficulty: 3,
         text: "Tan pronto como ◯ el problema, avísame.",
         infinitive: "resolver",
-        person: "él",
+        person: "tú",
         options: ["resuelves", "resolviste", "resolvías", "resolverás", "resolverías", "resuelvas"],
         correctAnswers: [5],
         explanation: "cuando_future"
@@ -743,7 +743,7 @@ window.subjuntivoExercises = [
         difficulty: 2,
         text: "Es bueno que ◯ ejercicio regularmente.",
         infinitive: "hacer",
-        person: "nosotros",
+        person: "tú",
         options: ["haces", "hiciste", "hacías", "harás", "harías", "hagas"],
         correctAnswers: [5],
         explanation: "es_bueno_opinion"
@@ -754,7 +754,7 @@ window.subjuntivoExercises = [
         difficulty: 3,
         text: "Dondequiera que ◯, siempre te recordaré.",
         infinitive: "ir",
-        person: "yo",
+        person: "tú",
         options: ["vas", "fuiste", "ibas", "irás", "irías", "vayas"],
         correctAnswers: [5],
         explanation: "cuando_future"
@@ -765,7 +765,7 @@ window.subjuntivoExercises = [
         difficulty: 2,
         text: "Te ruego que ◯ mi decisión.",
         infinitive: "respetar",
-        person: "yo",
+        person: "tú",
         options: ["respetas", "respetaste", "respetabas", "respetarás", "respetarías", "respetes"],
         correctAnswers: [5],
         explanation: "querer_desire"
@@ -798,7 +798,7 @@ window.subjuntivoExercises = [
         difficulty: 3,
         text: "No importa lo que ◯, te apoyaré.",
         infinitive: "decidir",
-        person: "yo",
+        person: "tú",
         options: ["decides", "decidiste", "decidías", "decidirás", "decidirías", "decidas"],
         correctAnswers: [5],
         explanation: "cuando_future"
@@ -820,7 +820,7 @@ window.subjuntivoExercises = [
         difficulty: 3,
         text: "Mientras ◯ aquí, eres bienvenido.",
         infinitive: "estar",
-        person: "yo",
+        person: "tú",
         options: ["estás", "estuviste", "estabas", "estarás", "estarías", "estés"],
         correctAnswers: [5],
         explanation: "cuando_future"
