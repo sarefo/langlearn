@@ -237,6 +237,14 @@ body {
     text-align: center;
 }
 
+.question-sentence {
+    margin-bottom: 6px;
+}
+
+.question-infinitive {
+    font-size: 16px;
+}
+
 .options {
     display: grid;
     gap: 8px;
@@ -459,6 +467,17 @@ body {
     width: 100%;
     height: 100%;
     padding: 8px;
+    pointer-events: none; /* Allow clicks to pass through to overlay */
+}
+
+.overlay-content * {
+    pointer-events: none; /* Prevent child elements from intercepting clicks */
+}
+
+/* Ensure overlays are clickable */
+.option-overlay {
+    cursor: pointer !important;
+    pointer-events: all !important;
 }
 
 .grid-layout {

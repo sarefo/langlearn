@@ -311,7 +311,10 @@ function renderExercise() {
     
     exerciseContainer.innerHTML = `
         <div class="question">
-            <div class="question-text">${exercise.text} <span class="infinitive">(${exercise.infinitive})</span></div>
+            <div class="question-text">
+                <div class="question-sentence">${exercise.text}</div>
+                <div class="question-infinitive"><span class="infinitive">(${exercise.infinitive})</span></div>
+            </div>
         </div>
         
         <div class="options">
@@ -446,7 +449,11 @@ function selectOption(selectedIndex) {
                 `;
                 
                 // Make overlay clickable
-                correctOverlay.addEventListener('click', nextExercise);
+                correctOverlay.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    handleSiguienteClick();
+                });
                 correctOverlay.style.cursor = 'pointer';
                 
                 option.appendChild(correctOverlay);
@@ -476,7 +483,11 @@ function selectOption(selectedIndex) {
             `;
             
             // Make overlay clickable
-            incorrectOverlay.addEventListener('click', nextExercise);
+            incorrectOverlay.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                handleSiguienteClick();
+            });
             incorrectOverlay.style.cursor = 'pointer';
             
             option.appendChild(incorrectOverlay);
