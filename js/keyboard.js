@@ -152,4 +152,17 @@ export function initGlobalKeyboardHandler() {
             return;
         }
     });
+    
+    // Handle Android back gesture by listening to popstate events
+    window.addEventListener('popstate', function(e) {
+        // Check if any dialog is visible and close it
+        if (isDialogVisible('help-dialog-overlay')) {
+            hideHelpDialog(true);
+            return;
+        }
+        if (isDialogVisible('stats-dialog-overlay')) {
+            window.hideStatsDialog(true);
+            return;
+        }
+    });
 }

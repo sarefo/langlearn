@@ -153,24 +153,3 @@
     font-weight: 400;
 }
 
-/* Dark mode overlay */
-@media (prefers-color-scheme: dark) {
-    .options-overlay {
-        background: rgba(31, 41, 55, 0.95);
-    }
-
-    .answer-input {
-        background: #374151;
-        border-color: #60a5fa;
-        color: #f3f4f6;
-    }
-
-    .answer-input:focus {
-        border-color: #3b82f6;
-        box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.1);
-    }
-
-    .answer-input::placeholder {
-        color: #9ca3af;
-    }
-}

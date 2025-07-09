@@ -21,12 +21,20 @@ export function showHelpDialog() {
     const overlay = document.getElementById('help-dialog-overlay');
     overlay.style.display = 'flex';
     document.body.style.overflow = 'hidden';
+    
+    // Push state to history for Android back gesture support
+    history.pushState({ dialog: 'help' }, '', window.location.href);
 }
 
-export function hideHelpDialog() {
+export function hideHelpDialog(fromPopstate = false) {
     const overlay = document.getElementById('help-dialog-overlay');
     overlay.style.display = 'none';
     document.body.style.overflow = 'auto';
+    
+    // Go back in history if current state is a dialog and not triggered by popstate
+    if (!fromPopstate && history.state && history.state.dialog === 'help') {
+        history.back();
+    }
 }
 
 export function showStatsDialog() {
@@ -34,12 +42,20 @@ export function showStatsDialog() {
     const overlay = document.getElementById('stats-dialog-overlay');
     overlay.style.display = 'flex';
     document.body.style.overflow = 'hidden';
+    
+    // Push state to history for Android back gesture support
+    history.pushState({ dialog: 'stats' }, '', window.location.href);
 }
 
-export function hideStatsDialog() {
+export function hideStatsDialog(fromPopstate = false) {
     const overlay = document.getElementById('stats-dialog-overlay');
     overlay.style.display = 'none';
     document.body.style.overflow = 'auto';
+    
+    // Go back in history if current state is a dialog and not triggered by popstate
+    if (!fromPopstate && history.state && history.state.dialog === 'stats') {
+        history.back();
+    }
 }
 
 function updateStatsDialogContent() {

@@ -1,35 +1,9 @@
-/* Dark mode specific overrides */
+/* Dark mode specific overrides - consolidated from all CSS files */
 
 @media (prefers-color-scheme: dark) {
+    /* Tense selector styles */
     .tense-option {
         background: #374151 !important;
-    }
-    
-    .question-text {
-        background: #374151 !important;
-    }
-    
-    .result {
-        background: #1e293b !important;
-    }
-    
-    .result.correct {
-        background: #1e293b !important;
-    }
-    
-    .result.incorrect {
-        background: #1e293b !important;
-    }
-    
-    .option.allowed {
-        background: rgba(96, 165, 250, 0.1) !important;
-        border-color: #60a5fa !important;
-        color: #60a5fa !important;
-    }
-    
-    .option.allowed:hover {
-        background: rgba(96, 165, 250, 0.2) !important;
-        border-color: #60a5fa !important;
     }
     
     .tense-option.selected {
@@ -45,5 +19,55 @@
     
     .tense-option.selected .tense-letter {
         background: #60a5fa !important;
+    }
+    
+    /* Question text styles */
+    .question-text {
+        background: #374151 !important;
+    }
+    
+    /* Result styles */
+    .result {
+        background: #1e293b !important;
+    }
+    
+    .result.correct {
+        background: #1e293b !important;
+    }
+    
+    .result.incorrect {
+        background: #1e293b !important;
+    }
+    
+    /* Option styles */
+    .option.allowed {
+        background: rgba(96, 165, 250, 0.1) !important;
+        border-color: #60a5fa !important;
+        color: #60a5fa !important;
+    }
+    
+    .option.allowed:hover {
+        background: rgba(96, 165, 250, 0.2) !important;
+        border-color: #60a5fa !important;
+    }
+    
+    /* Exercise overlay styles */
+    .options-overlay {
+        background: rgba(31, 41, 55, 0.95);
+    }
+
+    .answer-input {
+        background: #374151;
+        border-color: #60a5fa;
+        color: #f3f4f6;
+    }
+
+    .answer-input:focus {
+        border-color: #3b82f6;
+        box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.1);
+    }
+
+    .answer-input::placeholder {
+        color: #9ca3af;
     }
 }
