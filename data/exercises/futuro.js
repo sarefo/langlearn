@@ -8,8 +8,8 @@ window.futuroExercises = [
         infinitive: "ir",
         person: "yo",
         options: ["voy", "fui", "iba", "iré", "iría", "vaya"],
-        correctAnswers: [3],
-        explanation: "manana_future"
+        correctAnswers: [0, 3],
+        explanation: "tiempo_especifico_multi"
     },
     {
         id: 402,
@@ -74,8 +74,8 @@ window.futuroExercises = [
         infinitive: "buscar",
         person: "yo",
         options: ["busco", "busqué", "buscaba", "buscaré", "buscaría", "busque"],
-        correctAnswers: [3],
-        explanation: "despues_future"
+        correctAnswers: [0, 3],
+        explanation: "secuencia_multi"
     },
     {
         id: 408,
@@ -107,8 +107,8 @@ window.futuroExercises = [
         infinitive: "visitar",
         person: "yo",
         options: ["visito", "visité", "visitaba", "visitaré", "visitaría", "visite"],
-        correctAnswers: [3],
-        explanation: "domingo_future"
+        correctAnswers: [0, 3],
+        explanation: "tiempo_especifico_multi"
     },
     {
         id: 411,
@@ -129,8 +129,8 @@ window.futuroExercises = [
         infinitive: "ir",
         person: "yo",
         options: ["voy", "fui", "iba", "iré", "iría", "vaya"],
-        correctAnswers: [3],
-        explanation: "pronto_future"
+        correctAnswers: [0, 3],
+        explanation: "tiempo_especifico_multi"
     },
     {
         id: 413,
@@ -228,8 +228,8 @@ window.futuroExercises = [
         infinitive: "hacer",
         person: "yo",
         options: ["hago", "hice", "hacía", "haré", "haría", "haga"],
-        correctAnswers: [3],
-        explanation: "despues_cenar_future"
+        correctAnswers: [0, 3],
+        explanation: "secuencia_multi"
     },
     {
         id: 422,
@@ -393,8 +393,8 @@ window.futuroExercises = [
         infinitive: "comer",
         person: "yo",
         options: ["como", "comí", "comía", "comeré", "comería", "coma"],
-        correctAnswers: [3],
-        explanation: "viernes_future"
+        correctAnswers: [0, 3],
+        explanation: "tiempo_especifico_multi"
     },
     {
         id: 437,
@@ -426,8 +426,8 @@ window.futuroExercises = [
         infinitive: "salir",
         person: "yo",
         options: ["salgo", "salí", "salía", "saldré", "saldría", "salga"],
-        correctAnswers: [3],
-        explanation: "manana_salir_future"
+        correctAnswers: [0, 3],
+        explanation: "tiempo_especifico_multi"
     },
     {
         id: 440,
@@ -459,8 +459,8 @@ window.futuroExercises = [
         infinitive: "estrenar",
         person: "yo",
         options: ["estreno", "estrené", "estrenaba", "estrenaré", "estrenaría", "estrene"],
-        correctAnswers: [3],
-        explanation: "sabado_future"
+        correctAnswers: [0, 3],
+        explanation: "tiempo_especifico_multi"
     },
     {
         id: 443,
@@ -525,8 +525,8 @@ window.futuroExercises = [
         infinitive: "dormir",
         person: "yo",
         options: ["duermo", "dormí", "dormía", "dormiré", "dormiría", "duerma"],
-        correctAnswers: [3],
-        explanation: "domingo_dormir_future"
+        correctAnswers: [0, 3],
+        explanation: "tiempo_especifico_multi"
     },
     {
         id: 449,
@@ -569,8 +569,8 @@ window.futuroExercises = [
         infinitive: "usar",
         person: "yo",
         options: ["uso", "usé", "usaba", "usaré", "usaría", "use"],
-        correctAnswers: [3],
-        explanation: "manana_future"
+        correctAnswers: [0, 3],
+        explanation: "tiempo_especifico_multi"
     },
     {
         id: 453,
@@ -668,8 +668,8 @@ window.futuroExercises = [
         infinitive: "correr",
         person: "yo",
         options: ["corro", "corrí", "corría", "correré", "correría", "corra"],
-        correctAnswers: [3],
-        explanation: "domingo_future"
+        correctAnswers: [0, 3],
+        explanation: "tiempo_especifico_multi"
     },
     {
         id: 462,
@@ -800,8 +800,8 @@ window.futuroExercises = [
         infinitive: "ir",
         person: "yo",
         options: ["voy", "fui", "iba", "iré", "iría", "vaya"],
-        correctAnswers: [3],
-        explanation: "viernes_future"
+        correctAnswers: [0, 3],
+        explanation: "tiempo_especifico_multi"
     },
     {
         id: 474,

@@ -807,6 +807,33 @@ window.explanations = {
             3: "Actividad futura programada para esta tarde",
             4: "No es hipotético, es plan real",
             5: "No hay duda ni emoción"
+        },
+        
+        "obligacion_multi": {
+            0: "Obligación presente e inmediata",
+            1: "Tiempo pasado no aplica para obligación",
+            2: "Imperfecto no se usa para obligación",
+            3: "Obligación futura necesaria",
+            4: "No es hipotético, es necesidad real",
+            5: "No hay duda ni emoción"
+        },
+        
+        "tiempo_especifico_multi": {
+            0: "Actividad habitual en ese momento",
+            1: "Tiempo pasado no aplica para momento específico",
+            2: "Imperfecto no se usa para momento específico",
+            3: "Actividad futura programada",
+            4: "No es hipotético, es plan real",
+            5: "No hay duda ni emoción"
+        },
+        
+        "secuencia_multi": {
+            0: "Rutina habitual en secuencia",
+            1: "Tiempo pasado no aplica para secuencia",
+            2: "Imperfecto no se usa para secuencia",
+            3: "Acción futura en secuencia",
+            4: "No es hipotético, es plan real",
+            5: "No hay duda ni emoción"
         }
     }
 };

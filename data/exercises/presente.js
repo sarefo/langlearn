@@ -184,8 +184,8 @@ window.presenteExercises = [
         infinitive: "tener",
         person: "yo",
         options: ["tengo", "tuve", "tenía", "tendré", "tendría", "tenga"],
-        correctAnswers: [0],
-        explanation: "obligacion_presente"
+        correctAnswers: [0, 3],
+        explanation: "obligacion_multi"
     },
     {
         id: 118,
@@ -349,8 +349,8 @@ window.presenteExercises = [
         infinitive: "necesitar",
         person: "yo",
         options: ["necesito", "necesité", "necesitaba", "necesitaré", "necesitaría", "necesite"],
-        correctAnswers: [0],
-        explanation: "obligacion_presente"
+        correctAnswers: [0, 3],
+        explanation: "obligacion_multi"
     },
     {
         id: 133,
