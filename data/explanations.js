@@ -762,6 +762,51 @@ window.explanations = {
             3: "Capacidad futura para resolver problemas",
             4: "No es hipotético, es capacidad real",
             5: "No hay duda ni emoción"
+        },
+        
+        "pregunta_multi": {
+            0: "Pregunta sobre conocimiento actual",
+            1: "Tiempo pasado no aplica para pregunta",
+            2: "Imperfecto no se usa para pregunta",
+            3: "Pregunta sobre conocimiento futuro",
+            4: "No es hipotético, es pregunta directa",
+            5: "No hay duda ni emoción"
+        },
+        
+        "necesidad_multi": {
+            0: "Necesidad presente e inmediata",
+            1: "Tiempo pasado no aplica para necesidad",
+            2: "Imperfecto no se usa para necesidad",
+            3: "Necesidad futura para la tarea",
+            4: "No es hipotético, es necesidad real",
+            5: "No hay duda ni emoción"
+        },
+        
+        "disponibilidad_multi": {
+            0: "Disponibilidad general o habitual",
+            1: "Tiempo pasado no aplica para disponibilidad",
+            2: "Imperfecto no se usa para disponibilidad",
+            3: "Disponibilidad específica futura",
+            4: "No es hipotético, es disponibilidad real",
+            5: "No hay duda ni emoción"
+        },
+        
+        "esta_noche_multi": {
+            0: "Actividad inmediata o ya planificada",
+            1: "Tiempo pasado no aplica para 'esta noche'",
+            2: "Imperfecto no se usa para 'esta noche'",
+            3: "Actividad futura programada para esta noche",
+            4: "No es hipotético, es plan real",
+            5: "No hay duda ni emoción"
+        },
+        
+        "esta_tarde_multi": {
+            0: "Actividad inmediata o ya planificada",
+            1: "Tiempo pasado no aplica para 'esta tarde'",
+            2: "Imperfecto no se usa para 'esta tarde'",
+            3: "Actividad futura programada para esta tarde",
+            4: "No es hipotético, es plan real",
+            5: "No hay duda ni emoción"
         }
     }
 };

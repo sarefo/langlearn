@@ -52,8 +52,8 @@ window.futuroExercises = [
         infinitive: "tener",
         person: "tú",
         options: ["tienes", "tuviste", "tenías", "tendrás", "tendrías", "tengas"],
-        correctAnswers: [3],
-        explanation: "pregunta_future"
+        correctAnswers: [0, 3],
+        explanation: "disponibilidad_multi"
     },
     {
         id: 406,
@@ -63,8 +63,8 @@ window.futuroExercises = [
         infinitive: "ver",
         person: "yo",
         options: ["veo", "vi", "veía", "veré", "vería", "vea"],
-        correctAnswers: [3],
-        explanation: "esta_noche_future"
+        correctAnswers: [0, 3],
+        explanation: "esta_noche_multi"
     },
     {
         id: 407,
@@ -294,8 +294,8 @@ window.futuroExercises = [
         infinitive: "limpiar",
         person: "yo",
         options: ["limpio", "limpié", "limpiaba", "limpiaré", "limpiaría", "limpie"],
-        correctAnswers: [3],
-        explanation: "esta_tarde_future"
+        correctAnswers: [0, 3],
+        explanation: "esta_tarde_multi"
     },
     {
         id: 428,
@@ -492,8 +492,8 @@ window.futuroExercises = [
         infinitive: "preparar",
         person: "tú",
         options: ["preparas", "preparaste", "preparabas", "prepararás", "prepararías", "prepares"],
-        correctAnswers: [3],
-        explanation: "esta_noche_future"
+        correctAnswers: [0, 3],
+        explanation: "esta_noche_multi"
     },
     {
         id: 446,
@@ -558,8 +558,8 @@ window.futuroExercises = [
         infinitive: "tener",
         person: "nosotros",
         options: ["tenemos", "tuvimos", "teníamos", "tendremos", "tendríamos", "tengamos"],
-        correctAnswers: [3],
-        explanation: "pregunta_future"
+        correctAnswers: [0, 3],
+        explanation: "disponibilidad_multi"
     },
     {
         id: 452,
@@ -602,8 +602,8 @@ window.futuroExercises = [
         infinitive: "terminar",
         person: "yo",
         options: ["termino", "terminé", "terminaba", "terminaré", "terminaría", "termine"],
-        correctAnswers: [3],
-        explanation: "esta_tarde_future"
+        correctAnswers: [0, 3],
+        explanation: "esta_tarde_multi"
     },
     {
         id: 456,
@@ -734,8 +734,8 @@ window.futuroExercises = [
         infinitive: "cocinar",
         person: "yo",
         options: ["cocino", "cociné", "cocinaba", "cocinaré", "cocinaría", "cocine"],
-        correctAnswers: [3],
-        explanation: "esta_noche_future"
+        correctAnswers: [0, 3],
+        explanation: "esta_noche_multi"
     },
     {
         id: 468,

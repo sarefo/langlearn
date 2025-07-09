@@ -74,8 +74,8 @@ window.presenteExercises = [
         infinitive: "saber",
         person: "tú",
         options: ["sabes", "supiste", "sabías", "sabrás", "sabrías", "sepas"],
-        correctAnswers: [0],
-        explanation: "pregunta_presente"
+        correctAnswers: [0, 3],
+        explanation: "pregunta_multi"
     },
     {
         id: 108,
@@ -525,8 +525,8 @@ window.presenteExercises = [
         infinitive: "necesitar",
         person: "tú",
         options: ["necesitas", "necesitaste", "necesitabas", "necesitarás", "necesitarías", "necesites"],
-        correctAnswers: [0],
-        explanation: "pregunta_presente"
+        correctAnswers: [0, 3],
+        explanation: "necesidad_multi"
     },
     {
         id: 149,
