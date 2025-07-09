@@ -239,8 +239,8 @@ window.presenteExercises = [
         infinitive: "poder",
         person: "tú",
         options: ["puedes", "pudiste", "podías", "podrás", "podrías", "puedas"],
-        correctAnswers: [0],
-        explanation: "capacidad_presente"
+        correctAnswers: [0, 3],
+        explanation: "capacidad_multi"
     },
     {
         id: 123,

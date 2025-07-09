@@ -707,6 +707,61 @@ window.explanations = {
             3: "Se refiere al futuro, no presente",
             4: "No es hipotético, es rutina actual",
             5: "No hay duda ni emoción"
+        },
+        
+        // Multi-answer patterns for ambiguous cases
+        "polite_invitation_multi": {
+            0: "Forma casual y directa de invitar",
+            1: "Tiempo pasado no aplica para invitaciones",
+            2: "Imperfecto no se usa para invitaciones",
+            3: "Futuro menos común en invitaciones",
+            4: "Forma más cortés y formal de invitar",
+            5: "Subjuntivo no se usa en invitaciones directas"
+        },
+        
+        "polite_request_multi": {
+            0: "Forma directa y común de pedir ayuda",
+            1: "Tiempo pasado no aplica para peticiones",
+            2: "Imperfecto no se usa para peticiones",
+            3: "Futuro menos común en peticiones",
+            4: "Forma más cortés y respetuosa de pedir",
+            5: "Subjuntivo no se usa en peticiones directas"
+        },
+        
+        "advice_multi": {
+            0: "Forma directa de dar consejo",
+            1: "Tiempo pasado no aplica para consejos",
+            2: "Imperfecto no se usa para consejos",
+            3: "Futuro no es adecuado para consejos",
+            4: "Forma más suave y respetuosa de aconsejar",
+            5: "Subjuntivo no se usa en consejos directos"
+        },
+        
+        "hypothetical_multi": {
+            0: "Declaración general sobre capacidades",
+            1: "Tiempo pasado no aplica para hipótesis",
+            2: "Imperfecto no se usa para hipótesis",
+            3: "Futuro menos común en hipótesis",
+            4: "Forma hipotética clásica",
+            5: "Subjuntivo no se usa en declaraciones hipotéticas"
+        },
+        
+        "hoy_multi": {
+            0: "Situación actual del día de hoy",
+            1: "Tiempo pasado no aplica para 'hoy'",
+            2: "Imperfecto no se usa para 'hoy'",
+            3: "Trabajo futuro programado para hoy",
+            4: "No es hipotético, es situación real",
+            5: "No hay duda ni emoción"
+        },
+        
+        "capacidad_multi": {
+            0: "Capacidad actual para resolver problemas",
+            1: "Tiempo pasado no aplica para capacidad",
+            2: "Imperfecto no se usa para capacidad",
+            3: "Capacidad futura para resolver problemas",
+            4: "No es hipotético, es capacidad real",
+            5: "No hay duda ni emoción"
         }
     }
 };

@@ -19,8 +19,8 @@ window.condicionalExercises = [
         infinitive: "venir",
         person: "tú",
         options: ["vienes", "viniste", "venías", "vendrás", "vendrías", "vengas"],
-        correctAnswers: [4],
-        explanation: "polite_request"
+        correctAnswers: [0, 4],
+        explanation: "polite_invitation_multi"
     },
     {
         id: 503,
@@ -30,8 +30,8 @@ window.condicionalExercises = [
         infinitive: "decir",
         person: "yo",
         options: ["digo", "dije", "decía", "diré", "diría", "diga"],
-        correctAnswers: [4],
-        explanation: "advice_conditional"
+        correctAnswers: [0, 4],
+        explanation: "advice_multi"
     },
     {
         id: 504,
@@ -63,8 +63,8 @@ window.condicionalExercises = [
         infinitive: "poder",
         person: "tú",
         options: ["puedes", "pudiste", "podías", "podrás", "podrías", "puedas"],
-        correctAnswers: [4],
-        explanation: "polite_request"
+        correctAnswers: [0, 4],
+        explanation: "polite_request_multi"
     },
     {
         id: 507,
@@ -74,8 +74,8 @@ window.condicionalExercises = [
         infinitive: "hacer",
         person: "yo",
         options: ["hago", "hice", "hacía", "haré", "haría", "haga"],
-        correctAnswers: [4],
-        explanation: "hypothetical_condition"
+        correctAnswers: [0, 4],
+        explanation: "hypothetical_multi"
     },
     {
         id: 508,
@@ -151,8 +151,8 @@ window.condicionalExercises = [
         infinitive: "querer",
         person: "tú",
         options: ["quieres", "quisiste", "querías", "querrás", "querrías", "quieras"],
-        correctAnswers: [4],
-        explanation: "polite_invitation"
+        correctAnswers: [0, 4],
+        explanation: "polite_invitation_multi"
     },
     {
         id: 515,
