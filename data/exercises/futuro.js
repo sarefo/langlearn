@@ -85,7 +85,7 @@ window.futuroExercises = [
         infinitive: "poder",
         person: "yo",
         options: ["puedo", "pude", "podía", "podré", "podría", "pueda"],
-        correctAnswers: [3],
+        correctAnswers: [0, 3],
         explanation: "capacidad_future"
     },
     {
@@ -261,7 +261,7 @@ window.futuroExercises = [
         infinitive: "haber",
         person: "él",
         options: ["hay", "hubo", "había", "habrá", "habría", "haya"],
-        correctAnswers: [3],
+        correctAnswers: [0, 3],
         explanation: "seguramente_future"
     },
     {
@@ -371,7 +371,7 @@ window.futuroExercises = [
         infinitive: "saber",
         person: "yo",
         options: ["sé", "supe", "sabía", "sabré", "sabría", "sepa"],
-        correctAnswers: [3],
+        correctAnswers: [0, 3],
         explanation: "nunca_sabre_future"
     },
     {
