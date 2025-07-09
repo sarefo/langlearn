@@ -5,7 +5,7 @@ import { saveStats, saveWrongAnswers, saveExerciseDifficulty, updateStreakOnFirs
 import { updateStatsDisplay, removeExistingButton, addFadeEffect } from './dom.js';
 import { renderExercise, renderOptionOverlays, renderActionButtons } from './renderer.js';
 
-export function loadExercise() {
+export function loadExercise(autoFocus = true) {
     const availableExercises = appState.filteredExercises.length > 0 ? appState.filteredExercises : getFilteredExercises();
     
     if (availableExercises.length === 0) {
@@ -20,7 +20,7 @@ export function loadExercise() {
     
     setCurrentExercise(availableExercises[appState.currentIndex]);
     resetAnswer();
-    renderExercise();
+    renderExercise(autoFocus);
 }
 
 export function selectOption(selectedIndex, inputMethod = 'selection') {

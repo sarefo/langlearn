@@ -63,5 +63,5 @@ export function toggleTense(tenseIndex) {
     saveTenseSelection();
     updateURL();
     shuffleExercises();
-    loadExercise();
+    loadExercise(false);
 }

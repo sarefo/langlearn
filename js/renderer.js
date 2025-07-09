@@ -4,7 +4,7 @@ import { appState } from './state.js';
 import { isAnswerCorrect, getBestCorrectAnswer } from './exercises.js';
 import { handleKeyboardInput } from './keyboard.js';
 
-export function renderExercise() {
+export function renderExercise(autoFocus = true) {
     const exercise = appState.currentExercise;
     const exerciseContainer = document.getElementById('exercise-container');
 
@@ -49,13 +49,15 @@ export function renderExercise() {
         </div>
     `;
 
-    // Focus on the input field
-    setTimeout(() => {
-        const input = document.querySelector('.answer-input');
-        if (input) {
-            input.focus();
-        }
-    }, 100);
+    // Focus on the input field only if autoFocus is true
+    if (autoFocus) {
+        setTimeout(() => {
+            const input = document.querySelector('.answer-input');
+            if (input) {
+                input.focus();
+            }
+        }, 100);
+    }
 
     document.onkeydown = handleKeyboardInput;
 }
