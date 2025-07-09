@@ -23,13 +23,13 @@ export function loadExercise() {
     renderExercise();
 }
 
-export function selectOption(selectedIndex) {
+export function selectOption(selectedIndex, inputMethod = 'selection') {
     if (appState.answered) return;
     
     appState.answered = true;
-    const isCorrect = isAnswerCorrect(selectedIndex);
+    const isCorrect = isAnswerCorrect(selectedIndex, inputMethod);
     
-    if (appState.selectedTenses.length > 1) {
+    if (appState.selectedTenses.length > 1 || inputMethod === 'typed') {
         incrementStats(isCorrect);
         
         if (isCorrect) {
@@ -44,7 +44,7 @@ export function selectOption(selectedIndex) {
         updateStatsDisplay();
     }
     
-    renderOptionOverlays(selectedIndex);
+    renderOptionOverlays(selectedIndex, inputMethod);
     renderActionButtons(isCorrect);
 }
 

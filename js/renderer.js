@@ -60,8 +60,8 @@ export function renderExercise() {
     document.onkeydown = handleKeyboardInput;
 }
 
-export function renderOptionOverlays(selectedIndex) {
-    const isCorrect = isAnswerCorrect(selectedIndex);
+export function renderOptionOverlays(selectedIndex, inputMethod = 'selection') {
+    const isCorrect = isAnswerCorrect(selectedIndex, inputMethod);
     const bestCorrectAnswer = getBestCorrectAnswer();
 
     const options = document.querySelectorAll('.option');
@@ -246,7 +246,7 @@ export function checkTypedAnswer() {
         input.style.borderColor = '';
         // Show options and select the matching option
         showOptions();
-        window.selectOption(exactMatchIndex);
+        window.selectOption(exactMatchIndex, 'typed');
         return;
     }
 

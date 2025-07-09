@@ -78,8 +78,8 @@ export function shuffleExercises() {
     setFilteredExercises(combinedExercises);
 }
 
-export function isAnswerCorrect(selectedIndex) {
-    if (appState.selectedTenses.length === 1) {
+export function isAnswerCorrect(selectedIndex, inputMethod = 'selection') {
+    if (appState.selectedTenses.length === 1 && inputMethod === 'selection') {
         return true;
     }
     return appState.currentExercise.correctAnswers.includes(selectedIndex) && 
