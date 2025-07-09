@@ -824,5 +824,16 @@ window.presenteExercises = [
         options: ["explicas", "explicaste", "explicabas", "explicarás", "explicarías", "expliques"],
         correctAnswers: [0],
         explanation: "habilidad_presente"
+    },
+    {
+        id: 176,
+        type: "Subjuntivo",
+        difficulty: 2,
+        text: "Es obvio que ◯ mucho trabajo.",
+        infinitive: "tener",
+        person: "tú",
+        options: ["tienes", "tuviste", "tenías", "tendrás", "tendrías", "tengas"],
+        correctAnswers: [0],
+        explanation: "es_obvio_certeza"
     }
 ];

@@ -807,12 +807,12 @@ window.subjuntivoExercises = [
         id: 674,
         type: "Subjuntivo",
         difficulty: 2,
-        text: "Es obvio que ◯ mucho trabajo.",
+        text: "Dudo que ◯ tiempo para terminarlo.",
         infinitive: "tener",
         person: "tú",
         options: ["tienes", "tuviste", "tenías", "tendrás", "tendrías", "tengas"],
-        correctAnswers: [0],
-        explanation: "es_bueno_opinion"
+        correctAnswers: [5],
+        explanation: "dudar_emotion"
     },
     {
         id: 675,
