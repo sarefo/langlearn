@@ -260,30 +260,8 @@ export function checkTypedAnswer() {
     if (anyOptionMatch) {
         // Clear any error styling if it matches any option
         input.style.borderColor = '';
-
-        // Check if it's a prefix of correct answer - if so, let them continue
-        const correctAnswers = exercise.correctAnswers.map(index => normalizeText(exercise.options[index]));
-        const isCorrectPrefix = correctAnswers.some(correctAnswer =>
-            correctAnswer.startsWith(normalizedTyped)
-        );
-
-        if (!isCorrectPrefix) {
-            // It matches wrong option(s), find all matches and select them
-            const matchingOptionIndices = exercise.options
-                .map((option, index) => ({ option, index }))
-                .filter(({ option, index }) => {
-                    const normalizedOption = normalizeText(option);
-                    return normalizedOption.startsWith(normalizedTyped) && !exercise.correctAnswers.includes(index);
-                })
-                .map(({ index }) => index);
-
-            if (matchingOptionIndices.length > 0) {
-                // Show options and select all matching wrong options
-                showOptions();
-                // Mark all matching options as incorrect
-                markMultipleOptionsIncorrect(matchingOptionIndices);
-            }
-        }
+        input.style.borderWidth = '';
+        // Let user continue typing regardless of whether it matches correct or wrong options
     } else {
         // No option matches - show visual feedback but don't select anything
         input.style.borderColor = '#ff4444';
@@ -296,12 +274,19 @@ export function handleInputKeydown(event) {
         event.preventDefault();
         // First check if typed answer is valid
         checkTypedAnswer();
-        // If no valid typed answer and no error styling, show options
+        // If no valid typed answer, show options
         if (!appState.answered) {
             const input = document.querySelector('.answer-input');
-            if (input && input.style.borderColor !== 'rgb(255, 68, 68)') {
-                showOptions();
+            
+            // If input has red border (error state), clear it and show options
+            if (input && input.style.borderColor === 'rgb(255, 68, 68)') {
+                input.value = '';
+                input.style.borderColor = '';
+                input.style.borderWidth = '';
             }
+            
+            // Always show options when pressing Enter
+            showOptions();
         }
     }
 }
