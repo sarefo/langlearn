@@ -2,3 +2,4 @@
 
 - if explanation becomes three lines, layout breaks
 
+- chrome warns about changing the icon when reloading the web app, indicating that the favicon gets re-loaded every time. can we fix this?
